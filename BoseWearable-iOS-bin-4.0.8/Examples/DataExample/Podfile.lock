@@ -1,0 +1,29 @@
+PODS:
+  - BLECore (4.0.8):
+    - Logging (= 4.0.8)
+  - BoseWearable (4.0.8):
+    - BLECore (= 4.0.8)
+    - Logging (= 4.0.8)
+  - Logging (4.0.8)
+
+DEPENDENCIES:
+  - BLECore (from `BoseWearable-iOS-bin-4.0.8/`)
+  - BoseWearable (from `BoseWearable-iOS-bin-4.0.8/`)
+  - Logging (from `BoseWearable-iOS-bin-4.0.8/`)
+
+EXTERNAL SOURCES:
+  BLECore:
+    :path: BoseWearable-iOS-bin-4.0.8/
+  BoseWearable:
+    :path: BoseWearable-iOS-bin-4.0.8/
+  Logging:
+    :path: BoseWearable-iOS-bin-4.0.8/
+
+SPEC CHECKSUMS:
+  BLECore: 66201cd79e9acde48d95fb7e4b7e9c5a86a17121
+  BoseWearable: 99e4fde335b54c93820336d938c5499c1f16ad1f
+  Logging: 6532aa2593d0b66b077fc391fce6f6ed94e98f11
+
+PODFILE CHECKSUM: de3356841350209728f8f1bc32770d1b72fc9abe
+
+COCOAPODS: 1.5.3

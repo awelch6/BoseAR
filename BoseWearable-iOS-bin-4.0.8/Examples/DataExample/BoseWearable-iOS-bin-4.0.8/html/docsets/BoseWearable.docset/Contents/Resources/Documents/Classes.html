@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Classes  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
+
+    <a title="Classes  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          BoseWearable Docs
+        </a>
+         (99% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">BoseWearable Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Classes  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="logging.html">Logging</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="sample-code.html">Sample Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="sensors-and-coordinate-system.html">Sensors and Coordinate System</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="usage.html">Usage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="v4-migration-guide.html">V4 Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AlertAction.html">AlertAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AlertAction/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BoseWearable.html">BoseWearable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BoseWearable/ConfigOption.html">– ConfigOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ConnectionTask.html">ConnectionTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/DeviceSearchTask.html">DeviceSearchTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:12BoseWearable13ListenerTokenC">ListenerToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SensorDispatch.html">SensorDispatch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/AlertIcon.html">AlertIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BoseWearableError.html">BoseWearableError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BoseWearableError/ErrorCode.html">– ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/CancellableResult.html">CancellableResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ConnectUIMode.html">ConnectUIMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceProtocolError.html">DeviceProtocolError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceProtocolErrorCode.html">DeviceProtocolErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceSearchMode.html">DeviceSearchMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceState.html">DeviceState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/FirmwareUpdateApp.html">FirmwareUpdateApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/FirmwareUpdateStatus.html">FirmwareUpdateStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/GestureType.html">GestureType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/InfoType.html">InfoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SamplePeriod.html">SamplePeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SensorSample.html">SensorSample</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SensorType.html">SensorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SignalStrength.html">SignalStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SuspensionReason.html">SuspensionReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/VectorAccuracy.html">VectorAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/WearableDeviceEvent.html">WearableDeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/WearableDeviceSessionState.html">WearableDeviceSessionState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Quaternion.html">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Vector.html">Vector</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AlertUI.html">AlertUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ConnectUI.html">ConnectUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:12BoseWearable16ConnectUIElementP">ConnectUIElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DeviceSearchTaskUserInterface.html">DeviceSearchTaskUserInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DeviceSearchTaskUserInterfaceDelegate.html">DeviceSearchTaskUserInterfaceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/InfoUI.html">InfoUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/InfoUIDelegate.html">InfoUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SearchUI.html">SearchUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SearchUIDelegate.html">SearchUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDevice.html">WearableDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSessionDelegate.html">WearableDeviceSessionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSessionPairingDelegate.html">WearableDeviceSessionPairingDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ActiveNoiseReduction.html">ActiveNoiseReduction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ActiveNoiseReduction/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AlertIconAssets.html">AlertIconAssets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ControllableNoiseCancellation.html">ControllableNoiseCancellation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/DeviceStatus.html">DeviceStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/FirmwareVersion.html">FirmwareVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureConfiguration.html">GestureConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureData.html">GestureData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureInformation.html">GestureInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureIntent.html">GestureIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/QuaternionAccuracy.html">QuaternionAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SecurePairingInfo.html">SecurePairingInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SecurePairingInfo/Asset.html">– Asset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorConfiguration.html">SensorConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorData.html">SensorData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorInformation.html">SensorInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorIntent.html">SensorIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorValue.html">SensorValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/WearableDeviceInformation.html">WearableDeviceInformation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable10Quaterniona">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable15SensorTimestampa">SensorTimestamp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable6Vectora">Vector</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Classes</h1>
+            <p>The following classes are available globally.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC"></a>
+                    <a name="//apple_ref/swift/Class/BoseWearable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC">BoseWearable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Top-level interface to the BoseWearable library. Note that you must call <code><a href="Classes/BoseWearable.html#/s:12BoseWearableAAC9configureyySDyAB12ConfigOptionOypGFZ">BoseWearable.configure(_:)</a></code> before using the <code><a href="Classes/BoseWearable.html#/s:12BoseWearableAAC6sharedABvpZ">BoseWearable.shared</a></code> singleton instance. Failing to do so results in a fatal error.</p>
+
+                        <a href="Classes/BoseWearable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BoseWearable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearable14ConnectionTaskC"></a>
+                    <a name="//apple_ref/swift/Class/ConnectionTask" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearable14ConnectionTaskC">ConnectionTask</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encapsulates the device search and connection functionality. It requires a <code><a href="Protocols/ConnectUI.html">ConnectUI</a></code> implementation that gets called to show and update the user interface throughout the search, connect, and secure pairing process.</p>
+
+                        <a href="Classes/ConnectionTask.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ConnectionTask</span><span class="o">&lt;</span><span class="kt">ConnectUIImpl</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">ConnectUIImpl</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ConnectUI.html">ConnectUI</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearable11AlertActionC"></a>
+                    <a name="//apple_ref/swift/Class/AlertAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearable11AlertActionC">AlertAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encapsulates an action to be shown on an <code><a href="Protocols/AlertUI.html">AlertUI</a></code> instance.</p>
+
+                        <a href="Classes/AlertAction.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AlertAction</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearable16DeviceSearchTaskC"></a>
+                    <a name="//apple_ref/swift/Class/DeviceSearchTask" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearable16DeviceSearchTaskC">DeviceSearchTask</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>DeviceSearchTask</code> class encapsulates the device search functionality. It requires a <code>DeviceSearchUserInterface</code> object that gets called to show and update the device picker which allows users to select a discovered device. The <code>DeviceSearchUserInterface</code> calls back into the <code>DeviceSearchTask</code> via the <code>DeviceSearchUserInterfaceDelegate</code> protocol.</p>
+
+                        <a href="Classes/DeviceSearchTask.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "DeviceSearchTask has been replaced by ConnectionTask.")</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">DeviceSearchTask</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearable14SensorDispatchC"></a>
+                    <a name="//apple_ref/swift/Class/SensorDispatch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearable14SensorDispatchC">SensorDispatch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>SensorDispatch</code> object is used to receive sensor readings. A <code>SensorDispatch</code> object listens for the underlying <code><a href="Enums/WearableDeviceEvent.html">WearableDeviceEvent</a></code> notifications indicating that sensor data has been received. It then unpacks the individual values from the data and dispatches each to its appropriate callback block and to its handler (a <code><a href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a></code> object).</p>
+
+<p>An app can have arbitrarily many <code>SensorDispatch</code> objects. This allows multiple handlers inside an app all to listen to the same sensor. Each <code>SensorDispatch</code> automatically registers and deregisters for the appropriate <code><a href="Enums/WearableDeviceEvent.html">WearableDeviceEvent</a></code> notifications.</p>
+
+<p>A <code>SensorDispatch</code> object is created with an associated <code>OperationQueue</code>. Specifying the <code>.main</code> queue is suitable for when the app&rsquo;s user interface should be updated in response to the event. Otherwise, a background <code>OperationQueue</code> can be provided.</p>
+
+<p>When a <code>WearableDeviceEvent.didReceiveSensorData(SensorData)</code> notification is received, the <code>SensorDispatch</code> object does the following on the <code>OperationQueue</code> provided to the <code>SensorDispatch</code> initializer:</p>
+
+<ul>
+<li>Dispatches the <code><a href="Structs/SensorData.html">SensorData</a></code> object to <code>sensorDataCallback</code> and to <code><a href="Protocols/SensorDispatchHandler.html#/s:12BoseWearable21SensorDispatchHandlerP08receivedC4DatayyAA0cG0VF">SensorDispatchHandler.receivedSensorData(_:)</a></code>.</li>
+<li>Each of the values in the <code><a href="Structs/SensorData.html">SensorData</a></code> object is dispatched to the appropriate handler:
+
+<ul>
+<li>Accelerometer values are dispatched to <code>accelerometerCallback</code> and to  <code><a href="Protocols/SensorDispatchHandler.html#/s:12BoseWearable21SensorDispatchHandlerP21receivedAccelerometer6vector8accuracy9timestampys5SIMD3VySdG_AA14VectorAccuracyOs6UInt16VtF">SensorDispatchHandler.receivedAccelerometer(vector:accuracy:timestamp:)</a></code></li>
+<li>Gyroscope values are dispatched to <code>gyroscopeCallback</code> and to  <code><a href="Protocols/SensorDispatchHandler.html#/s:12BoseWearable21SensorDispatchHandlerP17receivedGyroscope6vector8accuracy9timestampys5SIMD3VySdG_AA14VectorAccuracyOs6UInt16VtF">SensorDispatchHandler.receivedGyroscope(vector:accuracy:timestamp:)</a></code></li>
+<li>Rotation values are dispatched to <code>rotationCallback</code> and to <code><a href="Protocols/SensorDispatchHandler.html#/s:12BoseWearable21SensorDispatchHandlerP16receivedRotation10quaternion8accuracy9timestampySo10simd_quatda_AA18QuaternionAccuracyVs6UInt16VtF">SensorDispatchHandler.receivedRotation(quaternion:accuracy:timestamp:)</a></code>.</li>
+<li>Game rotation values are dispatched to <code>gameRotationCallback</code> and to <code><a href="Protocols/SensorDispatchHandler.html#/s:12BoseWearable21SensorDispatchHandlerP20receivedGameRotation10quaternion9timestampySo10simd_quatda_s6UInt16VtF">SensorDispatchHandler.receivedGameRotation(quaternion:timestamp:)</a></code>.</li>
+<li>Orientation values are dispatched to <code>orientationCallback</code> and to  <code><a href="Protocols/SensorDispatchHandler.html#/s:12BoseWearable21SensorDispatchHandlerP19receivedOrientation6vector8accuracy9timestampys5SIMD3VySdG_AA14VectorAccuracyOs6UInt16VtF">SensorDispatchHandler.receivedOrientation(vector:accuracy:timestamp:)</a></code></li>
+<li>Magnetometer values are dispatched to <code>magnetometerCallback</code> and to  <code><a href="Protocols/SensorDispatchHandler.html#/s:12BoseWearable21SensorDispatchHandlerP20receivedMagnetometer6vector8accuracy9timestampys5SIMD3VySdG_AA14VectorAccuracyOs6UInt16VtF">SensorDispatchHandler.receivedMagnetometer(vector:accuracy:timestamp:)</a></code></li>
+<li>Uncalibrated magnetometer values are dispatched to <code>uncalibratedMagnetometerCallback</code> and to  <code><a href="Protocols/SensorDispatchHandler.html#/s:12BoseWearable21SensorDispatchHandlerP32receivedUncalibratedMagnetometer6vector4bias9timestampys5SIMD3VySdG_AJs6UInt16VtF">SensorDispatchHandler.receivedUncalibratedMagnetometer(vector:bias:timestamp:)</a></code></li>
+</ul></li>
+</ul>
+
+<p>Callbacks are only invoked if they are non-nil. Thus you need only provide callback blocks for sensors you are interested in. Similarly, the <code><a href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a></code> protocol provides default implementation of all of its handler functions. Thus you need only provide implementations for sensors you are interested in. A <code><a href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a></code> and callback blocks can co-exist. Each callback is invoked before the corresponding <code><a href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a></code> function.</p>
+
+                        <a href="Classes/SensorDispatch.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SensorDispatch</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearable13ListenerTokenC"></a>
+                    <a name="//apple_ref/swift/Class/ListenerToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearable13ListenerTokenC">ListenerToken</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An opaque token used to add and remove listeners backed by <code>NotificationCenter</code>. A <code>ListenerToken</code> object retains the token returned by <code>NotificationCenter.addObserver(for:object:queue:)</code> as well as the <code>NotificationCenter</code>. When the object is deallocated, we automatically remove the observer from the retained <code>NotificationCenter</code> using the retained token.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ListenerToken</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://developer.bose.com" target="_blank" rel="external">Bose Corporation</a>. All rights reserved. (Last updated: 2019-06-20)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

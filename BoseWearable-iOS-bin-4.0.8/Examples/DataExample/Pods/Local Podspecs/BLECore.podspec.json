@@ -1,0 +1,26 @@
+{
+  "name": "BLECore",
+  "version": "4.0.8",
+  "summary": "Bose BLE Core Library",
+  "description": "This library provides core BLE functionality used by the BoseWearable library.",
+  "homepage": "https://developer.bose.com",
+  "authors": "Bose Corporation",
+  "source": {
+    "git": "git@github.com:BoseCorp/BoseWearable-iOS-bin.git",
+    "tag": "4.0.8"
+  },
+  "license": {
+    "type": "Proprietary",
+    "text": "Bose Confidential"
+  },
+  "platforms": {
+    "ios": "11.4"
+  },
+  "swift_version": "5.0",
+  "vendored_frameworks": "Frameworks/iOS/BLECore.framework",
+  "dependencies": {
+    "Logging": [
+      "4.0.8"
+    ]
+  }
+}

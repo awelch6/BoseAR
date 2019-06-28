@@ -3,8 +3,8 @@ platform :ios, '11.4'
 target 'DataExample' do
   use_frameworks!
 
-  pod 'BLECore', :path => '../../'
-  pod 'BoseWearable', :path => '../../'
-  pod 'Logging', :path => '../../'
+  pod 'BoseWearable', :path => 'BoseWearable-iOS-bin-4.0.8/'
+  pod 'BLECore', :path => 'BoseWearable-iOS-bin-4.0.8/'
+  pod 'Logging', :path => 'BoseWearable-iOS-bin-4.0.8/'
+  
 end
-

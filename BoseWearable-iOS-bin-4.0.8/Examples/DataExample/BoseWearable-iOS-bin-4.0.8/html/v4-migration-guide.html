@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>V4 Migration Guide  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="V4 Migration Guide  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          BoseWearable Docs
+        </a>
+         (99% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">BoseWearable Reference</a>
+      <img class="carat" src="img/carat.png" />
+      V4 Migration Guide  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="logging.html">Logging</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="sample-code.html">Sample Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="sensors-and-coordinate-system.html">Sensors and Coordinate System</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="usage.html">Usage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="v4-migration-guide.html">V4 Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AlertAction.html">AlertAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AlertAction/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BoseWearable.html">BoseWearable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BoseWearable/ConfigOption.html">– ConfigOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ConnectionTask.html">ConnectionTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/DeviceSearchTask.html">DeviceSearchTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:12BoseWearable13ListenerTokenC">ListenerToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SensorDispatch.html">SensorDispatch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/AlertIcon.html">AlertIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BoseWearableError.html">BoseWearableError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BoseWearableError/ErrorCode.html">– ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/CancellableResult.html">CancellableResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ConnectUIMode.html">ConnectUIMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceProtocolError.html">DeviceProtocolError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceProtocolErrorCode.html">DeviceProtocolErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceSearchMode.html">DeviceSearchMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceState.html">DeviceState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/FirmwareUpdateApp.html">FirmwareUpdateApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/FirmwareUpdateStatus.html">FirmwareUpdateStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/GestureType.html">GestureType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/InfoType.html">InfoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SamplePeriod.html">SamplePeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SensorSample.html">SensorSample</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SensorType.html">SensorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SignalStrength.html">SignalStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SuspensionReason.html">SuspensionReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/VectorAccuracy.html">VectorAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/WearableDeviceEvent.html">WearableDeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/WearableDeviceSessionState.html">WearableDeviceSessionState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Quaternion.html">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Vector.html">Vector</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AlertUI.html">AlertUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ConnectUI.html">ConnectUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:12BoseWearable16ConnectUIElementP">ConnectUIElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DeviceSearchTaskUserInterface.html">DeviceSearchTaskUserInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DeviceSearchTaskUserInterfaceDelegate.html">DeviceSearchTaskUserInterfaceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/InfoUI.html">InfoUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/InfoUIDelegate.html">InfoUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SearchUI.html">SearchUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SearchUIDelegate.html">SearchUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDevice.html">WearableDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSessionDelegate.html">WearableDeviceSessionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSessionPairingDelegate.html">WearableDeviceSessionPairingDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ActiveNoiseReduction.html">ActiveNoiseReduction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ActiveNoiseReduction/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AlertIconAssets.html">AlertIconAssets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ControllableNoiseCancellation.html">ControllableNoiseCancellation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/DeviceStatus.html">DeviceStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/FirmwareVersion.html">FirmwareVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureConfiguration.html">GestureConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureData.html">GestureData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureInformation.html">GestureInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureIntent.html">GestureIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/QuaternionAccuracy.html">QuaternionAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SecurePairingInfo.html">SecurePairingInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SecurePairingInfo/Asset.html">– Asset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorConfiguration.html">SensorConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorData.html">SensorData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorInformation.html">SensorInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorIntent.html">SensorIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorValue.html">SensorValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/WearableDeviceInformation.html">WearableDeviceInformation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable10Quaterniona">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable15SensorTimestampa">SensorTimestamp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable6Vectora">Vector</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='migrating-to-sdk-v4-from-v3' class='heading'>Migrating to SDK v4 from v3</h1>
+
+<p>This document explains how to migrate from v3 of the Bose Wearable SDK to v4.</p>
+<h2 id='user-interface' class='heading'>User Interface</h2>
+
+<p>Bose provided the <code><a href="Classes/BoseWearable.html#/s:12BoseWearableAAC17startDeviceSearch4mode17completionHandleryAA0dE4ModeO_yAA17CancellableResultOyAA0bD7Session_pGctF">BoseWearable.startDeviceSearch(mode:completionHandler:)</a></code> function. It would perform a device search and present UI to the user allowing the selection of a device. This would create a <code><a href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a></code> and pass it to the completion handler. It was the responsibility of the caller to open the session.</p>
+
+<p>In the v4 SDK, Bose has provided <code>BoseWearable.startConnection(mode:sensorIntent:gestureIntent:completionHander:)</code> and deprecated <code>startDeviceSearch</code>. This function presents an entirely new user interface for device search. It also guides the user through the secure pairing process, if required. Finally, it checks to see whether a firmware update is available and directs the user to the appropriate app to perform the firmware update. The completion handler is invoked with an open <code><a href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a></code>, eliminating the requirement to open the session from the client app.</p>
+<h3 id='continuing-to-use-the-v3-api' class='heading'>Continuing to use the v3 API</h3>
+
+<p>We encourage all developers to switch over to the new <code>startConnection</code> API. The old <code>startDeviceSearch</code> API will be removed from a future release of the SDK. If you want to continue using the old <code>startDeviceSearch</code> API, you need to handle secure pairing when connecting to devices that require a bonded connection.</p>
+
+<p>To do so, you must register a <code><a href="Protocols/WearableDeviceSessionPairingDelegate.html">WearableDeviceSessionPairingDelegate</a></code> instance with the <code><a href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a></code> before calling <code>open()</code>. Failing to do so will result in a fatal error.</p>
+
+<p>When <code><a href="Protocols/WearableDeviceSessionPairingDelegate.html#/s:12BoseWearable0B28DeviceSessionPairingDelegateP015sessionRequiresE4ModeyyAA0bcD0_pF">WearableDeviceSessionPairingDelegate.sessionRequiresPairingMode(_:)</a></code> is called, you must present user interface prompting the user to place the device into pairing mode. The process of opening the <code><a href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a></code> will wait indefinitely for the user to place the device into pairing mode.</p>
+
+<p>When <code><a href="Protocols/WearableDeviceSessionPairingDelegate.html#/s:12BoseWearable0B28DeviceSessionPairingDelegateP7session_08finishedE10WithResultyAA0bcD0_p_AA0J0OyytGtF">WearableDeviceSessionPairingDelegate.session(_:finishedPairingWithResult:)</a></code> is called, you must dismiss the user interface prompt provided above.</p>
+
+<p>Using <code>startConnection</code> in the v4 API handles all of this for you.</p>
+<h3 id='migrating-to-the-v4-api' class='heading'>Migrating to the v4 API</h3>
+
+<p>Replace your call to <code><a href="Classes/BoseWearable.html#/s:12BoseWearableAAC17startDeviceSearch4mode17completionHandleryAA0dE4ModeO_yAA17CancellableResultOyAA0bD7Session_pGctF">BoseWearable.startDeviceSearch(mode:completionHandler:)</a></code> with a call to <code>BoseWearable.startConnection(mode:sensorIntent:gestureIntent:completionHander:)</code>. You no longer need to open the session passed to the completion handler when the operation is successful. You do not need to register a <code><a href="Protocols/WearableDeviceSessionPairingDelegate.html">WearableDeviceSessionPairingDelegate</a></code> with the <code><a href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a></code>.</p>
+
+<p>The v3 SDK signalled whether the session successfully opened via the following delegate callbacks:</p>
+
+<ul>
+<li><code><a href="Protocols/WearableDeviceSessionDelegate.html#/s:12BoseWearable0B21DeviceSessionDelegateP14sessionDidOpenyyAA0bcD0_pF">WearableDeviceSessionDelegate.sessionDidOpen(_:)</a></code> would indicate that the session successfully opened.</li>
+<li><code><a href="Protocols/WearableDeviceSessionDelegate.html#/s:12BoseWearable0B21DeviceSessionDelegateP7session_22didFailToOpenWithErroryAA0bcD0_p_s0L0_pSgtF">WearableDeviceSessionDelegate.session(_:didFailToOpenWithError:)</a></code> would indicate that the session failed to open.</li>
+</ul>
+
+<p>The v4 SDK opens the session for you and then performs multiple other operations on the session before passing it to your completion handler. Your completion handler will be invoked with one of the following values:</p>
+
+<ul>
+<li><code>.success(WearableDeviceSession)</code> indicates that the session opened successfully.</li>
+<li><code>.failure(Error)</code> indicates that the session failed to open, that a firmware update is required, or another error occurred while setting up the session.</li>
+<li><code>.cancelled</code> indicates that the user cancelled the operation.</li>
+</ul>
+
+<p>If you register a <code><a href="Protocols/WearableDeviceSessionDelegate.html">WearableDeviceSessionDelegate</a></code> on the <code><a href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a></code> passed to the completion handler, this delegate&rsquo;s <code>sessionDidOpen(_:)</code> and <code>session(_:didFailToOpenWithError:)</code> methods will not be invoked in response to the <code>startConnection</code> operation. This is because the session has already opened or failed to open before being passed to the completion handler and thus having your delegate registered.</p>
+
+<p>You should continue to register a delegate in order to be notified of a session closing via the <code><a href="Protocols/WearableDeviceSessionDelegate.html#/s:12BoseWearable0B21DeviceSessionDelegateP7session_17didCloseWithErroryAA0bcD0_p_s0J0_pSgtF">WearableDeviceSessionDelegate.session(_:didCloseWithError:)</a></code> function.</p>
+
+<p>If you use <code><a href="Protocols/WearableDeviceSession.html#/s:12BoseWearable0B13DeviceSessionP4openyyF">WearableDeviceSession.open()</a></code> to attempt to re-open a closed session (e.g., in response to the device disconnecting unexpectedly), you will need to use the <code><a href="Protocols/WearableDeviceSessionDelegate.html">WearableDeviceSessionDelegate</a></code> callbacks to be informed of the outcome of that operation.</p>
+
+<p>In summary, on first connection use the completion handler to determine whether the connection succeeded. When reopening a closed session, use the delegate callbacks.</p>
+<h2 id='euler-angle-conversion' class='heading'>Euler Angle Conversion</h2>
+
+<p>The <code><a href="Typealiases.html#/s:12BoseWearable10Quaterniona">Quaternion</a></code> type in the SDK provides <code>pitch</code>, <code>roll</code>, and <code>yaw</code> properties that are now deprecated. These return the right-handed rotation around the X, Y, and Z axis, respectively, as defined in the Bose Wearable Coordinate System. However, these only work for the raw Quaternion coming from the device. If calibrating or mapping to a different coordinate system, derive your pitch, roll, and yaw in the new coordinate system from right-handed <code>Quaternion.xRotation</code>, <code>Quaternion.yRotation</code>, and <code>Quaternion.zRotation</code>.</p>
+
+<p>For example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">quaternion</span> <span class="o">=</span> <span class="cm">/* input received from sensor */</span>
+
+<span class="k">let</span> <span class="nv">qMap</span> <span class="o">=</span> <span class="kt">Quaternion</span><span class="p">(</span><span class="nv">ix</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">iy</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">iz</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">r</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">qResult</span> <span class="o">=</span> <span class="n">quaternion</span> <span class="o">*</span> <span class="n">qMap</span>
+
+<span class="k">let</span> <span class="nv">pitch</span> <span class="o">=</span> <span class="n">qResult</span><span class="o">.</span><span class="n">xRotation</span>
+<span class="k">let</span> <span class="nv">roll</span> <span class="o">=</span> <span class="n">qResult</span><span class="o">.</span><span class="n">yRotation</span>
+<span class="k">let</span> <span class="nv">yaw</span> <span class="o">=</span> <span class="o">-</span><span class="n">qResult</span><span class="o">.</span><span class="n">zRotation</span>
+</code></pre>
+<h2 id='firmware-version' class='heading'>Firmware Version</h2>
+
+<p>During connection establishment, a check is performed to see whether updated firmware is available. The result of this check is automatically presented to the user when using the <code>startConnection</code> API. It is also available via the <code><a href="Protocols/WearableDevice.html#/s:12BoseWearable0B6DeviceP15firmwareVersionAA08FirmwareE0VSgvp">WearableDevice.firmwareVersion</a></code> property.</p>
+
+<p>The DataExample app shows this information under Device &gt; Firmware Version.</p>
+<h2 id='suspension' class='heading'>Suspension</h2>
+
+<p>As before, devices may suspend the wearable sensor service. On certain devices, certain user-initiated activities cause the wearable sensor service to be suspended due to bandwidth or processing restrictions.</p>
+
+<p>When the service is suspended, you will continue to be sent a <code>WearableDeviceEvent.didSuspendWearableSensorService</code>. In the v4 SDK, this event includes an associated <code><a href="Enums/SuspensionReason.html">SuspensionReason</a></code> which you can use to inform the user why sensor data is no longer being received.</p>
+
+<p>As before, you will continue to be sent a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO09didResumeB13SensorServiceyA2CmF">WearableDeviceEvent.didResumeWearableSensorService</a></code> event when the service resumes.</p>
+<h2 id='intents' class='heading'>Intents</h2>
+
+<p>An app may optionally specify a set of sensor and gesture intents that describe which sensors, sample periods, and gestures are required. The SDK provides mechanisms to validate these intents to determine whether a device is compatible with the requirements of your app.</p>
+
+<p>You can optionally provide <code><a href="Structs/SensorIntent.html">SensorIntent</a></code> and <code><a href="Structs/GestureIntent.html">GestureIntent</a></code> objects to the <code>startConnection</code> API to have the intents validated upon connection. If the intents are not met, the connection fails.</p>
+
+<p>Alternatively, you can call <code><a href="Protocols/WearableDevice.html#/s:12BoseWearable0B6DeviceP15validateIntents6sensor7gestureAA6ResultOyytGAA12SensorIntentV_AA07GestureJ0VtF">WearableDevice.validateIntents(sensor:gesture:)</a></code> after a connection to validate your intents manually.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://developer.bose.com" target="_blank" rel="external">Bose Corporation</a>. All rights reserved. (Last updated: 2019-06-20)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
