@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sensors and Coordinate System  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Sensors and Coordinate System  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          BoseWearable Docs
+        </a>
+         (99% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">BoseWearable Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Sensors and Coordinate System  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="logging.html">Logging</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="sample-code.html">Sample Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="sensors-and-coordinate-system.html">Sensors and Coordinate System</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="usage.html">Usage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="v4-migration-guide.html">V4 Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AlertAction.html">AlertAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AlertAction/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BoseWearable.html">BoseWearable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BoseWearable/ConfigOption.html">– ConfigOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ConnectionTask.html">ConnectionTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/DeviceSearchTask.html">DeviceSearchTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:12BoseWearable13ListenerTokenC">ListenerToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SensorDispatch.html">SensorDispatch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/AlertIcon.html">AlertIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BoseWearableError.html">BoseWearableError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BoseWearableError/ErrorCode.html">– ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/CancellableResult.html">CancellableResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ConnectUIMode.html">ConnectUIMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceProtocolError.html">DeviceProtocolError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceProtocolErrorCode.html">DeviceProtocolErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceSearchMode.html">DeviceSearchMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceState.html">DeviceState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/FirmwareUpdateApp.html">FirmwareUpdateApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/FirmwareUpdateStatus.html">FirmwareUpdateStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/GestureType.html">GestureType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/InfoType.html">InfoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SamplePeriod.html">SamplePeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SensorSample.html">SensorSample</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SensorType.html">SensorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SignalStrength.html">SignalStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SuspensionReason.html">SuspensionReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/VectorAccuracy.html">VectorAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/WearableDeviceEvent.html">WearableDeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/WearableDeviceSessionState.html">WearableDeviceSessionState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Quaternion.html">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Vector.html">Vector</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AlertUI.html">AlertUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ConnectUI.html">ConnectUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:12BoseWearable16ConnectUIElementP">ConnectUIElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DeviceSearchTaskUserInterface.html">DeviceSearchTaskUserInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DeviceSearchTaskUserInterfaceDelegate.html">DeviceSearchTaskUserInterfaceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/InfoUI.html">InfoUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/InfoUIDelegate.html">InfoUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SearchUI.html">SearchUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SearchUIDelegate.html">SearchUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDevice.html">WearableDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSessionDelegate.html">WearableDeviceSessionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSessionPairingDelegate.html">WearableDeviceSessionPairingDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ActiveNoiseReduction.html">ActiveNoiseReduction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ActiveNoiseReduction/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AlertIconAssets.html">AlertIconAssets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ControllableNoiseCancellation.html">ControllableNoiseCancellation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/DeviceStatus.html">DeviceStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/FirmwareVersion.html">FirmwareVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureConfiguration.html">GestureConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureData.html">GestureData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureInformation.html">GestureInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureIntent.html">GestureIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/QuaternionAccuracy.html">QuaternionAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SecurePairingInfo.html">SecurePairingInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SecurePairingInfo/Asset.html">– Asset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorConfiguration.html">SensorConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorData.html">SensorData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorInformation.html">SensorInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorIntent.html">SensorIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorValue.html">SensorValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/WearableDeviceInformation.html">WearableDeviceInformation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable10Quaterniona">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable15SensorTimestampa">SensorTimestamp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable6Vectora">Vector</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='sensors-and-coordinate-system' class='heading'>Sensors and Coordinate System</h1>
+
+<p>This document explains the device&rsquo;s coordinate system, the sensors supported by the BoseWearable SDK, and their units.</p>
+<h2 id='coordinate-system' class='heading'>Coordinate System</h2>
+
+<p>The following image shows the coordinate system used by Bose Wearable devices.</p>
+
+<p><img src="Docs/images/coordinate-system.png" alt=""></p>
+
+<p>The <strong>X axis</strong> is positive toward the user&rsquo;s right and negative toward the user&rsquo;s left.</p>
+
+<p>The <strong>Y axis</strong> is positive toward the user&rsquo;s back and negative toward the user&rsquo;s front.</p>
+
+<p>The <strong>Z axis</strong> is positive toward the user&rsquo;s body and negative toward the top of the user&rsquo;s head.</p>
+
+<p><strong>Pitch</strong> is rotation around the X axis. Positive pitch corresponds to looking up. Negative pitch corresponds to looking down.</p>
+
+<p><strong>Roll</strong> is rotation around the Y axis. Positive roll corresponds to tilting the head towards the left shoulder. Negative roll corresponds to tilting the head towards the right shoulder.</p>
+
+<p><strong>Yaw</strong> is rotation around the Z axis. Positive yaw corresponds to turning the head to the right. Negative yaw corresponds to turning the head to the left.</p>
+<h2 id='sensors' class='heading'>Sensors</h2>
+
+<p>This section describes the four sensors that are exposed by the Bose Wearable SDK: Accelerometer, Gyroscope, Rotation Vector, and Game Rotation Vector.</p>
+<h3 id='accelerometer' class='heading'>Accelerometer</h3>
+
+<ul>
+<li>Measures acceleration minus the force of gravity</li>
+<li>Provides 3-dimensional vector values</li>
+<li>Unit: g = 9.81 ms<sup>-2</sup></li>
+</ul>
+<h4 id='example' class='heading'>Example</h4>
+
+<p>If the device lying flat on a table, the accelerometer reading would be approximately (0, 0, -1). This is the acceleration of the device minus the force of gravity along the Z-axis: (0, 0, 0) - (0, 0, 1) = (0, 0, -1).</p>
+<h3 id='gyroscope' class='heading'>Gyroscope</h3>
+
+<ul>
+<li>Measures the rate of rotation around the three sensor axes</li>
+<li>Provides 3-dimensional vector values</li>
+<li>Unit: Degrees per second</li>
+</ul>
+<h4 id='example' class='heading'>Example</h4>
+
+<p>If the user&rsquo;s head is still, the accelerometer reading would be approximately (0, 0, 0).</p>
+
+<p>Nodding the head up and down corresponds to rotation around the X axis. Thus, moving the head up corresponds to a positive X value in the gyroscope reading. Moving the head down corresponds to a negative X value in the gyroscope reading.</p>
+
+<p>Tilting the head (i.e., moving the ear towards the shoulder) corresponds to rotation around the Y axis. Thus, tilting the head to the left corresponds to a positive Y value in the gyroscope reading. Tilting the head to the right corresponds to a negative Y value in the gyroscope reading.</p>
+
+<p>Shaking the head left and right corresponds to rotation around the Z axis. Thus, turning the head to the right corresponds to a positive Z value in the gyroscope reading. Turning the head to the left corresponds to a negative Z value in the gyroscope reading.</p>
+<h3 id='rotation' class='heading'>Rotation</h3>
+
+<ul>
+<li>Measures the orientation of the device relative to magnetic north</li>
+<li>Uses the accelerometer, gyroscope, and magnetometer to derive the orientation value</li>
+<li>Provides 4-dimension quaternion values</li>
+<li>Quaternions emitted by the SDK are unit quaternions with a norm of 1</li>
+<li>Unitless</li>
+</ul>
+
+<p>The quaternion values emitted by the SDK provide pitch, roll, and yaw properties that automatically convert from quaternions to Euler angles. Euler angle values are in radians.</p>
+<h3 id='game-rotation' class='heading'>Game Rotation</h3>
+
+<ul>
+<li>Similar to the rotation vector but does not use the geomagnetic field</li>
+<li>Not relative to magnetic north but to some other reference</li>
+<li>Provides 4-dimension quaternion values</li>
+<li>Quaternions emitted by the SDK are unit quaternions with a norm of 1</li>
+<li>Unitless</li>
+</ul>
+
+<p>The quaternion values emitted by the SDK provide pitch, roll, and yaw properties that automatically convert from quaternions to Euler angles. Euler angle values are in radians.</p>
+<h3 id='euler-angle-derivation-from-quaternions' class='heading'>Euler Angle Derivation from Quaternions</h3>
+
+<p>The <code><a href="Typealiases.html#/s:12BoseWearable10Quaterniona">Quaternion</a></code> type in the SDK provides deprecated <code>pitch</code>, <code>roll</code>, and <code>yaw</code> properties. These return the right-handed rotation around the X, Y, and Z axis, respectively, as defined in the Bose Wearable Coordinate System. However, these only work for the raw Quaternion coming from the device. If calibrating or mapping to a different coordinate system, derive your pitch, roll, and yaw in the new coordinate system from right-handed <code>Quaternion.xRotation</code>, <code>Quaternion.yRotation</code>, and <code>Quaternion.zRotation</code>.</p>
+
+<p>For example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">quaternion</span> <span class="o">=</span> <span class="cm">/* input received from sensor */</span>
+
+<span class="k">let</span> <span class="nv">qMap</span> <span class="o">=</span> <span class="kt">Quaternion</span><span class="p">(</span><span class="nv">ix</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">iy</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">iz</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">r</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">qResult</span> <span class="o">=</span> <span class="n">quaternion</span> <span class="o">*</span> <span class="n">qMap</span>
+
+<span class="k">let</span> <span class="nv">pitch</span> <span class="o">=</span> <span class="n">qResult</span><span class="o">.</span><span class="n">xRotation</span>
+<span class="k">let</span> <span class="nv">roll</span> <span class="o">=</span> <span class="n">qResult</span><span class="o">.</span><span class="n">yRotation</span>
+<span class="k">let</span> <span class="nv">yaw</span> <span class="o">=</span> <span class="o">-</span><span class="n">qResult</span><span class="o">.</span><span class="n">zRotation</span>
+</code></pre>
+<h2 id='user-heading' class='heading'>User Heading</h2>
+
+<p>The rotation sensor can be used to determine the user&rsquo;s heading. The <code>yaw</code> property on the <code><a href="Typealiases.html#/s:12BoseWearable10Quaterniona">Quaternion</a></code> values emitted by the rotation sensor indicate the user&rsquo;s heading relative to magnetic north (i.e., the magnetic north pole). This value is in radians. Note that the <code>estimatedAccuracy</code> field should be taken into consideration when interpreting this value.</p>
+
+<p>Bose provides a library called the <a href="https://github.com/Bose/WorldMagneticModel">World Magnetic Model</a> that provides a Swift-compatible Objective-C library that wraps <a href="https://www.ngdc.noaa.gov/geomag/WMM/">a library provided by the NOAA</a>. This library is publicly available on GitHub and can be installed <a href="https://cocoapods.org/pods/WorldMagneticModel">via CocoaPods</a>.</p>
+
+<p>The World Magnetic Model can be used to determine the magnetic declination based on the user&rsquo;s current location. The magnetic declination can be added to the user&rsquo;s magnetic heading to determine the user&rsquo;s heading relative to true north (i.e., the geographic north pole).</p>
+<h2 id='other-sensors' class='heading'>Other sensors</h2>
+
+<p>Other sensor types (orientation, magnetometer, and uncalibrated magnetometer) are supported by the SDK but are not enabled by the device firmware. They are included in the SDK for internal testing purposes.</p>
+
+<p>Orientation values can be derived by the pitch, roll, and yaw properties of the quaternion values emitted by the rotation and game rotation sensors.</p>
+
+<p>The SDK does not provide direct access to the magnetometer as that data is not useful in isolation. The hardware fuses the raw magnetometer data with the other sensors to derive the rotation vector which is relative to magnetic north. The compass heading is accessible via the yaw property of a quaternion value provided by the rotation sensor.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://developer.bose.com" target="_blank" rel="external">Bose Corporation</a>. All rights reserved. (Last updated: 2019-06-20)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

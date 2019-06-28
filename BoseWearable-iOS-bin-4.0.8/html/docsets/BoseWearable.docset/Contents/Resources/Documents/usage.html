@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Usage  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Usage  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          BoseWearable Docs
+        </a>
+         (99% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">BoseWearable Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Usage  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="logging.html">Logging</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="sample-code.html">Sample Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="sensors-and-coordinate-system.html">Sensors and Coordinate System</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="usage.html">Usage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="v4-migration-guide.html">V4 Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AlertAction.html">AlertAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/AlertAction/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BoseWearable.html">BoseWearable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/BoseWearable/ConfigOption.html">– ConfigOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ConnectionTask.html">ConnectionTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/DeviceSearchTask.html">DeviceSearchTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:12BoseWearable13ListenerTokenC">ListenerToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SensorDispatch.html">SensorDispatch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/AlertIcon.html">AlertIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BoseWearableError.html">BoseWearableError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/BoseWearableError/ErrorCode.html">– ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/CancellableResult.html">CancellableResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ConnectUIMode.html">ConnectUIMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceProtocolError.html">DeviceProtocolError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceProtocolErrorCode.html">DeviceProtocolErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceSearchMode.html">DeviceSearchMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/DeviceState.html">DeviceState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/FirmwareUpdateApp.html">FirmwareUpdateApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/FirmwareUpdateStatus.html">FirmwareUpdateStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/GestureType.html">GestureType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/InfoType.html">InfoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SamplePeriod.html">SamplePeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SensorSample.html">SensorSample</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SensorType.html">SensorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SignalStrength.html">SignalStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SuspensionReason.html">SuspensionReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/VectorAccuracy.html">VectorAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/WearableDeviceEvent.html">WearableDeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/WearableDeviceSessionState.html">WearableDeviceSessionState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Quaternion.html">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Vector.html">Vector</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/AlertUI.html">AlertUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ConnectUI.html">ConnectUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols.html#/s:12BoseWearable16ConnectUIElementP">ConnectUIElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DeviceSearchTaskUserInterface.html">DeviceSearchTaskUserInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/DeviceSearchTaskUserInterfaceDelegate.html">DeviceSearchTaskUserInterfaceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/InfoUI.html">InfoUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/InfoUIDelegate.html">InfoUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SearchUI.html">SearchUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SearchUIDelegate.html">SearchUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDevice.html">WearableDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSessionDelegate.html">WearableDeviceSessionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/WearableDeviceSessionPairingDelegate.html">WearableDeviceSessionPairingDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ActiveNoiseReduction.html">ActiveNoiseReduction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ActiveNoiseReduction/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/AlertIconAssets.html">AlertIconAssets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ControllableNoiseCancellation.html">ControllableNoiseCancellation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/DeviceStatus.html">DeviceStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/FirmwareVersion.html">FirmwareVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureConfiguration.html">GestureConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureData.html">GestureData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureInformation.html">GestureInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/GestureIntent.html">GestureIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/QuaternionAccuracy.html">QuaternionAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SecurePairingInfo.html">SecurePairingInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SecurePairingInfo/Asset.html">– Asset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorConfiguration.html">SensorConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorData.html">SensorData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorInformation.html">SensorInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorIntent.html">SensorIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/SensorValue.html">SensorValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/WearableDeviceInformation.html">WearableDeviceInformation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable10Quaterniona">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable15SensorTimestampa">SensorTimestamp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:12BoseWearable6Vectora">Vector</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='usage' class='heading'>Usage</h1>
+
+<p>This document describes how to use the Bose Wearable SDK in your app.</p>
+
+<ul>
+<li><a href="#client-app-requirements">Client App Requirements</a></li>
+<li><a href="#configuring-and-initializing-the-library">Configuring and Initializing the Library</a></li>
+<li><a href="#creating-and-opening-a-session">Creating and Opening a Session</a></li>
+<li><a href="#listening-for-connection-events">Listening for Connection Events</a></li>
+<li><a href="#configuring-sensors">Configuring Sensors</a></li>
+<li><a href="#configuring-gestures">Configuring Gestures</a></li>
+<li><a href="#configuration-example">Configuration Example</a></li>
+<li><a href="#listening-for-sensor-data">Listening for Sensor Data</a></li>
+<li><a href="#combined-example">Combined Example</a></li>
+</ul>
+<h2 id='client-app-requirements' class='heading'>Client App Requirements</h2>
+
+<p>The Bose Wearable SDK uses Bluetooth to communicate with a wearable device. As such, Apple requires you add an <code>NSBluetoothPeripheralUsageDescription</code> entry to your <code>Info.plist</code> file explaining why your app uses Bluetooth. For example:</p>
+<pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>NSBluetoothPeripheralUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>This app uses Bluetooth to communicate with Bose Wearable devices<span class="nt">&lt;/string&gt;</span>
+</code></pre>
+
+<p>Additionally, if you want to be able to communicate with a BoseWearable device while your app is in the background, you should add the following <code>UIBackgroundModes</code> entry to your <code>Info.plist</code> file:</p>
+<pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>UIBackgroundModes<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;array&gt;</span>
+    <span class="nt">&lt;string&gt;</span>bluetooth-central<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/array&gt;</span>
+</code></pre>
+<h2 id='configuring-and-initializing-the-library' class='heading'>Configuring and Initializing the Library</h2>
+
+<p>Before using the Bose Wearable library, you will need to call <code><a href="Classes/BoseWearable.html#/s:12BoseWearableAAC9configureyySDyAB12ConfigOptionOypGFZ">BoseWearable.configure(_:)</a></code>. We recommend doing so in your app delegate. For example:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+
+    <span class="c1">// ...</span>
+
+    <span class="c1">// Configure the BoseWearable SDK.</span>
+    <span class="kt">BoseWearable</span><span class="o">.</span><span class="nf">configure</span><span class="p">()</span>
+
+    <span class="c1">// Enable common logging categories. Remove this from production code.</span>
+    <span class="kt">BoseWearable</span><span class="o">.</span><span class="nf">enableCommonLogging</span><span class="p">()</span>
+
+    <span class="c1">// ...</span>
+
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The <code><a href="Classes/BoseWearable.html#/s:12BoseWearableAAC9configureyySDyAB12ConfigOptionOypGFZ">BoseWearable.configure(_:)</a></code> method takes an optional dictionary containing configuration parameters. See the documentation for more details.</p>
+<h2 id='creating-and-opening-a-session' class='heading'>Creating and Opening a Session</h2>
+
+<p>Use <code>BoseWearable.startConnection(mode:sensorIntent:gestureIntent:completionHander:)</code> to quickly and easily establish a connection with a wearable device.</p>
+<pre class="highlight swift"><code><span class="c1">// Perform the device search and connect to the selected device. This may</span>
+<span class="c1">// present a view controller on a new UIWindow.</span>
+<span class="kt">BoseWearable</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">startConnection</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="n">mode</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+
+    <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="k">let</span> <span class="nv">session</span><span class="p">):</span>
+        <span class="c1">// A device was selected, a session was created and opened. Show a view</span>
+        <span class="c1">// controller that will become the session delegate.</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">showViewController</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">session</span><span class="p">)</span>
+
+    <span class="k">case</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+        <span class="c1">// An error occurred when searching for or connecting to a device.</span>
+        <span class="c1">// Present an alert showing the error.</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">show</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+
+    <span class="k">case</span> <span class="o">.</span><span class="nv">cancelled</span><span class="p">:</span>
+        <span class="c1">// The user cancelled the search operation.</span>
+        <span class="k">break</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='listening-for-connection-events' class='heading'>Listening for Connection Events</h2>
+
+<p>You can use the <code><a href="Protocols/WearableDeviceSessionDelegate.html">WearableDeviceSessionDelegate</a></code> protocol to listen for connection events. Assign a delegate to the <code><a href="Protocols/WearableDeviceSession.html#/s:12BoseWearable0B13DeviceSessionP8delegateAA0bcD8Delegate_pSgvp">WearableDeviceSession.delegate</a></code> property to receive those events. For example:</p>
+<pre class="highlight swift"><code>
+<span class="kd">extension</span> <span class="kt">ExampleClass</span><span class="p">:</span> <span class="kt">WearableDeviceSessionDelegate</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">sessionDidOpen</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">WearableDeviceSession</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Session opened successfully. Note that the session passed to the</span>
+        <span class="c1">// startConnection completion handler is already open. This delegate</span>
+        <span class="c1">// method is only useful when re-opening a session.</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">WearableDeviceSession</span><span class="p">,</span> <span class="n">didFailToOpenWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="c1">// The session failed to open. Present the error to the user. As above,</span>
+        <span class="c1">// the session passed to the startConnection completion handler is</span>
+        <span class="c1">// already open. This delegate method is only useful when re-opening a</span>
+        <span class="c1">// session.</span>
+        <span class="nf">show</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">WearableDeviceSession</span><span class="p">,</span> <span class="n">didCloseWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="c1">// The session closed. If error is nil, this was an expected closure</span>
+        <span class="c1">// (e.g., the connection was requested to be closed).</span>
+
+        <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="nf">show</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='reconnecting-to-a-device' class='heading'>Reconnecting to a Device</h2>
+
+<p>In the event that a session has closed, you will be notified via the <code><a href="Protocols/WearableDeviceSessionDelegate.html#/s:12BoseWearable0B21DeviceSessionDelegateP7session_17didCloseWithErroryAA0bcD0_p_s0J0_pSgtF">WearableDeviceSessionDelegate.session(_:didCloseWithError:)</a></code> delegate function. To re-establish communication with the remote device, you can do one of two things:</p>
+
+<ol>
+<li>You can call <code><a href="Protocols/WearableDeviceSession.html#/s:12BoseWearable0B13DeviceSessionP4openyyF">WearableDeviceSession.open()</a></code> to open the connection again. Note that if the session was closed due to the remote device being powered down or moved out of range, it must be powered back on or moved back into range in order for this to succeed. You will be notified on the <code><a href="Protocols/WearableDeviceSessionDelegate.html">WearableDeviceSessionDelegate</a></code> whether this call to <code>open()</code> has succeeded (via <code><a href="Protocols/WearableDeviceSessionDelegate.html#/s:12BoseWearable0B21DeviceSessionDelegateP14sessionDidOpenyyAA0bcD0_pF">WearableDeviceSessionDelegate.sessionDidOpen(_:)</a></code>) or failed (via <code><a href="Protocols/WearableDeviceSessionDelegate.html#/s:12BoseWearable0B21DeviceSessionDelegateP7session_22didFailToOpenWithErroryAA0bcD0_p_s0L0_pSgtF">WearableDeviceSessionDelegate.session(_:didFailToOpenWithError:)</a></code>).</li>
+<li>You can perform another device search. Note that you must first release the closed <code><a href="Protocols/WearableDeviceSession.html">WearableDeviceSession</a></code> by setting any retained references to <code>nil</code>.</li>
+</ol>
+<h2 id='configuring-sensors' class='heading'>Configuring Sensors</h2>
+<h3 id='sensor-information' class='heading'>Sensor Information</h3>
+
+<p>A <code><a href="Protocols/WearableDevice.html">WearableDevice</a></code> provides a <code><a href="Protocols/WearableDevice.html#/s:12BoseWearable0B6DeviceP17sensorInformationAA06SensorE0VSgvp">WearableDevice.sensorInformation</a></code> property that contains information about the sensors available on the device. Of particular interest to client applications is the <code><a href="Structs/SensorInformation.html#/s:12BoseWearable17SensorInformationV16availableSensorsSayAA0C4TypeOGvp">SensorInformation.availableSensors</a></code> array that identifies which sensors are available on the device and the <code><a href="Structs/SensorInformation.html#/s:12BoseWearable17SensorInformationV22availableSamplePeriodsSayAA0F6PeriodOGvp">SensorInformation.availableSamplePeriods</a></code> array that identifies which sample periods are available for use with the available sensors. The SDK fires a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO26didUpdateSensorInformationyAcA0gH0VcACmF">WearableDeviceEvent.didUpdateSensorInformation(_:)</a></code> whenever this property changes.</p>
+<h3 id='sensor-configuration' class='heading'>Sensor Configuration</h3>
+
+<p>A <code><a href="Protocols/WearableDevice.html">WearableDevice</a></code> also provides a <code><a href="Protocols/WearableDevice.html#/s:12BoseWearable0B6DeviceP19sensorConfigurationAA06SensorE0VSgvp">WearableDevice.sensorConfiguration</a></code> property that contains the current configuration of its sensors. This indicates which sensors are enabled and the sample period for those enabled sensors. The SDK fires a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO28didUpdateSensorConfigurationyAcA0gH0VcACmF">WearableDeviceEvent.didUpdateSensorConfiguration(_:)</a></code> event whenever this property changes.</p>
+
+<p>The <code><a href="Structs/SensorConfiguration.html">SensorConfiguration</a></code> object allows you to do any of the following in a single shot:</p>
+
+<ul>
+<li>Enable sensors at a specified sample period (see <code><a href="Structs/SensorConfiguration.html#/s:12BoseWearable19SensorConfigurationV6enable6sensor2atyAA0C4TypeO_AA12SamplePeriodOtF">SensorConfiguration.enable(sensor:at:)</a></code>)</li>
+<li>Disable sensors (see <code><a href="Structs/SensorConfiguration.html#/s:12BoseWearable19SensorConfigurationV7disable6sensoryAA0C4TypeO_tF">SensorConfiguration.disable(sensor:)</a></code>)</li>
+<li>Change the sample period for all currently-enabled sensors (see <code><a href="Structs/SensorConfiguration.html#/s:12BoseWearable19SensorConfigurationV26enabledSensorsSamplePeriodAA0gH0OSgvp">SensorConfiguration.enabledSensorsSamplePeriod</a></code>)</li>
+</ul>
+
+<p>Upon connection to a wearable device, all sensors are disabled. The client application must configure the sensors appropriately. This can be done via the <code><a href="Protocols/WearableDevice.html#/s:12BoseWearable0B6DevicePAAE16configureSensorsyyyAA19SensorConfigurationVzXEF">WearableDevice.configureSensors(_:)</a></code> function.</p>
+
+<p>If the device accepts the new configuration, a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO27didWriteSensorConfigurationyA2CmF">WearableDeviceEvent.didWriteSensorConfiguration</a></code> event is fired followed by a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO28didUpdateSensorConfigurationyAcA0gH0VcACmF">WearableDeviceEvent.didUpdateSensorConfiguration(_:)</a></code> event containing the updated sensor configuration. If the device does not accept the new configuration, a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO33didFailToWriteSensorConfigurationyACs5Error_pcACmF">WearableDeviceEvent.didFailToWriteSensorConfiguration(_:)</a></code> is fired with an error object that indicates the cause of the failure.</p>
+
+<p>The <a href="#configuration-example">Configuration Example</a> below shows how to use this feature.</p>
+<h2 id='configuring-gestures' class='heading'>Configuring Gestures</h2>
+<h3 id='gesture-information' class='heading'>Gesture Information</h3>
+
+<p>A <code><a href="Protocols/WearableDevice.html">WearableDevice</a></code> provides a <code><a href="Protocols/WearableDevice.html#/s:12BoseWearable0B6DeviceP18gestureInformationAA07GestureE0VSgvp">WearableDevice.gestureInformation</a></code> property that contains information about the gestures that are available on the device. Of particular interest to client applicatons is the <code><a href="Structs/GestureInformation.html#/s:12BoseWearable18GestureInformationV17availableGesturesSayAA0C4TypeOGvp">GestureInformation.availableGestures</a></code> array that identifies which gestures are available on the device. The SDK fires a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO27didUpdateGestureInformationyAcA0gH0VcACmF">WearableDeviceEvent.didUpdateGestureInformation(_:)</a></code> whenever this property changes.</p>
+<h3 id='gesture-configuration' class='heading'>Gesture Configuration</h3>
+
+<p>A <code><a href="Protocols/WearableDevice.html">WearableDevice</a></code> also provides a <code><a href="Protocols/WearableDevice.html#/s:12BoseWearable0B6DeviceP20gestureConfigurationAA07GestureE0VSgvp">WearableDevice.gestureConfiguration</a></code> property that contains the current configuration of its gestures. This indicates which gestures are enabled. The SDK fires a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO29didUpdateGestureConfigurationyAcA0gH0VcACmF">WearableDeviceEvent.didUpdateGestureConfiguration(_:)</a></code> whenever this property changes.</p>
+
+<p>The <code><a href="Structs/GestureConfiguration.html">GestureConfiguration</a></code> object allows you to enable or disable supported gestures.</p>
+
+<p>Upon connection to a wearable device, all gestures are disabled by default. The client application must configure the gestures appropriately. This can be done via the <code><a href="Protocols/WearableDevice.html#/s:12BoseWearable0B6DevicePAAE17configureGesturesyyyAA20GestureConfigurationVzXEF">WearableDevice.configureGestures(_:)</a></code> function.</p>
+
+<p>If the device accepts the new configuration, a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO28didWriteGestureConfigurationyA2CmF">WearableDeviceEvent.didWriteGestureConfiguration</a></code> event is fired followed by a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO29didUpdateGestureConfigurationyAcA0gH0VcACmF">WearableDeviceEvent.didUpdateGestureConfiguration(_:)</a></code> event containing the updated gesture configuration. If the device does not accept the new configuration, a <code><a href="Enums/WearableDeviceEvent.html#/s:12BoseWearable0B11DeviceEventO34didFailToWriteGestureConfigurationyACs5Error_pcACmF">WearableDeviceEvent.didFailToWriteGestureConfiguration(_:)</a></code> is fired with an error object that indicates the cause of the failure.</p>
+
+<p>The <a href="#configuration-example">Configuration Example</a> below shows how to use this feature.</p>
+<h2 id='configuration-example' class='heading'>Configuration Example</h2>
+
+<p>Consider an application that wants to:</p>
+
+<ul>
+<li>Enable both the accelerometer and gyroscope at 50 Hz (this corresponds to a 20 ms update period).</li>
+<li>Enable the double-tap gesture.</li>
+</ul>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BoseWearable</span>
+
+<span class="kd">class</span> <span class="kt">ExampleClass</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">device</span><span class="p">:</span> <span class="kt">WearableDevice</span>
+
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">ListenerToken</span><span class="p">?</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">device</span><span class="p">:</span> <span class="kt">WearableDevice</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device</span>
+
+        <span class="c1">// Listen for WearableDeviceEvents.</span>
+        <span class="n">token</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">event</span> <span class="k">in</span>
+            <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">wearableDeviceEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">configureSensors</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">device</span><span class="o">.</span><span class="n">configureSensors</span> <span class="p">{</span> <span class="n">config</span> <span class="k">in</span>
+            <span class="c1">// First, disable all currently-enabled sensors.</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">disableAll</span><span class="p">()</span>
+
+            <span class="c1">// Next, configure the sensors we are interested in.</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">enable</span><span class="p">(</span><span class="nv">sensor</span><span class="p">:</span> <span class="o">.</span><span class="n">accelerometer</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="o">.</span><span class="n">_20ms</span><span class="p">)</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">enable</span><span class="p">(</span><span class="nv">sensor</span><span class="p">:</span> <span class="o">.</span><span class="n">gyroscope</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="o">.</span><span class="n">_20ms</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">configureGestures</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">device</span><span class="o">.</span><span class="n">configureGestures</span> <span class="p">{</span> <span class="n">config</span> <span class="k">in</span>
+            <span class="c1">// First, disable all currently-enabled gestures.</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">disableAll</span><span class="p">()</span>
+
+            <span class="c1">// Next, configure the gestures we are interested in.</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="nv">gesture</span><span class="p">:</span> <span class="o">.</span><span class="n">doubleTap</span><span class="p">,</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">wearableDeviceEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">WearableDeviceEvent</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="n">event</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nv">didWriteSensorConfiguration</span><span class="p">:</span>
+            <span class="c1">// The sensor configuration change was accepted.</span>
+
+        <span class="k">case</span> <span class="o">.</span><span class="nf">didFailToWriteSensorConfiguration</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+            <span class="c1">// The sensor configuration change was rejected with the specified error.</span>
+
+        <span class="k">case</span> <span class="o">.</span><span class="nv">didWriteGestureConfiguration</span><span class="p">:</span>
+            <span class="c1">// The gesture configuration change was accepted.</span>
+
+        <span class="k">case</span> <span class="o">.</span><span class="nf">didFailToWriteGestureConfiguration</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+            <span class="c1">// The gesture configuration change was rejected with the specified error.</span>
+
+        <span class="k">default</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='listening-for-sensor-data' class='heading'>Listening for Sensor Data</h2>
+
+<p>The example above showed how to configure the sensors to send data but it did not show how to receive that data. This section and its example will illustrate how that is done.</p>
+
+<p>The <code><a href="Classes/SensorDispatch.html">SensorDispatch</a></code> class allows you to listen for sensor data. Classes interested in receiving sensor data need to create a <code><a href="Classes/SensorDispatch.html">SensorDispatch</a></code> instance, specifying which dispatch queue it wants to be notified on. The class then provides the <code><a href="Classes/SensorDispatch.html">SensorDispatch</a></code> object with a handler object and/or callback blocks to receive the sensor data.</p>
+
+<p>You can have as many <code><a href="Classes/SensorDispatch.html">SensorDispatch</a></code> instances as you like. They each will receive the same sensor data.</p>
+
+<p>The <code><a href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a></code> protocol provides methods for each of the supported sensor types. You can implement the functions corresponding to the sensors of interest to your app in order to receive data from those sensors:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ExampleOne</span><span class="p">:</span> <span class="kt">SensorDispatchHandler</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">sensorDispatch</span> <span class="o">=</span> <span class="kt">SensorDispatch</span><span class="p">(</span><span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span>
+
+    <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">sensorDispatch</span><span class="o">.</span><span class="n">handler</span> <span class="o">=</span> <span class="k">self</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">receivedAccelerometer</span><span class="p">(</span><span class="nv">vector</span><span class="p">:</span> <span class="kt">Vector</span><span class="p">,</span> <span class="nv">accuracy</span><span class="p">:</span> <span class="kt">VectorAccuracy</span><span class="p">,</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">SensorTimestamp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// handle accelerometer reading</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">receivedGyroscope</span><span class="p">(</span><span class="nv">vector</span><span class="p">:</span> <span class="kt">Vector</span><span class="p">,</span> <span class="nv">accuracy</span><span class="p">:</span> <span class="kt">VectorAccuracy</span><span class="p">,</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">SensorTimestamp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// handle gyroscope reading</span>
+    <span class="p">}</span>
+
+    <span class="c1">// ...</span>
+</code></pre>
+
+<p>Note that the <code><a href="Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a></code> protocol provides default implementations for all of its methods, so you need only to implement the functions corresponding to the sensors you are interested in.</p>
+
+<p>You can also use callback blocks to receive sensor data:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ExampleTwo</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">sensorDispatch</span> <span class="o">=</span> <span class="kt">SensorDispatch</span><span class="p">(</span><span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span>
+
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">startListening</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">sensorDispatch</span><span class="o">.</span><span class="n">accelerometerCallback</span> <span class="o">=</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">)</span> <span class="k">in</span>
+            <span class="c1">// handle accelerometer reading</span>
+        <span class="p">}</span>
+
+        <span class="n">sensorDispatch</span><span class="o">.</span><span class="n">gyroscopeCallback</span> <span class="o">=</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">)</span> <span class="k">in</span>
+            <span class="c1">// handle gyroscope reading</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// ...</span>
+</code></pre>
+
+<p>These two approaches are equivalent. Which you use is a matter of preference. You are free to mix the two approaches with the same <code><a href="Classes/SensorDispatch.html">SensorDispatch</a></code> object. See the documentation for <code><a href="Classes/SensorDispatch.html">SensorDispatch</a></code> for more details.</p>
+<h2 id='combined-example' class='heading'>Combined Example</h2>
+
+<p>The following class enables the accelerometer and gyroscope sensors as well as the double-tap gesture. It uses a <code><a href="Classes/SensorDispatch.html">SensorDispatch</a></code> object to receive the data related to those sensors and gestures.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">BoseWearable</span>
+
+<span class="kd">class</span> <span class="kt">ExampleClass</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">device</span><span class="p">:</span> <span class="kt">WearableDevice</span>
+
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">ListenerToken</span><span class="p">?</span>
+
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">sensorDispatch</span> <span class="o">=</span> <span class="kt">SensorDispatch</span><span class="p">(</span><span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">device</span><span class="p">:</span> <span class="kt">WearableDevice</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">device</span>
+
+        <span class="c1">// Listen for WearableDeviceEvents.</span>
+        <span class="n">token</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">event</span> <span class="k">in</span>
+            <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">wearableDeviceEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="nf">configureSensors</span><span class="p">()</span>
+        <span class="nf">configureGestures</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">configureSensors</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">device</span><span class="o">.</span><span class="n">configureSensors</span> <span class="p">{</span> <span class="n">config</span> <span class="k">in</span>
+            <span class="c1">// First, disable all currently-enabled sensors.</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">disableAll</span><span class="p">()</span>
+
+            <span class="c1">// Next, configure the sensors we are interested in.</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">enable</span><span class="p">(</span><span class="nv">sensor</span><span class="p">:</span> <span class="o">.</span><span class="n">accelerometer</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="o">.</span><span class="n">_20ms</span><span class="p">)</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">enable</span><span class="p">(</span><span class="nv">sensor</span><span class="p">:</span> <span class="o">.</span><span class="n">gyroscope</span><span class="p">,</span> <span class="nv">at</span><span class="p">:</span> <span class="o">.</span><span class="n">_20ms</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">configureGestures</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">device</span><span class="o">.</span><span class="n">configureGestures</span> <span class="p">{</span> <span class="n">config</span> <span class="k">in</span>
+            <span class="c1">// First, disable all currently-enabled gestures.</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">disableAll</span><span class="p">()</span>
+
+            <span class="c1">// Next, configure the gestures we are interested in.</span>
+            <span class="n">config</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="nv">gesture</span><span class="p">:</span> <span class="o">.</span><span class="n">doubleTap</span><span class="p">,</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kd">func</span> <span class="nf">wearableDeviceEvent</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">WearableDeviceEvent</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="n">event</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nv">didUpdateSensorConfiguration</span><span class="p">:</span>
+            <span class="c1">// The sensor configuration change was accepted.</span>
+
+        <span class="k">case</span> <span class="o">.</span><span class="nf">didFailToWriteSensorConfiguration</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+            <span class="c1">// The sensor configuration change was rejected with the specified error.</span>
+
+        <span class="k">case</span> <span class="o">.</span><span class="nv">didUpdateGestureConfiguration</span><span class="p">:</span>
+            <span class="c1">// The gesture configuration change was accepted.</span>
+
+        <span class="k">case</span> <span class="o">.</span><span class="nf">didFailToWriteGestureConfiguration</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+            <span class="c1">// The gesture configuration change was rejected with the specified error.</span>
+
+        <span class="k">default</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// NOTE: The SensorDispatchHandler functions are invoked by the SensorDispatch</span>
+<span class="c1">// on the main queue, as specified in the call to the SensorDispatch initializer.</span>
+
+<span class="kd">extension</span> <span class="kt">ExampleClass</span><span class="p">:</span> <span class="kt">SensorDispatchHandler</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">receivedAccelerometer</span><span class="p">(</span><span class="nv">vector</span><span class="p">:</span> <span class="kt">Vector</span><span class="p">,</span> <span class="nv">accuracy</span><span class="p">:</span> <span class="kt">VectorAccuracy</span><span class="p">,</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">SensorTimestamp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// handle accelerometer reading</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">receivedGyroscope</span><span class="p">(</span><span class="nv">vector</span><span class="p">:</span> <span class="kt">Vector</span><span class="p">,</span> <span class="nv">accuracy</span><span class="p">:</span> <span class="kt">VectorAccuracy</span><span class="p">,</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">SensorTimestamp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// handle gyroscope reading</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">receivedGesture</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">GestureType</span><span class="p">,</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">SensorTimestamp</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// handle gesture</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://developer.bose.com" target="_blank" rel="external">Bose Corporation</a>. All rights reserved. (Last updated: 2019-06-20)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

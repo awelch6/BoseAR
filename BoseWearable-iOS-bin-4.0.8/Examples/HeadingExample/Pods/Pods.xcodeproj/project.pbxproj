@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C3E20F2CE97A12B1D60EE7BD0DB1904 /* WorldMagneticModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A19985E42AA13A2D616D906DAB233C /* WorldMagneticModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BB9DFA5B219C5EA8076636092598BBD /* WMMAltitude.h in Headers */ = {isa = PBXBuildFile; fileRef = E86C59DE9BED34A5D74E9700DD5F3AA9 /* WMMAltitude.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20267D6BD458893F9AAA94EF9630D5A3 /* WMMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B10B0CB584BF59F0DCBABD316E63A4 /* WMMModel.m */; };
+		2559488406E572D08490F028E8928AB6 /* WMMDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7D98DF2F72FE30B20575026E64773 /* WMMDate.m */; };
+		3235409C1B632700D775A2E565F7C8BD /* WorldMagneticModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5FC1C8C8DE99C7727CA5A76167592D /* WorldMagneticModel-dummy.m */; };
+		340EA50FAC0571ADE98830640D472B7B /* WMMModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C24EBCE0F6493736CA6C90BD275EB43A /* WMMModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C1ED3616D779353AC00845D03DEB3D4 /* WMMElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CE21C47394F0FBC11FB250A7FCF0E5 /* WMMElements.m */; };
+		5F6C12D3C22FB4356CD959F18DD6FEC9 /* WMMElements+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = CDD8713053AF1BA8D59AE76EB4D85F46 /* WMMElements+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		622FF277E1FE5254F01A671C9318D0ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		7C142BAEDF964A8750D15897FF38A920 /* GeomagnetismLibrary.c in Sources */ = {isa = PBXBuildFile; fileRef = 74D25966B4CE6E1713A3F91E265B48E0 /* GeomagnetismLibrary.c */; };
+		81CCCE2620111D5288A29AAE32EBC050 /* WMM.COF in Resources */ = {isa = PBXBuildFile; fileRef = D2A868ED98A8272B23203786AAAB0778 /* WMM.COF */; };
+		9140A6E729FB529BE9C679F2B88277AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		9A19AAD7BE73B9648E5E0CBF2393FE45 /* GeomagnetismHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 422AAE2B0FCAD540F0C98DFE7EFEC447 /* GeomagnetismHeader.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		AAA2FDA8B3CB746090C13ABF38763B75 /* WMMDate+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7CC21CDC6D1B31D8991C0F43A06635 /* WMMDate+Internal.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		B2075A95DDDA31A60E9D26AE29867B6E /* Pods-HeadingExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B87FD05399F42B62849A1410C3DBF /* Pods-HeadingExample-dummy.m */; };
+		E4AC7610FA2F66C62CD7C382989335D0 /* EGM9615.h in Headers */ = {isa = PBXBuildFile; fileRef = C30BB69E0A8856974F37BE4BC934F42F /* EGM9615.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		ECC24E9F2E34040A090D910980D81692 /* WMMElements.h in Headers */ = {isa = PBXBuildFile; fileRef = 041A8E0C578A63CFC3783BEEC5D2B400 /* WMMElements.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F00C8CBF362CC4D1E563B5C775388FDF /* WMMDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 69849ED15F7EA51942DA475F9C9F980A /* WMMDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0613630552A9B09786F0E2A269FB78C /* Pods-HeadingExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B05C07118F0104E316E4922C74BD70 /* Pods-HeadingExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5BAD89755EE63A9077C71ED001E5756 /* WorldMagneticModel.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA84030F8527F2A95CD5FC122A16CB2 /* WorldMagneticModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4053A34C506CA4FB5B1E7084EE9BACF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 261E6B535C9D5F4383C5DF56D363B2A4;
+			remoteInfo = WorldMagneticModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041A8E0C578A63CFC3783BEEC5D2B400 /* WMMElements.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMMElements.h; path = Source/WMMElements.h; sourceTree = "<group>"; };
+		13D55D6F9F1022DC4A0446EFDD402AC3 /* Pods-HeadingExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HeadingExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		16178331CFE4CB49FA8FD66D41BABC71 /* WorldMagneticModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WorldMagneticModel-prefix.pch"; sourceTree = "<group>"; };
+		2651BCFC88AD4AAB6783D8E64082F8A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D1597F1C88E0EC9B8A655DA5EF9D862 /* BoseWearable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoseWearable.framework; path = Frameworks/iOS/BoseWearable.framework; sourceTree = "<group>"; };
+		366A8D2B541E9E27BC6421BA0B2A1132 /* Logging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logging.framework; path = Frameworks/iOS/Logging.framework; sourceTree = "<group>"; };
+		422AAE2B0FCAD540F0C98DFE7EFEC447 /* GeomagnetismHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeomagnetismHeader.h; path = Source/WMM/GeomagnetismHeader.h; sourceTree = "<group>"; };
+		4B5FC1C8C8DE99C7727CA5A76167592D /* WorldMagneticModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WorldMagneticModel-dummy.m"; sourceTree = "<group>"; };
+		605E3C25A4D8B5D4B4BB1BE5E1A42B9E /* Logging.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Logging.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6619222006E8878950C2E7D2B76004A5 /* BLECore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BLECore.framework; path = Frameworks/iOS/BLECore.framework; sourceTree = "<group>"; };
+		67B10B0CB584BF59F0DCBABD316E63A4 /* WMMModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMMModel.m; path = Source/WMMModel.m; sourceTree = "<group>"; };
+		69849ED15F7EA51942DA475F9C9F980A /* WMMDate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMMDate.h; path = Source/WMMDate.h; sourceTree = "<group>"; };
+		69CE21C47394F0FBC11FB250A7FCF0E5 /* WMMElements.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMMElements.m; path = Source/WMMElements.m; sourceTree = "<group>"; };
+		715A300D3D7E99C3D0D2D9118485580F /* WorldMagneticModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WorldMagneticModel.modulemap; sourceTree = "<group>"; };
+		74D25966B4CE6E1713A3F91E265B48E0 /* GeomagnetismLibrary.c */ = {isa = PBXFileReference; includeInIndex = 1; name = GeomagnetismLibrary.c; path = Source/WMM/GeomagnetismLibrary.c; sourceTree = "<group>"; };
+		77B257CD698CA3A80A327A31B2C0B340 /* Pods-HeadingExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HeadingExample.modulemap"; sourceTree = "<group>"; };
+		7BF4AC439FD12A81E58EE04625E0B674 /* Pods-HeadingExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeadingExample-frameworks.sh"; sourceTree = "<group>"; };
+		8993D6C47776F5988E151DF0E6FFB7DC /* Pods_HeadingExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HeadingExample.framework; path = "Pods-HeadingExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		914593261AFCAE1B34ABE066EFD5EE2E /* BoseWearable.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BoseWearable.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DB7D98DF2F72FE30B20575026E64773 /* WMMDate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WMMDate.m; path = Source/WMMDate.m; sourceTree = "<group>"; };
+		A5CFDF804A08CFD40CCA67666F476964 /* Pods-HeadingExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HeadingExample-resources.sh"; sourceTree = "<group>"; };
+		B5407FAC98C8457A96FCB6B73D414CFC /* BLECore.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BLECore.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B55AD99310DCA79D33B727C2A074858E /* Pods-HeadingExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeadingExample.release.xcconfig"; sourceTree = "<group>"; };
+		B5B05C07118F0104E316E4922C74BD70 /* Pods-HeadingExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HeadingExample-umbrella.h"; sourceTree = "<group>"; };
+		B67B87FD05399F42B62849A1410C3DBF /* Pods-HeadingExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HeadingExample-dummy.m"; sourceTree = "<group>"; };
+		B8694730BAA18FC3C45B2852864917D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0EEE32A7BEB436BF15463C89CAA2BC /* Pods-HeadingExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HeadingExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C24EBCE0F6493736CA6C90BD275EB43A /* WMMModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMMModel.h; path = Source/WMMModel.h; sourceTree = "<group>"; };
+		C30BB69E0A8856974F37BE4BC934F42F /* EGM9615.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EGM9615.h; path = Source/WMM/EGM9615.h; sourceTree = "<group>"; };
+		CAA99F71FA961F14C1C55B46E5E9F7A3 /* Pods-HeadingExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HeadingExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CDD8713053AF1BA8D59AE76EB4D85F46 /* WMMElements+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WMMElements+Internal.h"; path = "Source/WMMElements+Internal.h"; sourceTree = "<group>"; };
+		D2A868ED98A8272B23203786AAAB0778 /* WMM.COF */ = {isa = PBXFileReference; includeInIndex = 1; name = WMM.COF; path = Source/WMM/WMM.COF; sourceTree = "<group>"; };
+		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DC7CC21CDC6D1B31D8991C0F43A06635 /* WMMDate+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WMMDate+Internal.h"; path = "Source/WMMDate+Internal.h"; sourceTree = "<group>"; };
+		E5A19985E42AA13A2D616D906DAB233C /* WorldMagneticModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WorldMagneticModel-umbrella.h"; sourceTree = "<group>"; };
+		E86C59DE9BED34A5D74E9700DD5F3AA9 /* WMMAltitude.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WMMAltitude.h; path = Source/WMMAltitude.h; sourceTree = "<group>"; };
+		ED86246C66A2EB3283779F4ED2DBC7E5 /* WorldMagneticModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WorldMagneticModel.framework; path = WorldMagneticModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4AD3AC34C48C16B1192851E7765A551 /* WorldMagneticModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WorldMagneticModel.xcconfig; sourceTree = "<group>"; };
+		FCA84030F8527F2A95CD5FC122A16CB2 /* WorldMagneticModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WorldMagneticModel.h; path = Source/WorldMagneticModel.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25FE32EAFFDC281392014AF0797DA033 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				622FF277E1FE5254F01A671C9318D0ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C39DE107BB0657B8A322DF519B0553A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9140A6E729FB529BE9C679F2B88277AD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10A97C0CCD52CF5EFDC5C7FD4CF7552A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8993D6C47776F5988E151DF0E6FFB7DC /* Pods_HeadingExample.framework */,
+				ED86246C66A2EB3283779F4ED2DBC7E5 /* WorldMagneticModel.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3088499E8AE19C26FB640BCFB5ECF9DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6619222006E8878950C2E7D2B76004A5 /* BLECore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3921B0163EADCA36BB785B3389CB1D73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DA35A5B72117F9E456299D52C63FBD1 /* WorldMagneticModel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		583159F9B71449C687AAFFCC88620DAA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B5407FAC98C8457A96FCB6B73D414CFC /* BLECore.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		5A399E76E3DF8E48EDFF81A01DFEC2C3 /* Pods-HeadingExample */ = {
+			isa = PBXGroup;
+			children = (
+				2651BCFC88AD4AAB6783D8E64082F8A0 /* Info.plist */,
+				77B257CD698CA3A80A327A31B2C0B340 /* Pods-HeadingExample.modulemap */,
+				CAA99F71FA961F14C1C55B46E5E9F7A3 /* Pods-HeadingExample-acknowledgements.markdown */,
+				13D55D6F9F1022DC4A0446EFDD402AC3 /* Pods-HeadingExample-acknowledgements.plist */,
+				B67B87FD05399F42B62849A1410C3DBF /* Pods-HeadingExample-dummy.m */,
+				7BF4AC439FD12A81E58EE04625E0B674 /* Pods-HeadingExample-frameworks.sh */,
+				A5CFDF804A08CFD40CCA67666F476964 /* Pods-HeadingExample-resources.sh */,
+				B5B05C07118F0104E316E4922C74BD70 /* Pods-HeadingExample-umbrella.h */,
+				BF0EEE32A7BEB436BF15463C89CAA2BC /* Pods-HeadingExample.debug.xcconfig */,
+				B55AD99310DCA79D33B727C2A074858E /* Pods-HeadingExample.release.xcconfig */,
+			);
+			name = "Pods-HeadingExample";
+			path = "Target Support Files/Pods-HeadingExample";
+			sourceTree = "<group>";
+		};
+		5CCE65C106DA3526DF68050077ED71EB /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				BE92DBC1060B20141480F0966D671290 /* Frameworks */,
+				8E3D86A1C4681B0AE232C66FECBA83DE /* Pod */,
+			);
+			name = Logging;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		68E383AB6537E3340DAF5E9F6F59CD12 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A399E76E3DF8E48EDFF81A01DFEC2C3 /* Pods-HeadingExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6DA35A5B72117F9E456299D52C63FBD1 /* WorldMagneticModel */ = {
+			isa = PBXGroup;
+			children = (
+				C30BB69E0A8856974F37BE4BC934F42F /* EGM9615.h */,
+				422AAE2B0FCAD540F0C98DFE7EFEC447 /* GeomagnetismHeader.h */,
+				74D25966B4CE6E1713A3F91E265B48E0 /* GeomagnetismLibrary.c */,
+				E86C59DE9BED34A5D74E9700DD5F3AA9 /* WMMAltitude.h */,
+				69849ED15F7EA51942DA475F9C9F980A /* WMMDate.h */,
+				9DB7D98DF2F72FE30B20575026E64773 /* WMMDate.m */,
+				DC7CC21CDC6D1B31D8991C0F43A06635 /* WMMDate+Internal.h */,
+				041A8E0C578A63CFC3783BEEC5D2B400 /* WMMElements.h */,
+				69CE21C47394F0FBC11FB250A7FCF0E5 /* WMMElements.m */,
+				CDD8713053AF1BA8D59AE76EB4D85F46 /* WMMElements+Internal.h */,
+				C24EBCE0F6493736CA6C90BD275EB43A /* WMMModel.h */,
+				67B10B0CB584BF59F0DCBABD316E63A4 /* WMMModel.m */,
+				FCA84030F8527F2A95CD5FC122A16CB2 /* WorldMagneticModel.h */,
+				E583A3D9EB65A754F7485D1AAA0398D6 /* Resources */,
+				EC74453A989B9ABD802C2D17C9B5E883 /* Support Files */,
+			);
+			name = WorldMagneticModel;
+			path = WorldMagneticModel;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				D68A8C782884C5E1205898141345FD56 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				3921B0163EADCA36BB785B3389CB1D73 /* Pods */,
+				10A97C0CCD52CF5EFDC5C7FD4CF7552A /* Products */,
+				68E383AB6537E3340DAF5E9F6F59CD12 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		819B732A5AD19843B8740D4BA72D6891 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				914593261AFCAE1B34ABE066EFD5EE2E /* BoseWearable.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		8E3D86A1C4681B0AE232C66FECBA83DE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				605E3C25A4D8B5D4B4BB1BE5E1A42B9E /* Logging.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		9228B4818275014DF8F11D2730C4E42A /* BoseWearable */ = {
+			isa = PBXGroup;
+			children = (
+				B3C4E5CBEC44C551D9508EA89D39B57D /* Frameworks */,
+				819B732A5AD19843B8740D4BA72D6891 /* Pod */,
+			);
+			name = BoseWearable;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		989BAE795C01674633B10BE273C3E661 /* BLECore */ = {
+			isa = PBXGroup;
+			children = (
+				3088499E8AE19C26FB640BCFB5ECF9DA /* Frameworks */,
+				583159F9B71449C687AAFFCC88620DAA /* Pod */,
+			);
+			name = BLECore;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		B3C4E5CBEC44C551D9508EA89D39B57D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D1597F1C88E0EC9B8A655DA5EF9D862 /* BoseWearable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D5347904CF754D6785B84253F2574A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE92DBC1060B20141480F0966D671290 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				366A8D2B541E9E27BC6421BA0B2A1132 /* Logging.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D68A8C782884C5E1205898141345FD56 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				989BAE795C01674633B10BE273C3E661 /* BLECore */,
+				9228B4818275014DF8F11D2730C4E42A /* BoseWearable */,
+				5CCE65C106DA3526DF68050077ED71EB /* Logging */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E583A3D9EB65A754F7485D1AAA0398D6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2A868ED98A8272B23203786AAAB0778 /* WMM.COF */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EC74453A989B9ABD802C2D17C9B5E883 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8694730BAA18FC3C45B2852864917D9 /* Info.plist */,
+				715A300D3D7E99C3D0D2D9118485580F /* WorldMagneticModel.modulemap */,
+				F4AD3AC34C48C16B1192851E7765A551 /* WorldMagneticModel.xcconfig */,
+				4B5FC1C8C8DE99C7727CA5A76167592D /* WorldMagneticModel-dummy.m */,
+				16178331CFE4CB49FA8FD66D41BABC71 /* WorldMagneticModel-prefix.pch */,
+				E5A19985E42AA13A2D616D906DAB233C /* WorldMagneticModel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/WorldMagneticModel";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2824612F1F1BD868973DF70CE26A4D4C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4AC7610FA2F66C62CD7C382989335D0 /* EGM9615.h in Headers */,
+				9A19AAD7BE73B9648E5E0CBF2393FE45 /* GeomagnetismHeader.h in Headers */,
+				1BB9DFA5B219C5EA8076636092598BBD /* WMMAltitude.h in Headers */,
+				AAA2FDA8B3CB746090C13ABF38763B75 /* WMMDate+Internal.h in Headers */,
+				F00C8CBF362CC4D1E563B5C775388FDF /* WMMDate.h in Headers */,
+				5F6C12D3C22FB4356CD959F18DD6FEC9 /* WMMElements+Internal.h in Headers */,
+				ECC24E9F2E34040A090D910980D81692 /* WMMElements.h in Headers */,
+				340EA50FAC0571ADE98830640D472B7B /* WMMModel.h in Headers */,
+				0C3E20F2CE97A12B1D60EE7BD0DB1904 /* WorldMagneticModel-umbrella.h in Headers */,
+				F5BAD89755EE63A9077C71ED001E5756 /* WorldMagneticModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A611D424BDE249B41C991E4243F80112 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0613630552A9B09786F0E2A269FB78C /* Pods-HeadingExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		261E6B535C9D5F4383C5DF56D363B2A4 /* WorldMagneticModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C23EF4734472875E3B165FB3F5B04A24 /* Build configuration list for PBXNativeTarget "WorldMagneticModel" */;
+			buildPhases = (
+				2824612F1F1BD868973DF70CE26A4D4C /* Headers */,
+				DF857C75B02574EF3FFC9E75A6FEE855 /* Sources */,
+				25FE32EAFFDC281392014AF0797DA033 /* Frameworks */,
+				47F19BDF166BF25F6783AAE51DAE2A4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorldMagneticModel;
+			productName = WorldMagneticModel;
+			productReference = ED86246C66A2EB3283779F4ED2DBC7E5 /* WorldMagneticModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CD3083FDF013CE3BAD2CD571CBCFDFCE /* Pods-HeadingExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32D1E69F8F44976E569DBF7E2DD8BA33 /* Build configuration list for PBXNativeTarget "Pods-HeadingExample" */;
+			buildPhases = (
+				A611D424BDE249B41C991E4243F80112 /* Headers */,
+				A59E7ACE95479C0A14FC299CA9188202 /* Sources */,
+				6C39DE107BB0657B8A322DF519B0553A /* Frameworks */,
+				17C22CA45F8F9DB7A3BB5B9E421BEBCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB682708470640A57CC616DF1FA52C20 /* PBXTargetDependency */,
+			);
+			name = "Pods-HeadingExample";
+			productName = "Pods-HeadingExample";
+			productReference = 8993D6C47776F5988E151DF0E6FFB7DC /* Pods_HeadingExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 10A97C0CCD52CF5EFDC5C7FD4CF7552A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD3083FDF013CE3BAD2CD571CBCFDFCE /* Pods-HeadingExample */,
+				261E6B535C9D5F4383C5DF56D363B2A4 /* WorldMagneticModel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17C22CA45F8F9DB7A3BB5B9E421BEBCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47F19BDF166BF25F6783AAE51DAE2A4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81CCCE2620111D5288A29AAE32EBC050 /* WMM.COF in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A59E7ACE95479C0A14FC299CA9188202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2075A95DDDA31A60E9D26AE29867B6E /* Pods-HeadingExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF857C75B02574EF3FFC9E75A6FEE855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C142BAEDF964A8750D15897FF38A920 /* GeomagnetismLibrary.c in Sources */,
+				2559488406E572D08490F028E8928AB6 /* WMMDate.m in Sources */,
+				3C1ED3616D779353AC00845D03DEB3D4 /* WMMElements.m in Sources */,
+				20267D6BD458893F9AAA94EF9630D5A3 /* WMMModel.m in Sources */,
+				3235409C1B632700D775A2E565F7C8BD /* WorldMagneticModel-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB682708470640A57CC616DF1FA52C20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WorldMagneticModel;
+			target = 261E6B535C9D5F4383C5DF56D363B2A4 /* WorldMagneticModel */;
+			targetProxy = 4053A34C506CA4FB5B1E7084EE9BACF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03AED5D8CC9999BFEF32CC7781B10D21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4AD3AC34C48C16B1192851E7765A551 /* WorldMagneticModel.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WorldMagneticModel/WorldMagneticModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WorldMagneticModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WorldMagneticModel/WorldMagneticModel.modulemap";
+				PRODUCT_MODULE_NAME = WorldMagneticModel;
+				PRODUCT_NAME = WorldMagneticModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		16BC524EDE752B9BB72D7E267116A89A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1DF68876DF2AD07A12482477C1AA7DB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		67B3BEBAFACC00AE9067E358A527BD6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF0EEE32A7BEB436BF15463C89CAA2BC /* Pods-HeadingExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HeadingExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HeadingExample/Pods-HeadingExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CB520BE137ACF59E536C403C9AD26899 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4AD3AC34C48C16B1192851E7765A551 /* WorldMagneticModel.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WorldMagneticModel/WorldMagneticModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WorldMagneticModel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WorldMagneticModel/WorldMagneticModel.modulemap";
+				PRODUCT_MODULE_NAME = WorldMagneticModel;
+				PRODUCT_NAME = WorldMagneticModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FEAD46447C93A48FD9D6B19C767AA0E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B55AD99310DCA79D33B727C2A074858E /* Pods-HeadingExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HeadingExample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HeadingExample/Pods-HeadingExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16BC524EDE752B9BB72D7E267116A89A /* Debug */,
+				1DF68876DF2AD07A12482477C1AA7DB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32D1E69F8F44976E569DBF7E2DD8BA33 /* Build configuration list for PBXNativeTarget "Pods-HeadingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67B3BEBAFACC00AE9067E358A527BD6F /* Debug */,
+				FEAD46447C93A48FD9D6B19C767AA0E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C23EF4734472875E3B165FB3F5B04A24 /* Build configuration list for PBXNativeTarget "WorldMagneticModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB520BE137ACF59E536C403C9AD26899 /* Debug */,
+				03AED5D8CC9999BFEF32CC7781B10D21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -28,3 +28,9 @@ DerivedData/
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
+
+# Pods
+Pods/*
+
+.DS_Store
+

@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BoseWearable Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/BoseWearable" class="dashAnchor"></a>
+
+    <a title="BoseWearable Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          BoseWearable Docs
+        </a>
+         (99% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">BoseWearable Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      BoseWearable Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../installation.html">Installation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../logging.html">Logging</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../sample-code.html">Sample Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../sensors-and-coordinate-system.html">Sensors and Coordinate System</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../usage.html">Usage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../v4-migration-guide.html">V4 Migration Guide</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AlertAction.html">AlertAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AlertAction/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BoseWearable.html">BoseWearable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BoseWearable/ConfigOption.html">– ConfigOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ConnectionTask.html">ConnectionTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/DeviceSearchTask.html">DeviceSearchTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/s:12BoseWearable13ListenerTokenC">ListenerToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SensorDispatch.html">SensorDispatch</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AlertIcon.html">AlertIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/BoseWearableError.html">BoseWearableError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/BoseWearableError/ErrorCode.html">– ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/CancellableResult.html">CancellableResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ConnectUIMode.html">ConnectUIMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/DeviceProtocolError.html">DeviceProtocolError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/DeviceProtocolErrorCode.html">DeviceProtocolErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/DeviceSearchMode.html">DeviceSearchMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/DeviceState.html">DeviceState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FirmwareUpdateApp.html">FirmwareUpdateApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/FirmwareUpdateStatus.html">FirmwareUpdateStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/GestureType.html">GestureType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/InfoType.html">InfoType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SamplePeriod.html">SamplePeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SensorSample.html">SensorSample</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SensorType.html">SensorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SignalStrength.html">SignalStrength</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SuspensionReason.html">SuspensionReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VectorAccuracy.html">VectorAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/WearableDeviceEvent.html">WearableDeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/WearableDeviceSessionState.html">WearableDeviceSessionState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Quaternion.html">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Vector.html">Vector</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Version.html">Version</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AlertUI.html">AlertUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ConnectUI.html">ConnectUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:12BoseWearable16ConnectUIElementP">ConnectUIElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DeviceSearchTaskUserInterface.html">DeviceSearchTaskUserInterface</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DeviceSearchTaskUserInterfaceDelegate.html">DeviceSearchTaskUserInterfaceDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InfoUI.html">InfoUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/InfoUIDelegate.html">InfoUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SearchUI.html">SearchUI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SearchUIDelegate.html">SearchUIDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SensorDispatchHandler.html">SensorDispatchHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/WearableDevice.html">WearableDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/WearableDeviceSession.html">WearableDeviceSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/WearableDeviceSessionDelegate.html">WearableDeviceSessionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/WearableDeviceSessionPairingDelegate.html">WearableDeviceSessionPairingDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ActiveNoiseReduction.html">ActiveNoiseReduction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ActiveNoiseReduction/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AlertIconAssets.html">AlertIconAssets</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ControllableNoiseCancellation.html">ControllableNoiseCancellation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/DeviceStatus.html">DeviceStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FirmwareVersion.html">FirmwareVersion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GestureConfiguration.html">GestureConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GestureData.html">GestureData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GestureInformation.html">GestureInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GestureIntent.html">GestureIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/QuaternionAccuracy.html">QuaternionAccuracy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurePairingInfo.html">SecurePairingInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SecurePairingInfo/Asset.html">– Asset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SensorConfiguration.html">SensorConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SensorData.html">SensorData</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SensorInformation.html">SensorInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SensorIntent.html">SensorIntent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/SensorValue.html">SensorValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/WearableDeviceInformation.html">WearableDeviceInformation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:12BoseWearable10Quaterniona">Quaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:12BoseWearable15SensorTimestampa">SensorTimestamp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:12BoseWearable6Vectora">Vector</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>BoseWearable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">BoseWearable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Top-level interface to the BoseWearable library. Note that you must call <code><a href="../Classes/BoseWearable.html#/s:12BoseWearableAAC9configureyySDyAB12ConfigOptionOypGFZ">BoseWearable.configure(_:)</a></code> before using the <code><a href="../Classes/BoseWearable.html#/s:12BoseWearableAAC6sharedABvpZ">BoseWearable.shared</a></code> singleton instance. Failing to do so results in a fatal error.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC12ConfigOptionO"></a>
+                    <a name="//apple_ref/swift/Enum/ConfigOption" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC12ConfigOptionO">ConfigOption</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Keys for the options dictionary passed to the <code><a href="../Classes/BoseWearable.html#/s:12BoseWearableAAC9configureyySDyAB12ConfigOptionOypGFZ">BoseWearable.configure(_:)</a></code> function.</p>
+
+                        <a href="../Classes/BoseWearable/ConfigOption.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ConfigOption</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC16bluetoothManager7BLECore09BluetoothD0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/bluetoothManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC16bluetoothManager7BLECore09BluetoothD0Cvp">bluetoothManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The Bluetooth manager handles device discovery and session creation. Client applications can use this object to perform a device search with a custom user interface.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">bluetoothManager</span><span class="p">:</span> <span class="kt">BluetoothManager</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC015createSimulatedB13DeviceSessionAA0beF0_pyF"></a>
+                    <a name="//apple_ref/swift/Method/createSimulatedWearableDeviceSession()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC015createSimulatedB13DeviceSessionAA0beF0_pyF">createSimulatedWearableDeviceSession()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Protocols/WearableDeviceSession.html">WearableDeviceSession</a></code> that uses the iOS device&rsquo;s internal IMU to simulate the sensor data that would be received from a Bose Wearable device. <em>For testing purposes only.</em></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createSimulatedWearableDeviceSession</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/WearableDeviceSession.html">WearableDeviceSession</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC15startConnection4mode12sensorIntent07gestureG017completionHandleryAA13ConnectUIModeO_AA06SensorG0VAA07GestureG0VyAA17CancellableResultOyAA0B13DeviceSession_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/startConnection(mode:sensorIntent:gestureIntent:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC15startConnection4mode12sensorIntent07gestureG017completionHandleryAA13ConnectUIModeO_AA06SensorG0VAA07GestureG0VyAA17CancellableResultOyAA0B13DeviceSession_pGctF">startConnection(mode:sensorIntent:gestureIntent:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begins the connection workflow for Bose devices. A <code>UIViewController</code> may be modally presented on a newly-created <code>UIWindow</code> to present a list of discovered devices. The user can select a device from this list. The <code>mode</code> value passed allows for already-connected devices to be automatically selected.</p>
+
+<p>Once a device has been selected (either by the user or via automatic selection described above), depending on the device&rsquo;s capabilities, other screens might be shown guiding the user to complete the pairing process.</p>
+
+<p>Callers can specify sensor and gesture intents that are used to check device compatibility. Once a session is created and the connection is established, the device is queried to ensure that it provides the features specified in the intents. If those features are not provided, the connection fails.</p>
+
+<p>The result of the operation is passed to the specified completion handler. This will either indicate that the session was successfully created, that the operation failed with an error, or that the operation was cancelled by the user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startConnection</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Enums/ConnectUIMode.html">ConnectUIMode</a></span><span class="p">,</span>
+                            <span class="nv">sensorIntent</span><span class="p">:</span> <span class="kt"><a href="../Structs/SensorIntent.html">SensorIntent</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/SensorIntent.html">SensorIntent</a></span><span class="p">(</span><span class="nv">sensors</span><span class="p">:</span> <span class="p">[],</span> <span class="nv">samplePeriods</span><span class="p">:</span> <span class="p">[]),</span>
+                            <span class="nv">gestureIntent</span><span class="p">:</span> <span class="kt"><a href="../Structs/GestureIntent.html">GestureIntent</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/GestureIntent.html">GestureIntent</a></span><span class="p">(</span><span class="nv">gestures</span><span class="p">:</span> <span class="p">[]),</span>
+                            <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/CancellableResult.html">CancellableResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/WearableDeviceSession.html">WearableDeviceSession</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The mode of operation. See the documentation for <code><a href="../Enums/ConnectUIMode.html">ConnectUIMode</a></code> for more details.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sensorIntent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Declares the sensors and sample periods that will be used with this connection. Defaults to an empty intent object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gestureIntent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Declares the gestures that will be used with this connection. Defaults to an empty intent object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A callback that is invoked with the result of the operation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC17startDeviceSearch4mode17completionHandleryAA0dE4ModeO_yAA17CancellableResultOyAA0bD7Session_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/startDeviceSearch(mode:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC17startDeviceSearch4mode17completionHandleryAA0dE4ModeO_yAA17CancellableResultOyAA0bD7Session_pGctF">startDeviceSearch(mode:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Begins searching for devices in the specified mode. A <code>UIViewController</code> may be modally presented on a newly-created <code>UIWindow</code> to present a list of discovered devices. The user can select a device from this list. The <code>mode</code> value passed allows for already-connected devices to be automatically selected.</p>
+
+<p>Once a device has been selected (either by the user or via automatic selection described above), a session is created. The session must be opened before being used.</p>
+
+<p>The result of the operation is passed to the specified completion handler. This will either indicate that the session was successfully created and opened, that the operation failed with an error, or that the operation was cancelled by the user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "Use BoseWearable.startConnection(mode:sensorIntent:gestureIntent:completionHander:﹚ instead.")</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">startDeviceSearch</span><span class="p">(</span><span class="nv">mode</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceSearchMode.html">DeviceSearchMode</a></span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/CancellableResult.html">CancellableResult</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/WearableDeviceSession.html">WearableDeviceSession</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The mode of operation. See the documentation for <code>SearchUI.Mode</code> for more details.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A callback that is invoked with the result of the operation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC22isDeviceLoggingEnabledSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/isDeviceLoggingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC22isDeviceLoggingEnabledSbvpZ">isDeviceLoggingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, enables logging of device-level events. Default is <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isDeviceLoggingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC26isSensorDataLoggingEnabledSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/isSensorDataLoggingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC26isSensorDataLoggingEnabledSbvpZ">isSensorDataLoggingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, enabled logging of sensor data. Default is <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isSensorDataLoggingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC22isSensorLoggingEnabledSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/isSensorLoggingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC22isSensorLoggingEnabledSbvpZ">isSensorLoggingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, enables logging of sensor events. Default is <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isSensorLoggingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC23isServiceLoggingEnabledSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/isServiceLoggingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC23isServiceLoggingEnabledSbvpZ">isServiceLoggingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, enables logging of service-level events. Default is <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isServiceLoggingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC23isSessionLoggingEnabledSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/isSessionLoggingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC23isSessionLoggingEnabledSbvpZ">isSessionLoggingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, enables logging of session-level events. Default is <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isSessionLoggingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC25isConnectUILoggingEnabledSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/isConnectUILoggingEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC25isConnectUILoggingEnabledSbvpZ">isConnectUILoggingEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code>, enables logging of connect UI events. Default is <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">isConnectUILoggingEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC16enableAllLoggingyyFZ"></a>
+                    <a name="//apple_ref/swift/Method/enableAllLogging()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC16enableAllLoggingyyFZ">enableAllLogging()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enables all BoseWearable logging.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">enableAllLogging</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC17disableAllLoggingyyFZ"></a>
+                    <a name="//apple_ref/swift/Method/disableAllLogging()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC17disableAllLoggingyyFZ">disableAllLogging()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disables all BoseWearable logging.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">disableAllLogging</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC19enableCommonLoggingyyFZ"></a>
+                    <a name="//apple_ref/swift/Method/enableCommonLogging()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC19enableCommonLoggingyyFZ">enableCommonLogging()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enables commonly useful BoseWearable logging.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">enableCommonLogging</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Static%20interface"></a>
+                <a name="//apple_ref/swift/Section/Static interface" class="dashAnchor"></a>
+                <a href="#/Static%20interface">
+                  <h3 class="section-name">Static interface</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC9configureyySDyAB12ConfigOptionOypGFZ"></a>
+                    <a name="//apple_ref/swift/Method/configure(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC9configureyySDyAB12ConfigOptionOypGFZ">configure(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes and configures the <code>BoseWearable</code> library with the specified options (if provided, otherwise default values will be used). Note this function can only be called once. Subsequent calls will result in a fatal error.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="n">_</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/BoseWearable/ConfigOption.html">ConfigOption</a></span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC6sharedABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC6sharedABvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The shared singleton <code>BoseWearable</code> instance. Note that the <code><a href="../Classes/BoseWearable.html#/s:12BoseWearableAAC9configureyySDyAB12ConfigOptionOypGFZ">configure(_:)</a></code> method must be called before referencing this variable. Otherwise, a fatal error will be raised.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">BoseWearable</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC14releaseVersionSSSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/releaseVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC14releaseVersionSSSgvpZ">releaseVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The release version of the BoseWearable framework. This corresponds to the CFBundleShortVersionString key in the framework&rsquo;s <code>Info.plist</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">releaseVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC11buildNumberSSSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/buildNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC11buildNumberSSSgvpZ">buildNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The build number of the BoseWearable framework. This corresponds to the CFBundleVersion key in the framework&rsquo;s <code>Info.plist</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">buildNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BoseWearableAAC16formattedVersionSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/formattedVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BoseWearableAAC16formattedVersionSSvpZ">formattedVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The formatted version of the BoseWearable framework, combining the release version and build number.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">formattedVersion</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://developer.bose.com" target="_blank" rel="external">Bose Corporation</a>. All rights reserved. (Last updated: 2019-06-20)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

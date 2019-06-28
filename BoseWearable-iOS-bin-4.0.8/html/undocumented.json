@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/alexmason/Developer/Bose/BoseWearable-iOS-src/Modules/BoseWearable/Source/Connection/Tasks/SecurePairingSubtask.swift",
+      "line": null,
+      "symbol": "SecurePairingSubtask",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alexmason/Developer/Bose/BoseWearable-iOS-src/Modules/BoseWearable/Source/ProductDB/DBProductInfo.swift",
+      "line": null,
+      "symbol": "DBProductInfo",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/alexmason/Developer/Bose/BoseWearable-iOS-src"
+}

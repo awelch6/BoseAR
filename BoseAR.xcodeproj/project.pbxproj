@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12279FF214FE7EB8950BB1C6 /* Pods_BoseARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D99BA26E7A91A26DCFDC68E /* Pods_BoseARTests.framework */; };
 		2B6DD8BB22C650B800F05436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DD8BA22C650B800F05436 /* AppDelegate.swift */; };
 		2B6DD8BD22C650B800F05436 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DD8BC22C650B800F05436 /* ViewController.swift */; };
 		2B6DD8C022C650B800F05436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6DD8BE22C650B800F05436 /* Main.storyboard */; };
 		2B6DD8C222C650B900F05436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6DD8C122C650B900F05436 /* Assets.xcassets */; };
 		2B6DD8C522C650B900F05436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6DD8C322C650B900F05436 /* LaunchScreen.storyboard */; };
 		2B6DD8D022C650B900F05436 /* BoseARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DD8CF22C650B900F05436 /* BoseARTests.swift */; };
+		2B6DDA9A22C667F400F05436 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DDA9922C667F400F05436 /* ConnectionManager.swift */; };
+		2B6DDA9E22C6693B00F05436 /* WearableSessionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DDA9D22C6693B00F05436 /* WearableSessionError.swift */; };
+		D7B46CE148D89BD70BC670D2 /* Pods_BoseAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9430DE7B6B0210B735D9FAE /* Pods_BoseAR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,14 @@
 		2B6DD8CB22C650B900F05436 /* BoseARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoseARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6DD8CF22C650B900F05436 /* BoseARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoseARTests.swift; sourceTree = "<group>"; };
 		2B6DD8D122C650B900F05436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B6DDA9922C667F400F05436 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		2B6DDA9D22C6693B00F05436 /* WearableSessionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearableSessionError.swift; sourceTree = "<group>"; };
+		3358C914A8D0E9BBF3043464 /* Pods-BoseARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseARTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseARTests/Pods-BoseARTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D99BA26E7A91A26DCFDC68E /* Pods_BoseARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59324BEAF24D35338EBF84E1 /* Pods-BoseAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.debug.xcconfig"; sourceTree = "<group>"; };
+		D9430DE7B6B0210B735D9FAE /* Pods_BoseAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAC82606F847D862F274DA2E /* Pods-BoseAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.release.xcconfig"; sourceTree = "<group>"; };
+		F5EDBE465F1F5064F45A81C4 /* Pods-BoseARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseARTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseARTests/Pods-BoseARTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7B46CE148D89BD70BC670D2 /* Pods_BoseAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +63,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12279FF214FE7EB8950BB1C6 /* Pods_BoseARTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1BF9148C86402C51CF6FC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9430DE7B6B0210B735D9FAE /* Pods_BoseAR.framework */,
+				4D99BA26E7A91A26DCFDC68E /* Pods_BoseARTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2B6DD8AE22C650B800F05436 = {
 			isa = PBXGroup;
 			children = (
 				2B6DD8B922C650B800F05436 /* BoseAR */,
 				2B6DD8CE22C650B900F05436 /* BoseARTests */,
 				2B6DD8B822C650B800F05436 /* Products */,
+				555A0B1075882E393E8324D2 /* Pods */,
+				1E1BF9148C86402C51CF6FC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +104,8 @@
 			children = (
 				2B6DD8BA22C650B800F05436 /* AppDelegate.swift */,
 				2B6DD8BC22C650B800F05436 /* ViewController.swift */,
+				2B6DDA9C22C6692500F05436 /* Enums */,
+				2B6DDA9B22C6691D00F05436 /* Managers */,
 				2B6DD8BE22C650B800F05436 /* Main.storyboard */,
 				2B6DD8C122C650B900F05436 /* Assets.xcassets */,
 				2B6DD8C322C650B900F05436 /* LaunchScreen.storyboard */,
@@ -96,6 +123,33 @@
 			path = BoseARTests;
 			sourceTree = "<group>";
 		};
+		2B6DDA9B22C6691D00F05436 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DDA9922C667F400F05436 /* ConnectionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2B6DDA9C22C6692500F05436 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DDA9D22C6693B00F05436 /* WearableSessionError.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		555A0B1075882E393E8324D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59324BEAF24D35338EBF84E1 /* Pods-BoseAR.debug.xcconfig */,
+				EAC82606F847D862F274DA2E /* Pods-BoseAR.release.xcconfig */,
+				F5EDBE465F1F5064F45A81C4 /* Pods-BoseARTests.debug.xcconfig */,
+				3358C914A8D0E9BBF3043464 /* Pods-BoseARTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B6DD8D422C650B900F05436 /* Build configuration list for PBXNativeTarget "BoseAR" */;
 			buildPhases = (
+				E2FEFEFC0A5F258718AAA615 /* [CP] Check Pods Manifest.lock */,
 				2B6DD8B322C650B800F05436 /* Sources */,
 				2B6DD8B422C650B800F05436 /* Frameworks */,
 				2B6DD8B522C650B800F05436 /* Resources */,
+				F5EC1E78085DA2DE06316D55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B6DD8D722C650B900F05436 /* Build configuration list for PBXNativeTarget "BoseARTests" */;
 			buildPhases = (
+				28A5478BE06577348A86AF46 /* [CP] Check Pods Manifest.lock */,
 				2B6DD8C722C650B900F05436 /* Sources */,
 				2B6DD8C822C650B900F05436 /* Frameworks */,
 				2B6DD8C922C650B900F05436 /* Resources */,
@@ -192,12 +249,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28A5478BE06577348A86AF46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoseARTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2FEFEFC0A5F258718AAA615 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoseAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5EC1E78085DA2DE06316D55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh",
+				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BLECore.framework",
+				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BoseWearable.framework",
+				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/Logging.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLECore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoseWearable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logging.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B6DD8B322C650B800F05436 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2B6DD8BD22C650B800F05436 /* ViewController.swift in Sources */,
+				2B6DDA9A22C667F400F05436 /* ConnectionManager.swift in Sources */,
+				2B6DDA9E22C6693B00F05436 /* WearableSessionError.swift in Sources */,
 				2B6DD8BB22C650B800F05436 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,10 +490,16 @@
 		};
 		2B6DD8D522C650B900F05436 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59324BEAF24D35338EBF84E1 /* Pods-BoseAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYA5KJEM32;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/BoseWearable-iOS-bin-4.0.8/Frameworks/iOS",
+				);
 				INFOPLIST_FILE = BoseAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,10 +514,16 @@
 		};
 		2B6DD8D622C650B900F05436 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAC82606F847D862F274DA2E /* Pods-BoseAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYA5KJEM32;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/BoseWearable-iOS-bin-4.0.8/Frameworks/iOS",
+				);
 				INFOPLIST_FILE = BoseAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -394,6 +538,7 @@
 		};
 		2B6DD8D822C650B900F05436 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5EDBE465F1F5064F45A81C4 /* Pods-BoseARTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +560,7 @@
 		};
 		2B6DD8D922C650B900F05436 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3358C914A8D0E9BBF3043464 /* Pods-BoseARTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

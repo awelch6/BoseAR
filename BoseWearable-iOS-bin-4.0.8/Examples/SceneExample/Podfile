@@ -1,0 +1,10 @@
+platform :ios, '11.4'
+
+target 'SceneExample' do
+  use_frameworks!
+
+  pod 'BLECore', :path => '../../'
+  pod 'BoseWearable', :path => '../../'
+  pod 'Logging', :path => '../../'
+end
+
