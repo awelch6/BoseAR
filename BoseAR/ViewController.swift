@@ -2,11 +2,14 @@ import UIKit
 import BoseWearable
 import simd
 import CoreLocation
+import MapKit
+import Foundation
 
 class ViewController: UIViewController {
     
     var sensorDispatch = SensorDispatch(queue: .main)
     
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var longitude: UILabel!
     @IBOutlet weak var latitude: UILabel!
     
@@ -19,8 +22,15 @@ class ViewController: UIViewController {
         
         locationManager.delegate = self
         checkLocationAuthStatus()
+        mapView.delegate = self
+
+        let location1 = CLLocation(latitude: 42.363552, longitude: -83.073319)
+        let location2 = CLLocation(latitude: 42.364542, longitude: -83.073900)
         
-        SessionManager.shared.startConnection()
+        monitorLocationAroundRegion(location: location1, identifier: "location1")
+        monitorLocationAroundRegion(location: location2, identifier: "location2")
+        
+//        SessionManager.shared.startConnection()
         SessionManager.shared.delegate = self
     }
 }
@@ -84,8 +94,6 @@ extension ViewController: SensorDispatchHandler {
         let pitch = qResult.xRotation
         let roll = qResult.yRotation
         let yaw = -qResult.zRotation
-
-        print("ROTATION: Pitch: \(pitch), Roll: \(roll), Yaw: \(yaw)")
     }
 
 
@@ -118,20 +126,75 @@ extension ViewController: CLLocationManagerDelegate {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
             
-            locationManager.stopUpdatingLocation()
-            
-            print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
+//            locationManager.stopUpdatingLocation()
+            mapView.showsUserLocation = true
+//            let location = locations.last as! CLLocation
+//            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+//            var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+//            region.center = mapView.userLocation.coordinate
+//            mapView.setRegion(region, animated: true)
         
             latitude.text = "LATITUDE: \(location.coordinate.latitude)"
             longitude.text = "LONGITUDE: \(location.coordinate.longitude)"
+            
         }
     }
     
-    func isInRange(forCoordinate coordinate: String) -> Bool {
-        return false
+    func monitorLocationAroundRegion(location: CLLocation, identifier: String) {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            
+            if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
+                
+                let region = CLCircularRegion(center: location.coordinate, radius: 50, identifier: identifier)
+                
+                let maxDistance = locationManager.maximumRegionMonitoringDistance
+                
+                locationManager.startMonitoring(for: region)
+                circleOverlay(location: location, radius: 50)
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
+        print(error)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("Something happened with the region.")
+        
+        if region.identifier == "region1" {
+            print("Region 1")
+        } else if region.identifier == "region2" {
+            print("Region 2")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("A region was exited.")
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
+    }
+    
+}
+
+extension ViewController: MKMapViewDelegate {
+    func circleOverlay(location: CLLocation, radius: Int) {
+        let circle = MKCircle(center: location.coordinate, radius: CLLocationDistance(radius))
+        mapView.addOverlay(circle)
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+
+        let circleRenderer = MKCircleRenderer(overlay: overlay)
+        circleRenderer.fillColor = UIColor.blue.withAlphaComponent(0.1)
+        circleRenderer.strokeColor = UIColor.blue
+        circleRenderer.lineWidth = 1
+        return circleRenderer
+    }
+    
+    func mapView(_ mapView: MKMapView, didAdd renderers: [MKOverlayRenderer]) {
+        print("added an overlay")
     }
 }

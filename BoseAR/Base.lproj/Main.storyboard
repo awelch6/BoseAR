@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BoseAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dl3-ao-9Xd">
-                                <rect key="frame" x="184" y="427.5" width="46.5" height="41"/>
+                                <rect key="frame" x="35" y="46" width="46.5" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-5N-S7g">
                                         <rect key="frame" x="0.0" y="0.0" width="46.5" height="20.5"/>
@@ -35,22 +35,27 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f2N-dC-tuD">
+                                <rect key="frame" x="16" y="167" width="288" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Dl3-ao-9Xd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aLU-qR-Ail"/>
-                            <constraint firstItem="Dl3-ao-9Xd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aet-Px-19r"/>
+                            <constraint firstItem="Dl3-ao-9Xd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Ogq-Vl-W0D"/>
+                            <constraint firstItem="Dl3-ao-9Xd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="nUg-dM-a3a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="latitude" destination="PVY-5N-S7g" id="Gy0-9H-pKM"/>
                         <outlet property="longitude" destination="BxX-J5-XG5" id="YQW-qW-mU2"/>
+                        <outlet property="mapView" destination="f2N-dC-tuD" id="CkW-7B-VVR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+            <point key="canvasLocation" x="136.875" y="129.92957746478874"/>
         </scene>
     </scenes>
 </document>
