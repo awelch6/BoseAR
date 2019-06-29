@@ -21,8 +21,6 @@
 		396BDD7CCB00B8C2BEBD9EB5 /* Pods_BoseARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B873987A41C7383D305FD201 /* Pods_BoseARTests.framework */; };
 		5960AA9F22C7D429006AC2C9 /* SoundZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960AA9E22C7D429006AC2C9 /* SoundZone.swift */; };
 		5960AAA222C7E1AD006AC2C9 /* SoundRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960AAA122C7E1AD006AC2C9 /* SoundRegion.swift */; };
-		59EC45C722C7EB4800511F35 /* Eye-of-the-Tiger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59EC45C622C7EB4800511F35 /* Eye-of-the-Tiger.mp3 */; };
-		59EC45C922C7EB5400511F35 /* cloud-nine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59EC45C822C7EB5400511F35 /* cloud-nine.mp3 */; };
 		E67166DF476BE2240BB60363 /* Pods_BoseAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA55C34B49F84C90100988C /* Pods_BoseAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,8 +53,6 @@
 		2B6DDAA922C803AE00F05436 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		5960AA9E22C7D429006AC2C9 /* SoundZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundZone.swift; sourceTree = "<group>"; };
 		5960AAA122C7E1AD006AC2C9 /* SoundRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRegion.swift; sourceTree = "<group>"; };
-		59EC45C622C7EB4800511F35 /* Eye-of-the-Tiger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Eye-of-the-Tiger.mp3"; path = "../../../../../Downloads/Eye-of-the-Tiger.mp3"; sourceTree = "<group>"; };
-		59EC45C822C7EB5400511F35 /* cloud-nine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "cloud-nine.mp3"; path = "../../../../../Downloads/cloud-nine.mp3"; sourceTree = "<group>"; };
 		8AA55C34B49F84C90100988C /* Pods_BoseAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B873987A41C7383D305FD201 /* Pods_BoseARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4E625925181220E3B239FC /* Pods-BoseAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.release.xcconfig"; sourceTree = "<group>"; };
@@ -313,22 +309,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BLECore.framework",
-				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BoseWearable.framework",
-				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/Logging.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLECore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoseWearable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logging.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
