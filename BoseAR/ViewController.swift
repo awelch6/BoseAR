@@ -9,6 +9,13 @@ class ViewController: UIViewController {
     
     var sensorDispatch = SensorDispatch(queue: .main)
     
+    private var soundRegion: SoundRegion = .BirdRegion {
+        didSet {
+            print(soundRegion)
+            TrackManager().playSound(soundUrl: soundRegion.soundUrl)
+        }
+    }
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var longitude: UILabel!
     @IBOutlet weak var latitude: UILabel!
@@ -19,8 +26,8 @@ class ViewController: UIViewController {
     
     var isFirstLocationUpdate: Bool = true
     
-    let region1 = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: "region1")
-    let region2 = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 50, identifier: "region2")
+    let region2 = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: "region1")
+    let region1 = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 50, identifier: "region2")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,13 +130,13 @@ extension ViewController: CLLocationManagerDelegate {
         }
     }
     
-    func determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D) -> CLCircularRegion? {
+    func determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D) {
         if region1.contains(initialUserCoordinate) {
-            return region1
+            soundRegion = .BirdRegion
         } else if (region2.contains(initialUserCoordinate)) {
-            return region2
+            soundRegion = .Jungle
         } else {
-            return nil
+            print("NOT IN REGION")
         }
     }
     

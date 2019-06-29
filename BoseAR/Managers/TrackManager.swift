@@ -1,19 +1,11 @@
-//
-//  TrackManager.swift
-//  BoseAR
-//
-//  Created by Austin Welch on 6/29/19.
-//  Copyright © 2019 Austin Welch. All rights reserved.
-//
-
 import AVFoundation
 
 var player: AVAudioPlayer?
 
 class TrackManager {
     
-    func playSound() {
-        guard let url = Bundle.main.url(forResource: "Nature-sounds-birds", withExtension: "mp3") else { return }
+    func playSound(soundUrl: String) {
+        guard let url = Bundle.main.url(forResource: soundUrl, withExtension: "mp3") else { return }
         
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
