@@ -1,13 +1,13 @@
 import UIKit
 import BoseWearable
 import simd
-import CoreLocation
 import MapKit
-import Foundation
+import AVFoundation
 
 class ViewController: UIViewController {
     
     var sensorDispatch = SensorDispatch(queue: .main)
+    var trackManager = TrackManager()
     
     private let trackManager: TrackManager = TrackManager()
     
@@ -42,6 +42,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        trackManager.delegate = self
+        
+        NetworkManager.shared.requestTracks { (tracks, error) in
+            self.trackManager.enqueue(track: tracks[5])
+        }
         
         locationManager.delegate = self
         checkLocationAuthStatus()
@@ -225,5 +231,11 @@ extension ViewController: MKMapViewDelegate {
         circleRenderer.strokeColor = UIColor.blue
         circleRenderer.lineWidth = 1
         return circleRenderer
+    }
+}
+
+extension ViewController: TrackManagerDelegate {
+    func player(_ player: AVPlayer, didFinishPlaying: Bool) {
+        print("Song did finish playing.")
     }
 }

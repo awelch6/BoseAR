@@ -1,32 +1,60 @@
 import AVFoundation
 
-var player: AVAudioPlayer?
+var player: AVQueuePlayer?
+
+
+protocol TrackManagerDelegate: class {
+    func player(_ player: AVPlayer, didFinishPlaying: Bool)
+}
 
 class TrackManager {
+
+    weak var delegate: TrackManagerDelegate?
     
-    func stopPlayingMusic() {
-        player?.stop()
+    init() {
+        NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
     }
     
-    func playSound(soundUrl: String) {
-        guard let url = Bundle.main.url(forResource: soundUrl, withExtension: "mp3") else { return }
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            
-            /* iOS 10 and earlier require the following line:
-             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
-            
-            guard let player = player else { return print("FAILURE") }
-            
-            player.play()
-            
-        } catch let error {
-            print(error.localizedDescription)
+    public func stop() {
+         player?.removeAllItems()
+    }
+    
+    public func enqueue(track: Track) {
+        guard let playerItem = playerItem(track: track) else {
+            return
         }
+        
+        guard let p = player else {
+            player = AVQueuePlayer(playerItem: playerItem)
+            player?.play()
+            return
+        }
+        
+        p.insert(playerItem, after: p.items().last)
+        p.play()
+    }
+    
+    private func playerItem(track: Track) -> AVPlayerItem? {
+        let urlString = "https://hackathon.umusic.com/prod/v1/isrc/\(track.isrc)/stream.m3u8"
+        
+        guard let url = URL(string: urlString) else {
+            return nil
+        }
+        
+        let keyHeader = ["x-api-key": "5dsb3jqxzX8D5dIlJzWoTaTM2TzcKufq1geS1SSb"]
+        
+        let asset = AVURLAsset(url: url, options: ["AVURLAssetHTTPHeaderFieldsKey": keyHeader])
+        
+        return AVPlayerItem(asset: asset)
+    }
+    
+    @objc public func playerDidFinishPlaying() {
+        guard let player = player else { return }
+        
+        delegate?.player(player, didFinishPlaying: true)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
