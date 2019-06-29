@@ -5,12 +5,12 @@ enum SoundRegion: String {
     case Motown = "Motown"
     case None
     
-    var soundUrl: String {
+    var trackId: String {
         switch self {
         case .EpicMusic:
-            return "Eye-of-the-Tiger"
+            return "USKRS0326911"
         case .Motown:
-            return "cloud-nine"
+            return "GBALB9900009"
         default:
             return "NOT IN REGION"
         }

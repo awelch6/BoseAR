@@ -49,11 +49,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         trackManager.delegate = self
-        
-        NetworkManager.shared.requestTracks { (tracks, error) in
-            self.trackManager.enqueue(track: tracks[5])
-        }
-        
+
         locationManager.delegate = self
         checkLocationAuthStatus()
         mapView.delegate = self
