@@ -300,24 +300,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh",
-				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BLECore.framework",
-				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BoseWearable.framework",
-				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/Logging.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLECore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoseWearable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logging.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -494,7 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYA5KJEM32;
+				DEVELOPMENT_TEAM = VK9Q399257;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -518,7 +509,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYA5KJEM32;
+				DEVELOPMENT_TEAM = VK9Q399257;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

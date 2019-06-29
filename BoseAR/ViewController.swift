@@ -1,25 +1,25 @@
-//
-//  ViewController.swift
-//  BoseAR
-//
-//  Created by Austin Welch on 6/28/19.
-//  Copyright © 2019 Austin Welch. All rights reserved.
-//
-
 import UIKit
 import BoseWearable
 import simd
+import CoreLocation
 
 class ViewController: UIViewController {
-
+    
     var sensorDispatch = SensorDispatch(queue: .main)
-
+    
+    @IBOutlet weak var longitude: UILabel!
+    @IBOutlet weak var latitude: UILabel!
+    
     private var token: ListenerToken?
 
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
+        
+        locationManager.delegate = self
+        checkLocationAuthStatus()
+        
         SessionManager.shared.startConnection()
         SessionManager.shared.delegate = self
     }
@@ -85,7 +85,7 @@ extension ViewController: SensorDispatchHandler {
         let roll = qResult.yRotation
         let yaw = -qResult.zRotation
 
-        print("Pitch: \(pitch), Roll: \(roll), Yaw: \(yaw)")
+        print("ROTATION: Pitch: \(pitch), Roll: \(roll), Yaw: \(yaw)")
     }
 
 
@@ -93,8 +93,6 @@ extension ViewController: SensorDispatchHandler {
         let pitch = vector.x
         let roll = vector.y
         let yaw = vector.z
-        
-        print("Pitch: \(pitch), Roll: \(roll), Yaw: \(yaw)")
     }
     
     func receivedGesture(type: GestureType, timestamp: SensorTimestamp) {
@@ -105,4 +103,35 @@ extension ViewController: SensorDispatchHandler {
 //        yValue.text = format(decimal: vector.y)
 //        zValue.text = format(decimal: vector.z)
 //    }
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    func checkLocationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            locationManager.startUpdatingLocation()
+        } else {
+            locationManager.requestAlwaysAuthorization()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[locations.count - 1]
+        if location.horizontalAccuracy > 0 {
+            
+            locationManager.stopUpdatingLocation()
+            
+            print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
+        
+            latitude.text = "LATITUDE: \(location.coordinate.latitude)"
+            longitude.text = "LONGITUDE: \(location.coordinate.longitude)"
+        }
+    }
+    
+    func isInRange(forCoordinate coordinate: String) -> Bool {
+        return false
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
 }
