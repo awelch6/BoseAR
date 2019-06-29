@@ -7,6 +7,8 @@ class ViewController: UIViewController {
     
     var sensorDispatch = SensorDispatch(queue: .main)
     
+    let coordinate = CLLocationCoordinate2D(latitude: 42.334966, longitude: -83.052590)
+    
     @IBOutlet weak var longitude: UILabel!
     @IBOutlet weak var latitude: UILabel!
     
@@ -77,6 +79,11 @@ extension ViewController: SessionManagerDelegate {
 }
 
 extension ViewController: SensorDispatchHandler {
+    
+    public func checkIfObjectIsInVisualBounds() {
+        
+    }
+    
     func receivedRotation(quaternion: Quaternion, accuracy: QuaternionAccuracy, timestamp: SensorTimestamp) {
         let qMap = Quaternion(ix: 1, iy: 0, iz: 0, r: 0)
         let qResult = quaternion * qMap
@@ -85,14 +92,14 @@ extension ViewController: SensorDispatchHandler {
         let roll = qResult.yRotation
         let yaw = -qResult.zRotation
 
+        
         print("ROTATION: Pitch: \(pitch), Roll: \(roll), Yaw: \(yaw)")
     }
 
-
     func receivedGyroscope(vector: Vector, accuracy: VectorAccuracy, timestamp: SensorTimestamp) {
-        let pitch = vector.x
-        let roll = vector.y
-        let yaw = vector.z
+//        let pitch = vector.x
+//        let roll = vector.y
+//        let yaw = vector.z
     }
     
     func receivedGesture(type: GestureType, timestamp: SensorTimestamp) {
@@ -114,17 +121,33 @@ extension ViewController: CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[locations.count - 1]
-        if location.horizontalAccuracy > 0 {
-            
-            locationManager.stopUpdatingLocation()
-            
-            print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
+    func drawVisualBounds(location: CLLocationCoordinate2D) {
+        let sw = CLLocationCoordinate2D(latitude: location.latitude - 0.00001, longitude: location.longitude)
+        let se = CLLocationCoordinate2D(latitude: location.latitude + 0.00001, longitude: location.longitude)
+        let nw = CLLocationCoordinate2D(latitude: sw.latitude, longitude: location.longitude + 0.0005)
+        let ne = CLLocationCoordinate2D(latitude: se.latitude, longitude: location.longitude + 0.0005)
         
-            latitude.text = "LATITUDE: \(location.coordinate.latitude)"
-            longitude.text = "LONGITUDE: \(location.coordinate.longitude)"
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        guard let location = locations.first else {
+            return
         }
+        
+        drawVisualBounds(location: location.coordinate)
+        
+//        let location = locations[locations.count - 1]
+//        if location.horizontalAccuracy > 0 {
+//
+//            locationManager.stopUpdatingLocation()
+//
+//            print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
+//
+//            latitude.text = "LATITUDE: \(location.coordinate.latitude)"
+//            longitude.text = "LONGITUDE: \(location.coordinate.longitude)"
+//        }
     }
     
     func isInRange(forCoordinate coordinate: String) -> Bool {
