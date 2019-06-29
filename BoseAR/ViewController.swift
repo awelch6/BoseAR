@@ -9,6 +9,21 @@ class ViewController: UIViewController {
     var sensorDispatch = SensorDispatch(queue: .main)
     var trackManager = TrackManager()
     
+    private let trackManager: TrackManager = TrackManager()
+    
+    private var soundRegion: SoundRegion = .BirdRegion {
+        didSet {
+            print(soundRegion)
+            
+            if (soundRegion == .None) {
+                trackManager.stopPlayingMusic()
+                return
+            }
+            
+            trackManager.playSound(soundUrl: soundRegion.soundUrl)
+        }
+    }
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var longitude: UILabel!
     @IBOutlet weak var latitude: UILabel!
@@ -16,6 +31,11 @@ class ViewController: UIViewController {
     private var token: ListenerToken?
 
     let locationManager = CLLocationManager()
+    
+    var isFirstLocationUpdate: Bool = true
+    
+    let birdRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: "Birds")
+    let jungleRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 50, identifier: "Jungle")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +49,9 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         checkLocationAuthStatus()
         mapView.delegate = self
-
-        let location1 = CLLocation(latitude: 42.363552, longitude: -83.073319)
-        let location2 = CLLocation(latitude: 42.364542, longitude: -83.073900)
         
-        monitorLocationAroundRegion(location: location1, identifier: "location1")
-        monitorLocationAroundRegion(location: location2, identifier: "location2")
-        
+        monitorLocationAroundRegion(region: jungleRegion)
+        monitorLocationAroundRegion(region: birdRegion)
 //        SessionManager.shared.startConnection()
         SessionManager.shared.delegate = self
     }
@@ -128,35 +144,43 @@ extension ViewController: CLLocationManagerDelegate {
         }
     }
     
+    func determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D) {
+        if jungleRegion.contains(initialUserCoordinate) {
+            soundRegion = .BirdRegion
+        } else if (birdRegion.contains(initialUserCoordinate)) {
+            soundRegion = .Jungle
+        } else {
+            print("NOT IN REGION")
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
             
 //            locationManager.stopUpdatingLocation()
             mapView.showsUserLocation = true
-//            let location = locations.last as! CLLocation
-//            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-//            var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-//            region.center = mapView.userLocation.coordinate
-//            mapView.setRegion(region, animated: true)
-        
+            
+            if (isFirstLocationUpdate) {
+                determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+                isFirstLocationUpdate = false
+            }
+            
             latitude.text = "LATITUDE: \(location.coordinate.latitude)"
             longitude.text = "LONGITUDE: \(location.coordinate.longitude)"
-            
         }
     }
     
-    func monitorLocationAroundRegion(location: CLLocation, identifier: String) {
+    func monitorLocationAroundRegion(region: CLCircularRegion) {
         if CLLocationManager.authorizationStatus() == .authorizedAlways {
             
             if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
                 
-                let region = CLCircularRegion(center: location.coordinate, radius: 50, identifier: identifier)
-                
                 let maxDistance = locationManager.maximumRegionMonitoringDistance
                 
                 locationManager.startMonitoring(for: region)
-                circleOverlay(location: location, radius: 50)
+                circleOverlay(center: region.center, radius: 50)
+                circleOverlay(center: region.center, radius: 50)
             }
         }
     }
@@ -168,15 +192,17 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         print("Something happened with the region.")
         
-        if region.identifier == "region1" {
-            print("Region 1")
-        } else if region.identifier == "region2" {
-            print("Region 2")
+        if region.identifier == "Birds" {
+            print("Birds")
+            soundRegion = .BirdRegion
+        } else if region.identifier == "Jungle" {
+            soundRegion = .Jungle
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("A region was exited.")
+        soundRegion = .None
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -186,8 +212,8 @@ extension ViewController: CLLocationManagerDelegate {
 }
 
 extension ViewController: MKMapViewDelegate {
-    func circleOverlay(location: CLLocation, radius: Int) {
-        let circle = MKCircle(center: location.coordinate, radius: CLLocationDistance(radius))
+    func circleOverlay(center: CLLocationCoordinate2D, radius: Int) {
+        let circle = MKCircle(center: center, radius: CLLocationDistance(radius))
         mapView.addOverlay(circle)
     }
     
