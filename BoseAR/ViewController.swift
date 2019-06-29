@@ -9,10 +9,18 @@ class ViewController: UIViewController {
     
     var sensorDispatch = SensorDispatch(queue: .main)
     
+    private let trackManager: TrackManager = TrackManager()
+    
     private var soundRegion: SoundRegion = .BirdRegion {
         didSet {
             print(soundRegion)
-            TrackManager().playSound(soundUrl: soundRegion.soundUrl)
+            
+            if (soundRegion == .None) {
+                trackManager.stopPlayingMusic()
+                return
+            }
+            
+            trackManager.playSound(soundUrl: soundRegion.soundUrl)
         }
     }
     
@@ -26,8 +34,8 @@ class ViewController: UIViewController {
     
     var isFirstLocationUpdate: Bool = true
     
-    let region2 = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: "region1")
-    let region1 = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 50, identifier: "region2")
+    let birdRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: "Birds")
+    let jungleRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 50, identifier: "Jungle")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +44,8 @@ class ViewController: UIViewController {
         checkLocationAuthStatus()
         mapView.delegate = self
         
-        monitorLocationAroundRegion(region: region1)
-        monitorLocationAroundRegion(region: region2)
+        monitorLocationAroundRegion(region: jungleRegion)
+        monitorLocationAroundRegion(region: birdRegion)
 //        SessionManager.shared.startConnection()
         SessionManager.shared.delegate = self
     }
@@ -131,9 +139,9 @@ extension ViewController: CLLocationManagerDelegate {
     }
     
     func determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D) {
-        if region1.contains(initialUserCoordinate) {
+        if jungleRegion.contains(initialUserCoordinate) {
             soundRegion = .BirdRegion
-        } else if (region2.contains(initialUserCoordinate)) {
+        } else if (birdRegion.contains(initialUserCoordinate)) {
             soundRegion = .Jungle
         } else {
             print("NOT IN REGION")
@@ -178,15 +186,17 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         print("Something happened with the region.")
         
-        if region.identifier == "region1" {
-            print("Region 1")
-        } else if region.identifier == "region2" {
-            print("Region 2")
+        if region.identifier == "Birds" {
+            print("Birds")
+            soundRegion = .BirdRegion
+        } else if region.identifier == "Jungle" {
+            soundRegion = .Jungle
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("A region was exited.")
+        soundRegion = .None
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

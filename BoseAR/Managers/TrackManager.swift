@@ -4,6 +4,10 @@ var player: AVAudioPlayer?
 
 class TrackManager {
     
+    func stopPlayingMusic() {
+        player?.stop()
+    }
+    
     func playSound(soundUrl: String) {
         guard let url = Bundle.main.url(forResource: soundUrl, withExtension: "mp3") else { return }
         
