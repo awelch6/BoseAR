@@ -1,16 +1,16 @@
 import Foundation
 
-enum SoundRegion {
-    case BirdRegion
-    case Jungle
+enum SoundRegion: String {
+    case EpicMusic = "EpicMusic"
+    case Motown = "Motown"
     case None
     
     var soundUrl: String {
         switch self {
-        case .BirdRegion:
-            return "Nature-sounds-birds"
-        case .Jungle:
-            return "JUNGLE MP3"
+        case .EpicMusic:
+            return "Eye-of-the-Tiger"
+        case .Motown:
+            return "cloud-nine"
         default:
             return "NOT IN REGION"
         }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,8 @@
 		396BDD7CCB00B8C2BEBD9EB5 /* Pods_BoseARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B873987A41C7383D305FD201 /* Pods_BoseARTests.framework */; };
 		5960AA9F22C7D429006AC2C9 /* SoundZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960AA9E22C7D429006AC2C9 /* SoundZone.swift */; };
 		5960AAA222C7E1AD006AC2C9 /* SoundRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960AAA122C7E1AD006AC2C9 /* SoundRegion.swift */; };
+		59EC45C722C7EB4800511F35 /* Eye-of-the-Tiger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59EC45C622C7EB4800511F35 /* Eye-of-the-Tiger.mp3 */; };
+		59EC45C922C7EB5400511F35 /* cloud-nine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59EC45C822C7EB5400511F35 /* cloud-nine.mp3 */; };
 		E67166DF476BE2240BB60363 /* Pods_BoseAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA55C34B49F84C90100988C /* Pods_BoseAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		2B6DDAA322C7DFE900F05436 /* Nature-sounds-birds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Nature-sounds-birds.mp3"; sourceTree = "<group>"; };
 		5960AA9E22C7D429006AC2C9 /* SoundZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundZone.swift; sourceTree = "<group>"; };
 		5960AAA122C7E1AD006AC2C9 /* SoundRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRegion.swift; sourceTree = "<group>"; };
+		59EC45C622C7EB4800511F35 /* Eye-of-the-Tiger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Eye-of-the-Tiger.mp3"; path = "../../../../../Downloads/Eye-of-the-Tiger.mp3"; sourceTree = "<group>"; };
+		59EC45C822C7EB5400511F35 /* cloud-nine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "cloud-nine.mp3"; path = "../../../../../Downloads/cloud-nine.mp3"; sourceTree = "<group>"; };
 		8AA55C34B49F84C90100988C /* Pods_BoseAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B873987A41C7383D305FD201 /* Pods_BoseARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4E625925181220E3B239FC /* Pods-BoseAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 			children = (
 				2B6DDA9922C667F400F05436 /* SessionManager.swift */,
 				2B6DDAA122C7DE7C00F05436 /* TrackManager.swift */,
+				59EC45C822C7EB5400511F35 /* cloud-nine.mp3 */,
+				59EC45C622C7EB4800511F35 /* Eye-of-the-Tiger.mp3 */,
 				2B6DDAA322C7DFE900F05436 /* Nature-sounds-birds.mp3 */,
 			);
 			path = Managers;
@@ -264,7 +270,9 @@
 			files = (
 				2B6DD8C522C650B900F05436 /* LaunchScreen.storyboard in Resources */,
 				2B6DD8C222C650B900F05436 /* Assets.xcassets in Resources */,
+				59EC45C922C7EB5400511F35 /* cloud-nine.mp3 in Resources */,
 				2B6DDAA422C7DFE900F05436 /* Nature-sounds-birds.mp3 in Resources */,
+				59EC45C722C7EB4800511F35 /* Eye-of-the-Tiger.mp3 in Resources */,
 				2B6DD8C022C650B800F05436 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYA5KJEM32;
+				DEVELOPMENT_TEAM = VK9Q399257;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -541,7 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYA5KJEM32;
+				DEVELOPMENT_TEAM = VK9Q399257;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

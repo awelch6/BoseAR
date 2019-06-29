@@ -11,19 +11,22 @@ class ViewController: UIViewController {
     
     private let trackManager: TrackManager = TrackManager()
     
-    private var soundRegion: SoundRegion = .BirdRegion {
+    private var soundRegion: SoundRegion = .None {
         didSet {
-            print(soundRegion)
             
             if (soundRegion == .None) {
                 trackManager.stopPlayingMusic()
+                currentSoundzone.text = "NOT IN ANY SOUND ZONE"
                 return
             }
+            
+            currentSoundzone.text = "CURRENT SOUNDREGION: \(soundRegion)"
             
             trackManager.playSound(soundUrl: soundRegion.soundUrl)
         }
     }
     
+    @IBOutlet weak var currentSoundzone: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var longitude: UILabel!
     @IBOutlet weak var latitude: UILabel!
@@ -34,8 +37,8 @@ class ViewController: UIViewController {
     
     var isFirstLocationUpdate: Bool = true
     
-    let birdRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: "Birds")
-    let jungleRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 50, identifier: "Jungle")
+    let epicMusic = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: SoundRegion.EpicMusic.rawValue)
+    let motownRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 50, identifier: SoundRegion.Motown.rawValue)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +47,8 @@ class ViewController: UIViewController {
         checkLocationAuthStatus()
         mapView.delegate = self
         
-        monitorLocationAroundRegion(region: jungleRegion)
-        monitorLocationAroundRegion(region: birdRegion)
+        monitorLocationAroundRegion(region: motownRegion)
+        monitorLocationAroundRegion(region: epicMusic)
 //        SessionManager.shared.startConnection()
         SessionManager.shared.delegate = self
     }
@@ -139,12 +142,12 @@ extension ViewController: CLLocationManagerDelegate {
     }
     
     func determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D) {
-        if jungleRegion.contains(initialUserCoordinate) {
-            soundRegion = .BirdRegion
-        } else if (birdRegion.contains(initialUserCoordinate)) {
-            soundRegion = .Jungle
+        if motownRegion.contains(initialUserCoordinate) {
+            soundRegion = .Motown
+        } else if epicMusic.contains(initialUserCoordinate) {
+            soundRegion = .EpicMusic
         } else {
-            print("NOT IN REGION")
+            soundRegion = .None
         }
     }
     
@@ -152,8 +155,14 @@ extension ViewController: CLLocationManagerDelegate {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
             
-//            locationManager.stopUpdatingLocation()
+            locationManager.stopUpdatingLocation()
+            
             mapView.showsUserLocation = true
+            if let location = locations.last{
+                let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+                self.mapView.setRegion(region, animated: true)
+            }
             
             if (isFirstLocationUpdate) {
                 determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
@@ -184,18 +193,17 @@ extension ViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        print("Something happened with the region.")
+        print("Did enter region \(region)")
         
-        if region.identifier == "Birds" {
-            print("Birds")
-            soundRegion = .BirdRegion
-        } else if region.identifier == "Jungle" {
-            soundRegion = .Jungle
+        if region.identifier == SoundRegion.Motown.rawValue {
+            soundRegion = .Motown
+        } else if region.identifier == SoundRegion.EpicMusic.rawValue {
+            soundRegion = .EpicMusic
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        print("A region was exited.")
+        print("Did exit region \(region)")
         soundRegion = .None
     }
     
@@ -212,15 +220,10 @@ extension ViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-
         let circleRenderer = MKCircleRenderer(overlay: overlay)
         circleRenderer.fillColor = UIColor.blue.withAlphaComponent(0.1)
         circleRenderer.strokeColor = UIColor.blue
         circleRenderer.lineWidth = 1
         return circleRenderer
-    }
-    
-    func mapView(_ mapView: MKMapView, didAdd renderers: [MKOverlayRenderer]) {
-        print("added an overlay")
     }
 }
