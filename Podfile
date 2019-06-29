@@ -7,6 +7,7 @@ target 'BoseAR' do
   pod 'BoseWearable', :path => 'BoseWearable-iOS-bin-4.0.8/'
   pod 'BLECore', :path => 'BoseWearable-iOS-bin-4.0.8/'
   pod 'Logging', :path => 'BoseWearable-iOS-bin-4.0.8/'
+  pod 'Alamofire', '~>4.8.1'
 
   target 'BoseARTests' do
     inherit! :search_paths

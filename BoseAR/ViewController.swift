@@ -1,13 +1,13 @@
 import UIKit
 import BoseWearable
 import simd
-import CoreLocation
 import MapKit
-import Foundation
+import AVFoundation
 
 class ViewController: UIViewController {
     
     var sensorDispatch = SensorDispatch(queue: .main)
+    var trackManager = TrackManager()
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var longitude: UILabel!
@@ -19,6 +19,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        trackManager.delegate = self
+        
+        NetworkManager.shared.requestTracks { (tracks, error) in
+            self.trackManager.enqueue(track: tracks[5])
+        }
         
         locationManager.delegate = self
         checkLocationAuthStatus()
@@ -196,5 +202,11 @@ extension ViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didAdd renderers: [MKOverlayRenderer]) {
         print("added an overlay")
+    }
+}
+
+extension ViewController: TrackManagerDelegate {
+    func player(_ player: AVPlayer, didFinishPlaying: Bool) {
+        print("Song did finish playing.")
     }
 }
