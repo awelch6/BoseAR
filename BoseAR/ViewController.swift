@@ -7,22 +7,27 @@ import AVFoundation
 class ViewController: UIViewController {
     
     var sensorDispatch = SensorDispatch(queue: .main)
-    var trackManager = TrackManager()
     
-    private let trackManager: TrackManager = TrackManager()
+    private let trackManager = TrackManager()
     
     private var soundRegion: SoundRegion = .None {
         didSet {
             
             if (soundRegion == .None) {
-                trackManager.stopPlayingMusic()
+                trackManager.stop()
                 currentSoundzone.text = "NOT IN ANY SOUND ZONE"
                 return
             }
             
             currentSoundzone.text = "CURRENT SOUNDREGION: \(soundRegion)"
             
-            trackManager.playSound(soundUrl: soundRegion.soundUrl)
+            NetworkManager.shared.requestTracks { (tracks, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    self.trackManager.enqueue(track: tracks[Int.random(in: 0..<tracks.count)])
+                }
+            }
         }
     }
     
