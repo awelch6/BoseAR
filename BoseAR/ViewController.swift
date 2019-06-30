@@ -236,7 +236,6 @@ extension ViewController: CLLocationManagerDelegate {
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
     // todo  sync HEading indicator view with userloacation
 
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
         self.mapView.setRegion(region, animated: true)
         
