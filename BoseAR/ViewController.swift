@@ -22,8 +22,12 @@ class ViewController: UIViewController {
     var sensorDispatch = SensorDispatch(queue: .main)
     private var magneticHeadingDegrees: Double?
     
+    var cardinalDirection: CardinalDirection = .InBetween
+    
     // CUSTOM MANAGERS
     private let trackManager = TrackManager()
+    
+    private var isPlayingPreview: Bool = false
     
     // SOUND REGIONS
     private var soundRegion: SoundRegion = .None {
@@ -63,8 +67,6 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.allowsBackgroundLocationUpdates = true
-
-        mapView.delegate = self
         
         sensorDispatch.handler = self
         listenForSensors(session!)
@@ -73,6 +75,7 @@ class ViewController: UIViewController {
         token = session!.device?.addEventListener(queue: .main) { [weak self] event in
             self?.wearableDeviceEvent(event)
         }
+        mapView.delegate = self
         
         checkLocationAuthStatus()
         monitorLocationAroundRegion(region: motownRegion)
@@ -82,13 +85,11 @@ class ViewController: UIViewController {
 
 extension ViewController {
     private func listenForGestures(_ session: WearableDeviceSession) {
-        
         session.device?.configureGestures({ (config) in
             config.disableAll()
             config.set(gesture: .doubleTap, enabled: true)
             config.set(gesture: .headNod, enabled: true)
         })
-        
     }
     
     private func listenForSensors(_ session: WearableDeviceSession) {
@@ -130,37 +131,104 @@ extension ViewController: SensorDispatchHandler {
         case InBetween = "InBetween"
     }
     
+    func receivedGesture(type: GestureType, timestamp: SensorTimestamp) {
+        print("Gesture Type")
+        if type == .doubleTap && soundRegion == .Motown {
+            if isPlayingPreview {
+                trackManager.stop()
+                trackManager.enqueue(soundRegion.trackId)
+                isPlayingPreview = false
+                
+                let utterance = AVSpeechUtterance(string: "You are now leaving preview mode.")
+                utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+                utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+                
+                let synthesizer = AVSpeechSynthesizer()
+                synthesizer.speak(utterance)
+            } else {
+                if case .East = cardinalDirection {
+                    //Speak the notification
+                    let utterance = AVSpeechUtterance(string: "You are now previewing Epic Zone.")
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+                    utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+                    
+                    let synthesizer = AVSpeechSynthesizer()
+                    synthesizer.speak(utterance)
+                    
+                    trackManager.stop()
+                    trackManager.enqueue(SoundRegion.EpicMusic.trackId)
+                    isPlayingPreview = true
+                } else {
+                    let utterance = AVSpeechUtterance(string: "No preview available.")
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+                    utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+                    
+                    let synthesizer = AVSpeechSynthesizer()
+                    synthesizer.speak(utterance)
+                }
+            }
+        }
+
+        if type == .doubleTap && soundRegion == .EpicMusic {
+            if isPlayingPreview {
+                trackManager.stop()
+                
+                let utterance = AVSpeechUtterance(string: "You are now leaving preview mode.")
+                utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+                utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+                
+                let synthesizer = AVSpeechSynthesizer()
+                synthesizer.speak(utterance)
+                trackManager.enqueue(soundRegion.trackId)
+                isPlayingPreview = false
+            } else {
+                if case .West = cardinalDirection {
+                    //Speak the notification
+                    let utterance = AVSpeechUtterance(string: "You are now previewing Motown Zone.")
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+                    utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+                    
+                    let synthesizer = AVSpeechSynthesizer()
+                    synthesizer.speak(utterance)
+                    
+                    trackManager.stop()
+                    trackManager.enqueue(SoundRegion.Motown.trackId)
+                    isPlayingPreview = true
+                } else {
+                    let utterance = AVSpeechUtterance(string: "No preview available.")
+                    utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+                    utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+                    
+                    let synthesizer = AVSpeechSynthesizer()
+                    synthesizer.speak(utterance)
+                }
+            }
+        }
+    }
+    
     func getCardinalDirectionFromYaw(yaw: Double, accuracy: QuaternionAccuracy) {
-        let cardinalDirection: CardinalDirection
-        
         switch yaw {
         case -45 ..< 45:
-            cardinalDirection = CardinalDirection.North
+            cardinalDirection = .North
             
         case 45 ..< 135:
-            cardinalDirection = CardinalDirection.East
+            cardinalDirection = .East
             
         case 135 ..< 180:
-            cardinalDirection = CardinalDirection.South
+            cardinalDirection = .South
         case -180 ..< -135:
-            cardinalDirection = CardinalDirection.South
+            cardinalDirection = .South
             
         case -135 ..< -45:
-            cardinalDirection = CardinalDirection.West
+            cardinalDirection = .West
             
         default:
-            cardinalDirection = CardinalDirection.InBetween
+            cardinalDirection = .InBetween
         }
         
         cardinalHeading.text = "Cardinal Heading: \(cardinalDirection.rawValue)"
     }
     
-
-    func receivedGameRotation(quaternion: Quaternion, timestamp: SensorTimestamp) {
-        //
-
-    }
-
     func receivedRotation(quaternion: Quaternion, accuracy: QuaternionAccuracy, timestamp: SensorTimestamp) {
         
         let qMap = Quaternion(ix: 1, iy: 0, iz: 0, r: 0)
