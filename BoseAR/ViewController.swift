@@ -28,11 +28,11 @@ class ViewController: UIViewController {
             
             if (soundRegion == .None) {
                 trackManager.stop()
-                currentSoundzone.text = "NOT IN ANY SOUND ZONE"
+                currentSoundzone.text = "Your SoundRegion: NONE"
                 return
             }
             
-            currentSoundzone.text = "CURRENT SOUNDREGION: \(soundRegion)"
+            currentSoundzone.text = "Your SoundRegion: \(soundRegion)"
             
             // Here can we request from a similar subset of songs related to the zones genre instead of getting them randomly?
             NetworkManager.shared.requestTracks { (tracks, error) in
@@ -82,11 +82,13 @@ extension ViewController: SessionManagerDelegate {
 
 extension ViewController {
     private func listenForGestures(_ session: WearableDeviceSession) {
+        
         session.device?.configureGestures({ (config) in
             config.disableAll()
             config.set(gesture: .doubleTap, enabled: true)
             config.set(gesture: .headNod, enabled: true)
         })
+        
     }
     
     private func listenForSensors(_ session: WearableDeviceSession) {
@@ -113,7 +115,6 @@ extension ViewController {
         case .didFailToWriteGestureConfiguration(let error):
             print("we have an err", error)
         default:
-            print("default")
             break
         }
     }
@@ -151,7 +152,7 @@ extension ViewController: SensorDispatchHandler {
             cardinalDirection = CardinalDirection.InBetween
         }
         
-        cardinalHeading.text = cardinalDirection.rawValue
+        cardinalHeading.text = "Cardinal Heading: \(cardinalDirection.rawValue)"
     }
     
     func receivedRotation(quaternion: Quaternion, accuracy: QuaternionAccuracy, timestamp: SensorTimestamp) {
@@ -170,13 +171,13 @@ extension ViewController: SensorDispatchHandler {
         
         // The desired heading value may be nil. See the documentation for `magneticHeadingDegrees` and `trueHeadingDegrees` to see why.
         if let h = heading {
-            headingValue.text = format(degrees: h)
+            headingValue.text = "Heading Value: \(format(degrees: h))"
             getCardinalDirectionFromYaw(yaw: h, accuracy: accuracy)
         }
         else {
             headingValue.text = "-"
         }
-        headingAccuracyValue.text = format(radians: accuracy.estimatedAccuracy)
+        headingAccuracyValue.text = "Heading Accuracy: \(format(radians: accuracy.estimatedAccuracy))"
     }
 }
 
@@ -202,8 +203,6 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
-            
-            locationManager.stopUpdatingLocation()
             
             mapView.showsUserLocation = true
             if let location = locations.last{
