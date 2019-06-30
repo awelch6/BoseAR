@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var latitude: UILabel!
     @IBOutlet weak var cardinalHeading: UILabel!
     @IBOutlet weak var headingValue: UILabel!
-    
+    @IBOutlet weak var headingIndicatorView: HeadingIndicator!
+
     // BOSE AR SDK Properties
     private var token: ListenerToken?
     var sensorDispatch = SensorDispatch(queue: .main)
@@ -34,13 +35,14 @@ class ViewController: UIViewController {
             trackManager.stop()
             
             soundRegion.displayNotification()
-            
+
             if (soundRegion == .None) {
                 currentSoundzone.text = "NOT IN ANY SOUND ZONE"
                 return
             }
             
-            currentSoundzone.text = "CURRENT SOUNDREGION: \(soundRegion)"
+            currentSoundzone.text = "\(soundRegion)"
+            
             trackManager.enqueue(soundRegion.trackId)
         }
     }
@@ -60,13 +62,14 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.allowsBackgroundLocationUpdates = true
-        
+
         mapView.delegate = self
         SessionManager.shared.delegate = self
         
         checkLocationAuthStatus()
         monitorLocationAroundRegion(region: motownRegion)
         monitorLocationAroundRegion(region: epicMusicRegion)
+        
     }
 }
 
@@ -157,6 +160,12 @@ extension ViewController: SensorDispatchHandler {
         cardinalHeading.text = "Cardinal Heading: \(cardinalDirection.rawValue)"
     }
     
+
+    func receivedGameRotation(quaternion: Quaternion, timestamp: SensorTimestamp) {
+        //
+
+    }
+
     func receivedRotation(quaternion: Quaternion, accuracy: QuaternionAccuracy, timestamp: SensorTimestamp) {
         
         let qMap = Quaternion(ix: 1, iy: 0, iz: 0, r: 0)
@@ -165,9 +174,26 @@ extension ViewController: SensorDispatchHandler {
         
         // The quaternion yaw value is the heading in radians. Convert to degrees.
         magneticHeadingDegrees = yaw * 180 / Double.pi
+
+        updateNeedleHeading(magneticHeadingDegrees!)
         updateHeadingDisplay(accuracy: accuracy)
     }
     
+    private func updateNeedleHeading(_ yaw: Double) {
+
+//        let location:MKUserLocation = self.mapView.userLocation
+//        let cordinate:CLLocationCoordinate2D = location.coordinate;
+//
+//        let circle = MKCircle(center: cordinate, radius: 10.0)
+//
+//
+//        mapView.addOverlay(circle)
+//
+        self.headingIndicatorView.degrees = CGFloat(yaw);
+        self.headingIndicatorView.setNeedsDisplay()
+
+    }
+
     private func updateHeadingDisplay(accuracy: QuaternionAccuracy) {
         let heading = magneticHeadingDegrees
         
@@ -208,6 +234,8 @@ extension ViewController: CLLocationManagerDelegate {
         mapView.showsUserLocation = true
         
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+    // todo  sync HEading indicator view with userloacation
+
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
         self.mapView.setRegion(region, animated: true)
         
@@ -216,7 +244,7 @@ extension ViewController: CLLocationManagerDelegate {
                 determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
                 isFirstLocationUpdate = false
             }
-            
+
             if motownRegion.contains(location.coordinate) {
                 soundRegion = .Motown
             } else if epicMusicRegion.contains(location.coordinate) {
@@ -246,14 +274,14 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         print("Did enter region \(region)")
-        
+
         if region.identifier == SoundRegion.Motown.rawValue {
             soundRegion = .Motown
         } else if region.identifier == SoundRegion.EpicMusic.rawValue {
             soundRegion = .EpicMusic
         }
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("Did exit region \(region)")
         soundRegion = .None
