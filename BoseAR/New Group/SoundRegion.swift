@@ -1,4 +1,4 @@
-import Foundation
+import UserNotifications
 
 enum SoundRegion: String {
     case EpicMusic = "EpicMusic"
@@ -13,6 +13,39 @@ enum SoundRegion: String {
             return "GBALB9900009"
         default:
             return "NOT IN REGION"
+        }
+    }
+    
+    public func displayNotification() {
+        switch self {
+         
+        case .EpicMusic:
+            let content = UNMutableNotificationContent()
+            content.title = "You have entered the Epic Music Zone"
+            content.body = "Listen to these amazing tracks!"
+            content.sound = UNNotificationSound.default
+            
+            let request = UNNotificationRequest(identifier: "epicMusic", content: content, trigger: nil)
+            
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        case .Motown:
+            let content = UNMutableNotificationContent()
+            content.title = "You have entered the Epic Music Zone"
+            content.body = "Listen to these amazing tracks!"
+            content.sound = UNNotificationSound.default
+            
+            let request = UNNotificationRequest(identifier: "motownMusic", content: content, trigger: nil)
+            
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+            }
+        default: break
         }
     }
 }

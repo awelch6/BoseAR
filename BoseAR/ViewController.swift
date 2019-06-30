@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cardinalHeading: UILabel!
     @IBOutlet weak var headingValue: UILabel!
     @IBOutlet weak var headingIndicatorView: HeadingIndicator!
-    
+
     // BOSE AR SDK Properties
     private var token: ListenerToken?
     var sensorDispatch = SensorDispatch(queue: .main)
@@ -34,6 +34,8 @@ class ViewController: UIViewController {
             
             trackManager.stop()
             
+            soundRegion.displayNotification()
+
             if (soundRegion == .None) {
                 currentSoundzone.text = "NOT IN ANY SOUND ZONE"
                 return
@@ -45,10 +47,8 @@ class ViewController: UIViewController {
         }
     }
     
-    let epicMusicRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.365719, longitude: -83.070364), radius: 70, identifier: SoundRegion.EpicMusic.rawValue)
-    
-    
-    let motownRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364506, longitude: -83.074012), radius: 70, identifier: SoundRegion.Motown.rawValue)
+    let epicMusicRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.365360, longitude: -83.071234), radius: 100, identifier: SoundRegion.EpicMusic.rawValue)
+    let motownRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 100, identifier: SoundRegion.Motown.rawValue)
 
     // CORE LOCATION
     let locationManager = CLLocationManager()
@@ -56,9 +56,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SessionManager.shared.startConnection()
 
         trackManager.delegate = self
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.allowsBackgroundLocationUpdates = true
+
         mapView.delegate = self
         SessionManager.shared.delegate = self
         
@@ -66,7 +70,6 @@ class ViewController: UIViewController {
         monitorLocationAroundRegion(region: motownRegion)
         monitorLocationAroundRegion(region: epicMusicRegion)
         
-        SessionManager.shared.startConnection()
     }
 }
 
@@ -157,12 +160,12 @@ extension ViewController: SensorDispatchHandler {
         cardinalHeading.text = "Cardinal Heading: \(cardinalDirection.rawValue)"
     }
     
-    
+
     func receivedGameRotation(quaternion: Quaternion, timestamp: SensorTimestamp) {
         //
-       
+
     }
-    
+
     func receivedRotation(quaternion: Quaternion, accuracy: QuaternionAccuracy, timestamp: SensorTimestamp) {
         
         let qMap = Quaternion(ix: 1, iy: 0, iz: 0, r: 0)
@@ -171,26 +174,26 @@ extension ViewController: SensorDispatchHandler {
         
         // The quaternion yaw value is the heading in radians. Convert to degrees.
         magneticHeadingDegrees = yaw * 180 / Double.pi
-        
+
         updateNeedleHeading(magneticHeadingDegrees!)
         updateHeadingDisplay(accuracy: accuracy)
     }
     
     private func updateNeedleHeading(_ yaw: Double) {
-        
+
 //        let location:MKUserLocation = self.mapView.userLocation
 //        let cordinate:CLLocationCoordinate2D = location.coordinate;
-//        
+//
 //        let circle = MKCircle(center: cordinate, radius: 10.0)
-//        
+//
 //
 //        mapView.addOverlay(circle)
-//        
+//
         self.headingIndicatorView.degrees = CGFloat(yaw);
         self.headingIndicatorView.setNeedsDisplay()
-        
+
     }
-    
+
     private func updateHeadingDisplay(accuracy: QuaternionAccuracy) {
         let heading = magneticHeadingDegrees
         
@@ -228,21 +231,28 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         
-        for region in manager.monitoredRegions {
-            manager.requestState(for: region)
-        }
-        
         mapView.showsUserLocation = true
         
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
     // todo  sync HEading indicator view with userloacation
-        
+
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
         self.mapView.setRegion(region, animated: true)
         
-        if isFirstLocationUpdate && location.horizontalAccuracy > 0 {
-            determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
-            isFirstLocationUpdate = false
+        if location.horizontalAccuracy > 0 {
+            if isFirstLocationUpdate {
+                determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+                isFirstLocationUpdate = false
+            }
+
+            if motownRegion.contains(location.coordinate) {
+                soundRegion = .Motown
+            } else if epicMusicRegion.contains(location.coordinate) {
+                soundRegion = .EpicMusic
+            } else {
+                soundRegion = .None
+            }
         }
         
         latitude.text = "LATITUDE: \(location.coordinate.latitude)"
@@ -257,8 +267,7 @@ extension ViewController: CLLocationManagerDelegate {
                 let maxDistance = locationManager.maximumRegionMonitoringDistance
                 
                 locationManager.startMonitoring(for: region)
-                circleOverlay(center: region.center, radius: 70)
-                circleOverlay(center: region.center, radius: 70)
+                circleOverlay(center: region.center, radius: 100)
             }
         }
     }
@@ -281,16 +290,6 @@ extension ViewController: CLLocationManagerDelegate {
         print("Did exit region \(region)")
         soundRegion = .None
     }
-    
-//    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
-//        if region.identifier == SoundRegion.Motown.rawValue && state == .inside {
-//            soundRegion = .Motown
-//        } else if region.identifier == SoundRegion.EpicMusic.rawValue && state == .inside {
-//            soundRegion = .EpicMusic
-//        } else if (region.identifier == SoundRegion.Motown.rawValue && state == .outside) || region.identifier == SoundRegion.EpicMusic.rawValue && state == .outside {
-//            soundRegion = .None
-//        }
-//    }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
