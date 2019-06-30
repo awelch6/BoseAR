@@ -234,9 +234,6 @@ extension ViewController: CLLocationManagerDelegate {
         if CLLocationManager.authorizationStatus() == .authorizedAlways {
             
             if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
-                
-                let maxDistance = locationManager.maximumRegionMonitoringDistance
-                
                 locationManager.startMonitoring(for: region)
                 circleOverlay(center: region.center, radius: 100)
             }
