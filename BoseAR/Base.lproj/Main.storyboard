@@ -18,9 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55x-pq-TCH">
-                                <rect key="frame" x="42" y="261" width="246" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55x-pq-TCH">
+                                <rect key="frame" x="37" y="236.5" width="246" height="95"/>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.6470588235294118" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="Dup-Yn-ozb"/>
+                                    <constraint firstAttribute="width" constant="246" id="OeL-Jp-P99"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="BEGIN QASTING">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,15 +34,16 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.011764705882352941" green="0.054901960784313725" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="55x-pq-TCH" firstAttribute="centerY" secondItem="Aaz-L7-aWw" secondAttribute="centerY" id="0MZ-u3-WEw"/>
-                            <constraint firstItem="55x-pq-TCH" firstAttribute="centerX" secondItem="Aaz-L7-aWw" secondAttribute="centerX" id="vWU-lw-hUg"/>
+                            <constraint firstItem="55x-pq-TCH" firstAttribute="centerX" secondItem="Aaz-L7-aWw" secondAttribute="centerX" id="KQe-Pp-Mxx"/>
+                            <constraint firstItem="55x-pq-TCH" firstAttribute="centerY" secondItem="Aaz-L7-aWw" secondAttribute="centerY" id="Vf5-JL-DX1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="veC-zA-0pB"/>
                     </view>
                     <navigationItem key="navigationItem" id="449-GA-roR"/>
                     <connections>
+                        <outlet property="beginQastingButton" destination="55x-pq-TCH" id="EhF-16-ROr"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToMainVC" id="OU5-aJ-k9J"/>
                     </connections>
                 </viewController>
@@ -138,6 +143,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tik-Tq-anS">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
