@@ -26,22 +26,21 @@ class ViewController: UIViewController {
     private var soundRegion: SoundRegion = .None {
         didSet {
             
-            if (soundRegion == .None) {
-                trackManager.stop()
-                currentSoundzone.text = "Your SoundRegion: NONE"
+            //Do nothing if the same region gets passed in twice
+            if oldValue == soundRegion {
                 return
             }
             
-            currentSoundzone.text = "Your SoundRegion: \(soundRegion)"
+            trackManager.stop()
             
-            // Here can we request from a similar subset of songs related to the zones genre instead of getting them randomly?
-            NetworkManager.shared.requestTracks { (tracks, error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                } else {
-                    self.trackManager.enqueue(track: tracks[Int.random(in: 0..<tracks.count)])
-                }
+            if (soundRegion == .None) {
+                currentSoundzone.text = "NOT IN ANY SOUND ZONE"
+                return
             }
+            
+            currentSoundzone.text = "CURRENT SOUNDREGION: \(soundRegion)"
+            
+            trackManager.enqueue(soundRegion.trackId)
         }
     }
     

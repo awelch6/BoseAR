@@ -18,11 +18,11 @@
 		2B6DDAA222C7DE7C00F05436 /* TrackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DDAA122C7DE7C00F05436 /* TrackManager.swift */; };
 		2B6DDAA822C7FBB900F05436 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DDAA722C7FBB900F05436 /* NetworkManager.swift */; };
 		2B6DDAAA22C803AE00F05436 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DDAA922C803AE00F05436 /* Track.swift */; };
-		396BDD7CCB00B8C2BEBD9EB5 /* Pods_BoseARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B873987A41C7383D305FD201 /* Pods_BoseARTests.framework */; };
+		3025A4352BB7F0FB3478EBEC /* Pods_BoseARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5E2E47E45FBA66D7775B27 /* Pods_BoseARTests.framework */; };
 		5960AA9F22C7D429006AC2C9 /* SoundZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960AA9E22C7D429006AC2C9 /* SoundZone.swift */; };
 		5960AAA222C7E1AD006AC2C9 /* SoundRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960AAA122C7E1AD006AC2C9 /* SoundRegion.swift */; };
 		5996397522C8490500856799 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996397422C8490500856799 /* UIViewController.swift */; };
-		E67166DF476BE2240BB60363 /* Pods_BoseAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA55C34B49F84C90100988C /* Pods_BoseAR.framework */; };
+		E2FA3ECE87A8D648EDA84196 /* Pods_BoseAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6AC4300E2E1ECE87E8808C8 /* Pods_BoseAR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		115504DA72A37BCC4487FA7F /* Pods-BoseARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseARTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseARTests/Pods-BoseARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		06B5802B34A6CC4CC1F47BA2 /* Pods-BoseARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseARTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseARTests/Pods-BoseARTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B6DD8B722C650B800F05436 /* BoseAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoseAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6DD8BA22C650B800F05436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B6DD8BC22C650B800F05436 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,14 +52,14 @@
 		2B6DDAA122C7DE7C00F05436 /* TrackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackManager.swift; sourceTree = "<group>"; };
 		2B6DDAA722C7FBB900F05436 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2B6DDAA922C803AE00F05436 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		4B34402AA718370EFE337829 /* Pods-BoseARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseARTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseARTests/Pods-BoseARTests.release.xcconfig"; sourceTree = "<group>"; };
 		5960AA9E22C7D429006AC2C9 /* SoundZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundZone.swift; sourceTree = "<group>"; };
 		5960AAA122C7E1AD006AC2C9 /* SoundRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRegion.swift; sourceTree = "<group>"; };
 		5996397422C8490500856799 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		8AA55C34B49F84C90100988C /* Pods_BoseAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B873987A41C7383D305FD201 /* Pods_BoseARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD4E625925181220E3B239FC /* Pods-BoseAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.release.xcconfig"; sourceTree = "<group>"; };
-		D4186FDBE5A42362B4D3F65A /* Pods-BoseARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseARTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseARTests/Pods-BoseARTests.release.xcconfig"; sourceTree = "<group>"; };
-		EC268134EF5015EFFF2B3F7C /* Pods-BoseAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.debug.xcconfig"; sourceTree = "<group>"; };
+		6E0D814CE6239D583F2D64EC /* Pods-BoseAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.release.xcconfig"; sourceTree = "<group>"; };
+		A90F75F121A67CECEF8A9EFB /* Pods-BoseAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.debug.xcconfig"; sourceTree = "<group>"; };
+		C6AC4300E2E1ECE87E8808C8 /* Pods_BoseAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5E2E47E45FBA66D7775B27 /* Pods_BoseARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E67166DF476BE2240BB60363 /* Pods_BoseAR.framework in Frameworks */,
+				E2FA3ECE87A8D648EDA84196 /* Pods_BoseAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				396BDD7CCB00B8C2BEBD9EB5 /* Pods_BoseARTests.framework in Frameworks */,
+				3025A4352BB7F0FB3478EBEC /* Pods_BoseARTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +88,8 @@
 				2B6DD8B922C650B800F05436 /* BoseAR */,
 				2B6DD8CE22C650B900F05436 /* BoseARTests */,
 				2B6DD8B822C650B800F05436 /* Products */,
-				E9EE61E6AE822D8B6D8CC1F6 /* Pods */,
-				92A4E062770DB89C349E29E2 /* Frameworks */,
+				D0A6EFE826A5CB7459018299 /* Pods */,
+				A4E14343961738034D9F3440 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,22 +172,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		92A4E062770DB89C349E29E2 /* Frameworks */ = {
+		A4E14343961738034D9F3440 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8AA55C34B49F84C90100988C /* Pods_BoseAR.framework */,
-				B873987A41C7383D305FD201 /* Pods_BoseARTests.framework */,
+				C6AC4300E2E1ECE87E8808C8 /* Pods_BoseAR.framework */,
+				EF5E2E47E45FBA66D7775B27 /* Pods_BoseARTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E9EE61E6AE822D8B6D8CC1F6 /* Pods */ = {
+		D0A6EFE826A5CB7459018299 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EC268134EF5015EFFF2B3F7C /* Pods-BoseAR.debug.xcconfig */,
-				CD4E625925181220E3B239FC /* Pods-BoseAR.release.xcconfig */,
-				115504DA72A37BCC4487FA7F /* Pods-BoseARTests.debug.xcconfig */,
-				D4186FDBE5A42362B4D3F65A /* Pods-BoseARTests.release.xcconfig */,
+				A90F75F121A67CECEF8A9EFB /* Pods-BoseAR.debug.xcconfig */,
+				6E0D814CE6239D583F2D64EC /* Pods-BoseAR.release.xcconfig */,
+				06B5802B34A6CC4CC1F47BA2 /* Pods-BoseARTests.debug.xcconfig */,
+				4B34402AA718370EFE337829 /* Pods-BoseARTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -199,11 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B6DD8D422C650B900F05436 /* Build configuration list for PBXNativeTarget "BoseAR" */;
 			buildPhases = (
-				DC2618461D9D201EF2D9E736 /* [CP] Check Pods Manifest.lock */,
+				EB9506B13B59849AE5FD4399 /* [CP] Check Pods Manifest.lock */,
 				2B6DD8B322C650B800F05436 /* Sources */,
 				2B6DD8B422C650B800F05436 /* Frameworks */,
 				2B6DD8B522C650B800F05436 /* Resources */,
-				776040DC0F4ACA3C9E9F7B32 /* [CP] Embed Pods Frameworks */,
+				D59500873C4AF08E0502E471 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,7 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B6DD8D722C650B900F05436 /* Build configuration list for PBXNativeTarget "BoseARTests" */;
 			buildPhases = (
-				6081A4267885CB5FB82A4D56 /* [CP] Check Pods Manifest.lock */,
+				9FBE5169506BC9AC582BA622 /* [CP] Check Pods Manifest.lock */,
 				2B6DD8C722C650B900F05436 /* Sources */,
 				2B6DD8C822C650B900F05436 /* Frameworks */,
 				2B6DD8C922C650B900F05436 /* Resources */,
@@ -292,7 +292,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6081A4267885CB5FB82A4D56 /* [CP] Check Pods Manifest.lock */ = {
+		9FBE5169506BC9AC582BA622 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -314,24 +314,35 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		776040DC0F4ACA3C9E9F7B32 /* [CP] Embed Pods Frameworks */ = {
+		D59500873C4AF08E0502E471 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BLECore.framework",
+				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BoseWearable.framework",
+				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/Logging.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLECore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoseWearable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logging.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC2618461D9D201EF2D9E736 /* [CP] Check Pods Manifest.lock */ = {
+		EB9506B13B59849AE5FD4399 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -529,7 +540,7 @@
 		};
 		2B6DD8D522C650B900F05436 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC268134EF5015EFFF2B3F7C /* Pods-BoseAR.debug.xcconfig */;
+			baseConfigurationReference = A90F75F121A67CECEF8A9EFB /* Pods-BoseAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -553,7 +564,7 @@
 		};
 		2B6DD8D622C650B900F05436 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD4E625925181220E3B239FC /* Pods-BoseAR.release.xcconfig */;
+			baseConfigurationReference = 6E0D814CE6239D583F2D64EC /* Pods-BoseAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -577,7 +588,7 @@
 		};
 		2B6DD8D822C650B900F05436 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 115504DA72A37BCC4487FA7F /* Pods-BoseARTests.debug.xcconfig */;
+			baseConfigurationReference = 06B5802B34A6CC4CC1F47BA2 /* Pods-BoseARTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -599,7 +610,7 @@
 		};
 		2B6DD8D922C650B900F05436 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4186FDBE5A42362B4D3F65A /* Pods-BoseARTests.release.xcconfig */;
+			baseConfigurationReference = 4B34402AA718370EFE337829 /* Pods-BoseARTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
