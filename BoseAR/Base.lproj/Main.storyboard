@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RKU-He-L0g">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Begin Qasting View Controller-->
+        <scene sceneID="ZrY-Q8-qwl">
+            <objects>
+                <viewController id="fao-32-0CW" customClass="BeginQastingViewController" customModule="BoseAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aaz-L7-aWw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55x-pq-TCH">
+                                <rect key="frame" x="42" y="261" width="246" height="46"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.6470588235294118" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="BEGIN QASTING">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchedBeginQasting:" destination="fao-32-0CW" eventType="touchUpInside" id="ay0-qX-W5U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="55x-pq-TCH" firstAttribute="centerY" secondItem="Aaz-L7-aWw" secondAttribute="centerY" id="0MZ-u3-WEw"/>
+                            <constraint firstItem="55x-pq-TCH" firstAttribute="centerX" secondItem="Aaz-L7-aWw" secondAttribute="centerX" id="vWU-lw-hUg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="veC-zA-0pB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="449-GA-roR"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToMainVC" id="OU5-aJ-k9J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6z1-hc-YZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="339.375" y="128.87323943661971"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -92,7 +128,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.875" y="129.92957746478874"/>
+            <point key="canvasLocation" x="1134.375" y="129.92957746478874"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s81-Eq-N62">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RKU-He-L0g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tik-Tq-anS">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fao-32-0CW" kind="relationship" relationship="rootViewController" id="J9c-bM-bXh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fps-Qp-GZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658.125" y="128.87323943661971"/>
         </scene>
     </scenes>
 </document>

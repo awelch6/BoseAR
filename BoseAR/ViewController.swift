@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var headingValue: UILabel!
     @IBOutlet weak var headingIndicatorView: HeadingIndicator!
 
+    public var session: WearableDeviceSession?
+    
     // BOSE AR SDK Properties
     private var token: ListenerToken?
     var sensorDispatch = SensorDispatch(queue: .main)
@@ -56,7 +58,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SessionManager.shared.startConnection()
 
         trackManager.delegate = self
         locationManager.delegate = self
@@ -64,24 +65,18 @@ class ViewController: UIViewController {
         locationManager.allowsBackgroundLocationUpdates = true
 
         mapView.delegate = self
-        SessionManager.shared.delegate = self
+        
+        sensorDispatch.handler = self
+        listenForSensors(session!)
+        listenForGestures(session!)
+        
+        token = session!.device?.addEventListener(queue: .main) { [weak self] event in
+            self?.wearableDeviceEvent(event)
+        }
         
         checkLocationAuthStatus()
         monitorLocationAroundRegion(region: motownRegion)
         monitorLocationAroundRegion(region: epicMusicRegion)
-        
-    }
-}
-
-extension ViewController: SessionManagerDelegate {
-    func session(_ session: WearableDeviceSession, didOpen: Bool) {
-        sensorDispatch.handler = self
-        listenForSensors(session)
-        listenForGestures(session)
-        
-        token = session.device?.addEventListener(queue: .main) { [weak self] event in
-            self?.wearableDeviceEvent(event)
-        }
     }
 }
 

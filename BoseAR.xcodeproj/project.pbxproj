@@ -24,6 +24,7 @@
 		5996397522C8490500856799 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996397422C8490500856799 /* UIViewController.swift */; };
 		59E61CE422C905D400146FBE /* HeadingStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E61CE222C905D300146FBE /* HeadingStyleKit.swift */; };
 		59E61CE522C905D400146FBE /* HeadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E61CE322C905D300146FBE /* HeadingIndicator.swift */; };
+		59E61CE722C90EC000146FBE /* BeginQastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E61CE622C90EC000146FBE /* BeginQastingViewController.swift */; };
 		E2FA3ECE87A8D648EDA84196 /* Pods_BoseAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6AC4300E2E1ECE87E8808C8 /* Pods_BoseAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		5996397422C8490500856799 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		59E61CE222C905D300146FBE /* HeadingStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadingStyleKit.swift; sourceTree = "<group>"; };
 		59E61CE322C905D300146FBE /* HeadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadingIndicator.swift; sourceTree = "<group>"; };
+		59E61CE622C90EC000146FBE /* BeginQastingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginQastingViewController.swift; sourceTree = "<group>"; };
 		6E0D814CE6239D583F2D64EC /* Pods-BoseAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.release.xcconfig"; sourceTree = "<group>"; };
 		A90F75F121A67CECEF8A9EFB /* Pods-BoseAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.debug.xcconfig"; sourceTree = "<group>"; };
 		C6AC4300E2E1ECE87E8808C8 /* Pods_BoseAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				2B6DD8C122C650B900F05436 /* Assets.xcassets */,
 				2B6DD8C322C650B900F05436 /* LaunchScreen.storyboard */,
 				2B6DD8C622C650B900F05436 /* Info.plist */,
+				59E61CE622C90EC000146FBE /* BeginQastingViewController.swift */,
 			);
 			path = BoseAR;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				2B6DDAAA22C803AE00F05436 /* Track.swift in Sources */,
 				59E61CE522C905D400146FBE /* HeadingIndicator.swift in Sources */,
 				5960AA9F22C7D429006AC2C9 /* SoundZone.swift in Sources */,
+				59E61CE722C90EC000146FBE /* BeginQastingViewController.swift in Sources */,
 				2B6DDA9E22C6693B00F05436 /* WearableSessionError.swift in Sources */,
 				5960AAA222C7E1AD006AC2C9 /* SoundRegion.swift in Sources */,
 				59E61CE422C905D400146FBE /* HeadingStyleKit.swift in Sources */,
