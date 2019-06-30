@@ -44,8 +44,8 @@ class ViewController: UIViewController {
         }
     }
     
-    let epicMusicRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: SoundRegion.EpicMusic.rawValue)
-    let motownRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 50, identifier: SoundRegion.Motown.rawValue)
+    let epicMusicRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.365141, longitude: -83.071883), radius: 70, identifier: SoundRegion.EpicMusic.rawValue)
+    let motownRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 70, identifier: SoundRegion.Motown.rawValue)
 
     // CORE LOCATION
     let locationManager = CLLocationManager()
@@ -225,8 +225,8 @@ extension ViewController: CLLocationManagerDelegate {
                 let maxDistance = locationManager.maximumRegionMonitoringDistance
                 
                 locationManager.startMonitoring(for: region)
-                circleOverlay(center: region.center, radius: 50)
-                circleOverlay(center: region.center, radius: 50)
+                circleOverlay(center: region.center, radius: 70)
+                circleOverlay(center: region.center, radius: 70)
             }
         }
     }
