@@ -1,3 +1,5 @@
-# BoseAR
+# Qast
 
 Bose x Capitol Records Code Jam
+
+Qast is an IoT enabled mobile (iOS) app that connects users to microlocation-based audio experiences. The app allows hosts & venues to curate multiple audio experiences in one location through geofencing technology. Upon launch, the app features a virtual display of the connected Bose AR device with configuration instructions. After successful configuration, the following page will provide a detailed list of nearby venues hosting spatial audio events with categorized genre icons. The venue expansion page will illustrate a map of the location’s floorplan with color coordinated zones highlighting the different audio experiences. Zones will contain an embedded image of the playing song’s album cover. As a user moves towards a specific zone, the volume of the approaching song increases. Using Bose AR hardware, users can initiate a preview mode of other zones by gazing in a certain direction and using already embedded gesture functionalities. Users will have the ability to save songs being played and store selections in a local or cloud playlist.
