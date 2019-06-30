@@ -33,19 +33,20 @@ class ViewController: UIViewController {
             
             trackManager.stop()
             
+            soundRegion.displayNotification()
+            
             if (soundRegion == .None) {
                 currentSoundzone.text = "NOT IN ANY SOUND ZONE"
                 return
             }
             
             currentSoundzone.text = "CURRENT SOUNDREGION: \(soundRegion)"
-            
             trackManager.enqueue(soundRegion.trackId)
         }
     }
     
-    let epicMusicRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.365141, longitude: -83.071883), radius: 70, identifier: SoundRegion.EpicMusic.rawValue)
-    let motownRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 70, identifier: SoundRegion.Motown.rawValue)
+    let epicMusicRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.365360, longitude: -83.071234), radius: 100, identifier: SoundRegion.EpicMusic.rawValue)
+    let motownRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 100, identifier: SoundRegion.Motown.rawValue)
 
     // CORE LOCATION
     let locationManager = CLLocationManager()
@@ -53,17 +54,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SessionManager.shared.startConnection()
 
         trackManager.delegate = self
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.allowsBackgroundLocationUpdates = true
+        
         mapView.delegate = self
         SessionManager.shared.delegate = self
         
         checkLocationAuthStatus()
         monitorLocationAroundRegion(region: motownRegion)
         monitorLocationAroundRegion(region: epicMusicRegion)
-        
-        SessionManager.shared.startConnection()
     }
 }
 
@@ -202,19 +205,25 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         
-        for region in manager.monitoredRegions {
-            manager.requestState(for: region)
-        }
-        
         mapView.showsUserLocation = true
         
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
         self.mapView.setRegion(region, animated: true)
         
-        if isFirstLocationUpdate && location.horizontalAccuracy > 0 {
-            determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
-            isFirstLocationUpdate = false
+        if location.horizontalAccuracy > 0 {
+            if isFirstLocationUpdate {
+                determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+                isFirstLocationUpdate = false
+            }
+            
+            if motownRegion.contains(location.coordinate) {
+                soundRegion = .Motown
+            } else if epicMusicRegion.contains(location.coordinate) {
+                soundRegion = .EpicMusic
+            } else {
+                soundRegion = .None
+            }
         }
         
         latitude.text = "LATITUDE: \(location.coordinate.latitude)"
@@ -229,8 +238,7 @@ extension ViewController: CLLocationManagerDelegate {
                 let maxDistance = locationManager.maximumRegionMonitoringDistance
                 
                 locationManager.startMonitoring(for: region)
-                circleOverlay(center: region.center, radius: 70)
-                circleOverlay(center: region.center, radius: 70)
+                circleOverlay(center: region.center, radius: 100)
             }
         }
     }
@@ -252,16 +260,6 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("Did exit region \(region)")
         soundRegion = .None
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
-        if region.identifier == SoundRegion.Motown.rawValue && state == .inside {
-            soundRegion = .Motown
-        } else if region.identifier == SoundRegion.EpicMusic.rawValue && state == .inside {
-            soundRegion = .EpicMusic
-        } else if (region.identifier == SoundRegion.Motown.rawValue && state == .outside) || region.identifier == SoundRegion.EpicMusic.rawValue && state == .outside {
-            soundRegion = .None
-        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
