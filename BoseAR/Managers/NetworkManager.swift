@@ -15,21 +15,19 @@ struct NetworkManager {
     private let baseURLString = "https://hackathon.umusic.com"
     private let apiKey = "5dsb3jqxzX8D5dIlJzWoTaTM2TzcKufq1geS1SSb"
     
-    public func requestTracks(_ completion: @escaping ([Track], Error?) -> Void) {
-        
-        let url = URL(string: "\(baseURLString)/prod/v1/tracks/")!
+    public func requestTrack(for soundRegion: SoundRegion, _ completion: @escaping (Track?, Error?) -> Void) {
+        let url = URL(string: "\(baseURLString)/prod/v1/tracks/\(soundRegion.trackId)")!
         
         let headers: HTTPHeaders = ["x-api-key": "q1WOBiu7kK6vlw3K7lDev6VRYKMZpVW72vAeWywP"]
         
         Alamofire.request(url, method: .get, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
             if let error = response.error {
-                print(error.localizedDescription)
-                completion([], error)
+                completion(nil, error)
             } else if let data = response.data {
-                guard let trackResponse = try? JSONDecoder().decode(TrackResponse.self, from: data) else {
-                    return completion([], NSError(domain: "Error", code: 303, userInfo: nil))
+                guard let track = try? JSONDecoder().decode(Track.self, from: data) else {
+                    return completion(nil, NSError(domain: "Error", code: 303, userInfo: nil))
                 }
-                completion(trackResponse.tracks, nil)
+                completion(track, nil)
             }
         }
     }

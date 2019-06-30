@@ -25,23 +25,21 @@ class ViewController: UIViewController {
     // SOUND REGIONS
     private var soundRegion: SoundRegion = .None {
         didSet {
+            //Do nothing if the same region gets passed in twice
+            if oldValue == soundRegion {
+                return
+            }
             
+            trackManager.stop()
+
             if (soundRegion == .None) {
-                trackManager.stop()
                 currentSoundzone.text = "NOT IN ANY SOUND ZONE"
                 return
             }
             
             currentSoundzone.text = "CURRENT SOUNDREGION: \(soundRegion)"
             
-            // Here can we request from a similar subset of songs related to the zones genre instead of getting them randomly?
-            NetworkManager.shared.requestTracks { (tracks, error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                } else {
-                    self.trackManager.enqueue(track: tracks[Int.random(in: 0..<tracks.count)])
-                }
-            }
+            trackManager.enqueue(soundRegion.trackId)
         }
     }
     
@@ -57,6 +55,9 @@ class ViewController: UIViewController {
 
         trackManager.delegate = self
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 0.5
+        
         mapView.delegate = self
         SessionManager.shared.delegate = self
         
@@ -194,13 +195,16 @@ extension ViewController: CLLocationManagerDelegate {
             soundRegion = .Motown
         } else if epicMusicRegion.contains(initialUserCoordinate) {
             soundRegion = .EpicMusic
-        } else {
-            soundRegion = .None
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]
+        
+        for region in locationManager.monitoredRegions {
+            locationManager.requestState(for: region)
+        }
+        
         if location.horizontalAccuracy > 0 {
             
             locationManager.stopUpdatingLocation()
@@ -222,15 +226,21 @@ extension ViewController: CLLocationManagerDelegate {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        if region.identifier == SoundRegion.Motown.rawValue && state == .inside {
+            soundRegion = .Motown
+        } else if region.identifier == SoundRegion.EpicMusic.rawValue && state == .inside {
+            soundRegion = .EpicMusic
+        } else if (region.identifier == SoundRegion.Motown.rawValue && state == .outside) || region.identifier == SoundRegion.EpicMusic.rawValue && state == .outside {
+            soundRegion = .None
+        }
+    }
+    
     func monitorLocationAroundRegion(region: CLCircularRegion) {
         if CLLocationManager.authorizationStatus() == .authorizedAlways {
             
             if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
-                
-                let maxDistance = locationManager.maximumRegionMonitoringDistance
-                
                 locationManager.startMonitoring(for: region)
-                circleOverlay(center: region.center, radius: 50)
                 circleOverlay(center: region.center, radius: 50)
             }
         }
@@ -247,6 +257,8 @@ extension ViewController: CLLocationManagerDelegate {
             soundRegion = .Motown
         } else if region.identifier == SoundRegion.EpicMusic.rawValue {
             soundRegion = .EpicMusic
+        } else {
+            soundRegion = .None
         }
     }
     

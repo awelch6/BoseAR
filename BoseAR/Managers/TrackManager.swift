@@ -19,8 +19,8 @@ class TrackManager {
          player?.removeAllItems()
     }
     
-    public func enqueue(track: Track) {
-        guard let playerItem = playerItem(track: track) else {
+    public func enqueue(_ isrc: String) {
+        guard let playerItem = playerItem(for: isrc) else {
             return
         }
         
@@ -30,12 +30,12 @@ class TrackManager {
             return
         }
         
-        p.insert(playerItem, after: p.items().last)
+        p.insert(playerItem, after: nil)
         p.play()
     }
     
-    private func playerItem(track: Track) -> AVPlayerItem? {
-        let urlString = "https://hackathon.umusic.com/prod/v1/isrc/\(track.isrc)/stream.m3u8"
+    private func playerItem(for isrc: String) -> AVPlayerItem? {
+        let urlString = "https://hackathon.umusic.com/prod/v1/isrc/\(isrc)/stream.m3u8"
         
         guard let url = URL(string: urlString) else {
             return nil
