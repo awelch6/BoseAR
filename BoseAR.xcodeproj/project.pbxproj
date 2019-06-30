@@ -24,12 +24,8 @@
 		5996397522C8490500856799 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996397422C8490500856799 /* UIViewController.swift */; };
 		59E61CE422C905D400146FBE /* HeadingStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E61CE222C905D300146FBE /* HeadingStyleKit.swift */; };
 		59E61CE522C905D400146FBE /* HeadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E61CE322C905D300146FBE /* HeadingIndicator.swift */; };
-<<<<<<< HEAD
 		59E61CE722C90EC000146FBE /* BeginQastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E61CE622C90EC000146FBE /* BeginQastingViewController.swift */; };
 		E2FA3ECE87A8D648EDA84196 /* Pods_BoseAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6AC4300E2E1ECE87E8808C8 /* Pods_BoseAR.framework */; };
-=======
-		E45D8E0516300F3AA94C139D /* Pods_BoseAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A6922DF484BA94206BDCCA /* Pods_BoseAR.framework */; };
->>>>>>> Added preview modes
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,18 +61,12 @@
 		5996397422C8490500856799 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		59E61CE222C905D300146FBE /* HeadingStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadingStyleKit.swift; sourceTree = "<group>"; };
 		59E61CE322C905D300146FBE /* HeadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadingIndicator.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		59E61CE622C90EC000146FBE /* BeginQastingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginQastingViewController.swift; sourceTree = "<group>"; };
 		6E0D814CE6239D583F2D64EC /* Pods-BoseAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.release.xcconfig"; sourceTree = "<group>"; };
 		A90F75F121A67CECEF8A9EFB /* Pods-BoseAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.debug.xcconfig"; sourceTree = "<group>"; };
 		C6AC4300E2E1ECE87E8808C8 /* Pods_BoseAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5E2E47E45FBA66D7775B27 /* Pods_BoseARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-=======
-		76581BD22F9C05D8C39161C8 /* Pods-BoseARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseARTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseARTests/Pods-BoseARTests.release.xcconfig"; sourceTree = "<group>"; };
-		D6A6922DF484BA94206BDCCA /* Pods_BoseAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4B4AE297F33EE2A164DAB76 /* Pods_BoseARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA39A5AD9D23AF729598A2B0 /* Pods-BoseARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseARTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseARTests/Pods-BoseARTests.debug.xcconfig"; sourceTree = "<group>"; };
->>>>>>> Added preview modes
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
