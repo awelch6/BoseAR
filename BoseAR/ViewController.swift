@@ -202,6 +202,10 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         
+        for region in manager.monitoredRegions {
+            manager.requestState(for: region)
+        }
+        
         mapView.showsUserLocation = true
         
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -248,6 +252,16 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("Did exit region \(region)")
         soundRegion = .None
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        if region.identifier == SoundRegion.Motown.rawValue && state == .inside {
+            soundRegion = .Motown
+        } else if region.identifier == SoundRegion.EpicMusic.rawValue && state == .inside {
+            soundRegion = .EpicMusic
+        } else if (region.identifier == SoundRegion.Motown.rawValue && state == .outside) || region.identifier == SoundRegion.EpicMusic.rawValue && state == .outside {
+            soundRegion = .None
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
