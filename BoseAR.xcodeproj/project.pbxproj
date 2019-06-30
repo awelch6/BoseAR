@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		5960AA9F22C7D429006AC2C9 /* SoundZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960AA9E22C7D429006AC2C9 /* SoundZone.swift */; };
 		5960AAA222C7E1AD006AC2C9 /* SoundRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5960AAA122C7E1AD006AC2C9 /* SoundRegion.swift */; };
 		5996397522C8490500856799 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996397422C8490500856799 /* UIViewController.swift */; };
+		59E61CE422C905D400146FBE /* HeadingStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E61CE222C905D300146FBE /* HeadingStyleKit.swift */; };
+		59E61CE522C905D400146FBE /* HeadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E61CE322C905D300146FBE /* HeadingIndicator.swift */; };
 		E2FA3ECE87A8D648EDA84196 /* Pods_BoseAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6AC4300E2E1ECE87E8808C8 /* Pods_BoseAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		5960AA9E22C7D429006AC2C9 /* SoundZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundZone.swift; sourceTree = "<group>"; };
 		5960AAA122C7E1AD006AC2C9 /* SoundRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRegion.swift; sourceTree = "<group>"; };
 		5996397422C8490500856799 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		59E61CE222C905D300146FBE /* HeadingStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadingStyleKit.swift; sourceTree = "<group>"; };
+		59E61CE322C905D300146FBE /* HeadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadingIndicator.swift; sourceTree = "<group>"; };
 		6E0D814CE6239D583F2D64EC /* Pods-BoseAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.release.xcconfig"; sourceTree = "<group>"; };
 		A90F75F121A67CECEF8A9EFB /* Pods-BoseAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoseAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR.debug.xcconfig"; sourceTree = "<group>"; };
 		C6AC4300E2E1ECE87E8808C8 /* Pods_BoseAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoseAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +114,8 @@
 				5960AA9B22C7D3D1006AC2C9 /* Model */,
 				2B6DD8BA22C650B800F05436 /* AppDelegate.swift */,
 				2B6DD8BC22C650B800F05436 /* ViewController.swift */,
+				59E61CE322C905D300146FBE /* HeadingIndicator.swift */,
+				59E61CE222C905D300146FBE /* HeadingStyleKit.swift */,
 				5960AA9E22C7D429006AC2C9 /* SoundZone.swift */,
 				2B6DDA9C22C6692500F05436 /* Enums */,
 				2B6DDA9B22C6691D00F05436 /* Managers */,
@@ -320,26 +326,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BLECore.framework",
-				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/BoseWearable.framework",
-				"${PODS_ROOT}/../BoseWearable-iOS-bin-4.0.8/Frameworks/iOS/Logging.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLECore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BoseWearable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logging.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoseAR/Pods-BoseAR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB9506B13B59849AE5FD4399 /* [CP] Check Pods Manifest.lock */ = {
@@ -377,9 +372,11 @@
 				2B6DDAA222C7DE7C00F05436 /* TrackManager.swift in Sources */,
 				2B6DDAA822C7FBB900F05436 /* NetworkManager.swift in Sources */,
 				2B6DDAAA22C803AE00F05436 /* Track.swift in Sources */,
+				59E61CE522C905D400146FBE /* HeadingIndicator.swift in Sources */,
 				5960AA9F22C7D429006AC2C9 /* SoundZone.swift in Sources */,
 				2B6DDA9E22C6693B00F05436 /* WearableSessionError.swift in Sources */,
 				5960AAA222C7E1AD006AC2C9 /* SoundRegion.swift in Sources */,
+				59E61CE422C905D400146FBE /* HeadingStyleKit.swift in Sources */,
 				2B6DD8BB22C650B800F05436 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,7 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYA5KJEM32;
+				DEVELOPMENT_TEAM = VK9Q399257;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -568,7 +565,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XYA5KJEM32;
+				DEVELOPMENT_TEAM = VK9Q399257;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

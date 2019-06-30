@@ -70,6 +70,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XOc-98-MZm" customClass="HeadingIndicator" customModule="BoseAR" customModuleProvider="target">
+                                <rect key="frame" x="244" y="488" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.6470588235294118" blue="0.10588235294117647" alpha="0.62411708047945202" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -78,6 +83,7 @@
                         <outlet property="cardinalHeading" destination="vnJ-Zh-vBn" id="77z-WJ-zSl"/>
                         <outlet property="currentSoundzone" destination="807-tE-Ou3" id="bS8-ZC-mD6"/>
                         <outlet property="headingAccuracyValue" destination="a2j-A6-BxS" id="Wlv-XI-9mv"/>
+                        <outlet property="headingIndicatorView" destination="XOc-98-MZm" id="VNw-d2-n77"/>
                         <outlet property="headingValue" destination="Zmv-vl-o8j" id="vBX-9r-D25"/>
                         <outlet property="latitude" destination="PVY-5N-S7g" id="Gy0-9H-pKM"/>
                         <outlet property="longitude" destination="BxX-J5-XG5" id="YQW-qW-mU2"/>

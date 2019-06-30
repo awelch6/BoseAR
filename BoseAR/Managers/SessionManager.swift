@@ -25,11 +25,13 @@ class SessionManager {
     public func startConnection() {
         
         let gestureIntent = GestureIntent(gestures: [.doubleTap, .headNod])
-        let sensorIntent = SensorIntent(sensors: [.rotation, .accelerometer], samplePeriods: [._20ms])
+       // let sensorIntent = SensorIntent(sensors: [.rotation, .accelerometer], samplePeriods: [._20ms])
         
         // Perform the device search and connect to the selected device. This
         // may present a view controller on a new UIWindow.
-        BoseWearable.shared.startConnection(mode: .connectToLast(timeout: 5), sensorIntent: sensorIntent, gestureIntent: gestureIntent) { [weak self] result in
+        //sensorIntent: sensorIntent,
+        //.connectToLast(timeout: 5)
+        BoseWearable.shared.startConnection(mode:.alwaysShow ,  gestureIntent: gestureIntent) { [weak self] result in
             switch result {
             case .success(let session):
                 // A device was selected, a session was created and opened. Show
