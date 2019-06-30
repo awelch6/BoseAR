@@ -6,10 +6,23 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    var sensorDispatch = SensorDispatch(queue: .main)
+    @IBOutlet weak var headingAccuracyValue: UILabel!
+    @IBOutlet weak var currentSoundzone: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var longitude: UILabel!
+    @IBOutlet weak var latitude: UILabel!
+    @IBOutlet weak var cardinalHeading: UILabel!
+    @IBOutlet weak var headingValue: UILabel!
     
+    // BOSE AR SDK Properties
+    private var token: ListenerToken?
+    var sensorDispatch = SensorDispatch(queue: .main)
+    private var magneticHeadingDegrees: Double?
+    
+    // CUSTOM MANAGERS
     private let trackManager = TrackManager()
     
+    // SOUND REGIONS
     private var soundRegion: SoundRegion = .None {
         didSet {
             
@@ -21,6 +34,7 @@ class ViewController: UIViewController {
             
             currentSoundzone.text = "CURRENT SOUNDREGION: \(soundRegion)"
             
+            // Here can we request from a similar subset of songs related to the zones genre instead of getting them randomly?
             NetworkManager.shared.requestTracks { (tracks, error) in
                 if let error = error {
                     print(error.localizedDescription)
@@ -31,37 +45,40 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var currentSoundzone: UILabel!
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var longitude: UILabel!
-    @IBOutlet weak var latitude: UILabel!
-    
-    private var token: ListenerToken?
-
-    let locationManager = CLLocationManager()
-    
-    var isFirstLocationUpdate: Bool = true
-    
-    let epicMusic = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: SoundRegion.EpicMusic.rawValue)
+    let epicMusicRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.363552, longitude: -83.073319), radius: 50, identifier: SoundRegion.EpicMusic.rawValue)
     let motownRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 42.364542, longitude: -83.073900), radius: 50, identifier: SoundRegion.Motown.rawValue)
+
+    // CORE LOCATION
+    let locationManager = CLLocationManager()
+    var isFirstLocationUpdate: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         trackManager.delegate = self
-
         locationManager.delegate = self
-        checkLocationAuthStatus()
         mapView.delegate = self
-        
-        monitorLocationAroundRegion(region: motownRegion)
-        monitorLocationAroundRegion(region: epicMusic)
-//        SessionManager.shared.startConnection()
         SessionManager.shared.delegate = self
+        
+        checkLocationAuthStatus()
+        monitorLocationAroundRegion(region: motownRegion)
+        monitorLocationAroundRegion(region: epicMusicRegion)
+        
+        SessionManager.shared.startConnection()
     }
 }
 
-// MARK: Setup Listeners
+extension ViewController: SessionManagerDelegate {
+    func session(_ session: WearableDeviceSession, didOpen: Bool) {
+        sensorDispatch.handler = self
+        listenForSensors(session)
+        listenForGestures(session)
+        
+        token = session.device?.addEventListener(queue: .main) { [weak self] event in
+            self?.wearableDeviceEvent(event)
+        }
+    }
+}
 
 extension ViewController {
     private func listenForGestures(_ session: WearableDeviceSession) {
@@ -78,9 +95,11 @@ extension ViewController {
             // all sensors, allowing us to start with a "clean slate."
             config.disableAll()
 
-            // Enable the rotation and accelerometer sensors
             config.enable(sensor: .rotation, at: ._20ms)
             config.enable(sensor: .accelerometer, at: ._20ms)
+            config.enable(sensor: .gameRotation, at: ._20ms)
+            config.enable(sensor: .orientation, at: ._20ms)
+            config.enable(sensor: .magnetometer, at: ._20ms)
             config.enable(sensor: .gyroscope, at: ._20ms)
         }
     }
@@ -100,43 +119,65 @@ extension ViewController {
     }
 }
 
-extension ViewController: SessionManagerDelegate {
-    func session(_ session: WearableDeviceSession, didOpen: Bool) {
-        sensorDispatch.handler = self
-        listenForSensors(session)
-        listenForGestures(session)
-        
-        token = session.device?.addEventListener(queue: .main) { [weak self] event in
-            self?.wearableDeviceEvent(event)
-        }
-    }
-}
-
 extension ViewController: SensorDispatchHandler {
-    func receivedRotation(quaternion: Quaternion, accuracy: QuaternionAccuracy, timestamp: SensorTimestamp) {
-        let qMap = Quaternion(ix: 1, iy: 0, iz: 0, r: 0)
-        let qResult = quaternion * qMap
-
-        let pitch = qResult.xRotation
-        let roll = qResult.yRotation
-        let yaw = -qResult.zRotation
-    }
-
-
-    func receivedGyroscope(vector: Vector, accuracy: VectorAccuracy, timestamp: SensorTimestamp) {
-        let pitch = vector.x
-        let roll = vector.y
-        let yaw = vector.z
+    
+    enum CardinalDirection: String {
+        case North = "North"
+        case South = "South"
+        case East = "East"
+        case West = "West"
+        case InBetween = "InBetween"
     }
     
-    func receivedGesture(type: GestureType, timestamp: SensorTimestamp) {
-        print(type)
+    func getCardinalDirectionFromYaw(yaw: Double, accuracy: QuaternionAccuracy) {
+        let cardinalDirection: CardinalDirection
+        
+        switch yaw {
+        case -45 ..< 45:
+            cardinalDirection = CardinalDirection.North
+            
+        case 45 ..< 135:
+            cardinalDirection = CardinalDirection.East
+            
+        case 135 ..< 180:
+            cardinalDirection = CardinalDirection.South
+        case -180 ..< -135:
+            cardinalDirection = CardinalDirection.South
+            
+        case -135 ..< -45:
+            cardinalDirection = CardinalDirection.West
+            
+        default:
+            cardinalDirection = CardinalDirection.InBetween
+        }
+        
+        cardinalHeading.text = cardinalDirection.rawValue
     }
-//    func receivedAccelerometer(vector: Vector, accuracy: VectorAccuracy, timestamp: SensorTimestamp) {
-//        xValue.text = format(decimal: vector.x)
-//        yValue.text = format(decimal: vector.y)
-//        zValue.text = format(decimal: vector.z)
-//    }
+    
+    func receivedRotation(quaternion: Quaternion, accuracy: QuaternionAccuracy, timestamp: SensorTimestamp) {
+        
+        let qMap = Quaternion(ix: 1, iy: 0, iz: 0, r: 0)
+        let qResult = quaternion * qMap
+        let yaw = -qResult.zRotation
+        
+        // The quaternion yaw value is the heading in radians. Convert to degrees.
+        magneticHeadingDegrees = yaw * 180 / Double.pi
+        updateHeadingDisplay(accuracy: accuracy)
+    }
+    
+    private func updateHeadingDisplay(accuracy: QuaternionAccuracy) {
+        let heading = magneticHeadingDegrees
+        
+        // The desired heading value may be nil. See the documentation for `magneticHeadingDegrees` and `trueHeadingDegrees` to see why.
+        if let h = heading {
+            headingValue.text = format(degrees: h)
+            getCardinalDirectionFromYaw(yaw: h, accuracy: accuracy)
+        }
+        else {
+            headingValue.text = "-"
+        }
+        headingAccuracyValue.text = format(radians: accuracy.estimatedAccuracy)
+    }
 }
 
 extension ViewController: CLLocationManagerDelegate {
@@ -151,7 +192,7 @@ extension ViewController: CLLocationManagerDelegate {
     func determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D) {
         if motownRegion.contains(initialUserCoordinate) {
             soundRegion = .Motown
-        } else if epicMusic.contains(initialUserCoordinate) {
+        } else if epicMusicRegion.contains(initialUserCoordinate) {
             soundRegion = .EpicMusic
         } else {
             soundRegion = .None
