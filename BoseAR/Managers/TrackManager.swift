@@ -25,6 +25,12 @@ class TrackManager {
         }
         
         guard let p = player else {
+            do {
+                try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
+                try AVAudioSession.sharedInstance().setActive(true)
+            } catch let error {
+                print(error.localizedDescription)
+            }
             player = AVQueuePlayer(playerItem: playerItem)
             player?.play()
             return
