@@ -200,24 +200,21 @@ extension ViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[locations.count - 1]
-        if location.horizontalAccuracy > 0 {
-            
-            mapView.showsUserLocation = true
-            if let location = locations.last{
-                let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-                let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
-                self.mapView.setRegion(region, animated: true)
-            }
-            
-            if (isFirstLocationUpdate) {
-                determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
-                isFirstLocationUpdate = false
-            }
-            
-            latitude.text = "LATITUDE: \(location.coordinate.latitude)"
-            longitude.text = "LONGITUDE: \(location.coordinate.longitude)"
+        guard let location = locations.last else { return }
+        
+        mapView.showsUserLocation = true
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+        self.mapView.setRegion(region, animated: true)
+        
+        if isFirstLocationUpdate && location.horizontalAccuracy > 0 {
+            determineInitialRegion(initialUserCoordinate: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude))
+            isFirstLocationUpdate = false
         }
+        
+        latitude.text = "LATITUDE: \(location.coordinate.latitude)"
+        longitude.text = "LONGITUDE: \(location.coordinate.longitude)"
     }
     
     func monitorLocationAroundRegion(region: CLCircularRegion) {
